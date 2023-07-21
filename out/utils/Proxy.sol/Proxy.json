@@ -1,0 +1,337 @@
+{
+  "abi": [],
+  "bytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "linkReferences": {}
+  },
+  "ast": {
+    "absolutePath": "lib/osx/packages/contracts/src/utils/Proxy.sol",
+    "id": 48356,
+    "exportedSymbols": {
+      "Address": [
+        45699
+      ],
+      "ERC1967Proxy": [
+        45003
+      ],
+      "ERC1967Upgrade": [
+        45307
+      ],
+      "IBeacon": [
+        45369
+      ],
+      "IERC1822Proxiable": [
+        44886
+      ],
+      "IERC1967": [
+        44876
+      ],
+      "Proxy": [
+        45359
+      ],
+      "StorageSlot": [
+        45809
+      ],
+      "createERC1967Proxy": [
+        48355
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "47:975:66",
+    "nodes": [
+      {
+        "id": 48333,
+        "nodeType": "PragmaDirective",
+        "src": "47:23:66",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 48334,
+        "nodeType": "ImportDirective",
+        "src": "72:64:66",
+        "nodes": [],
+        "absolutePath": "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+        "file": "@openzeppelin/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48356,
+        "sourceUnit": 45004,
+        "symbolAliases": [],
+        "unitAlias": ""
+      },
+      {
+        "id": 48355,
+        "nodeType": "FunctionDefinition",
+        "src": "883:138:66",
+        "nodes": [],
+        "body": {
+          "id": 48354,
+          "nodeType": "Block",
+          "src": "965:56:66",
+          "nodes": [],
+          "statements": [
+            {
+              "expression": {
+                "arguments": [
+                  {
+                    "arguments": [
+                      {
+                        "id": 48349,
+                        "name": "_logic",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48337,
+                        "src": "1003:6:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 48350,
+                        "name": "_data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48339,
+                        "src": "1011:5:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 48348,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "nodeType": "NewExpression",
+                      "src": "986:16:66",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_creation_payable$_t_address_$_t_bytes_memory_ptr_$returns$_t_contract$_ERC1967Proxy_$45003_$",
+                        "typeString": "function (address,bytes memory) payable returns (contract ERC1967Proxy)"
+                      },
+                      "typeName": {
+                        "id": 48347,
+                        "nodeType": "UserDefinedTypeName",
+                        "pathNode": {
+                          "id": 48346,
+                          "name": "ERC1967Proxy",
+                          "nameLocations": [
+                            "990:12:66"
+                          ],
+                          "nodeType": "IdentifierPath",
+                          "referencedDeclaration": 45003,
+                          "src": "990:12:66"
+                        },
+                        "referencedDeclaration": 45003,
+                        "src": "990:12:66",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_ERC1967Proxy_$45003",
+                          "typeString": "contract ERC1967Proxy"
+                        }
+                      }
+                    },
+                    "id": 48351,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "986:31:66",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_ERC1967Proxy_$45003",
+                      "typeString": "contract ERC1967Proxy"
+                    }
+                  }
+                ],
+                "expression": {
+                  "argumentTypes": [
+                    {
+                      "typeIdentifier": "t_contract$_ERC1967Proxy_$45003",
+                      "typeString": "contract ERC1967Proxy"
+                    }
+                  ],
+                  "id": 48345,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "lValueRequested": false,
+                  "nodeType": "ElementaryTypeNameExpression",
+                  "src": "978:7:66",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_type$_t_address_$",
+                    "typeString": "type(address)"
+                  },
+                  "typeName": {
+                    "id": 48344,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "978:7:66",
+                    "typeDescriptions": {}
+                  }
+                },
+                "id": 48352,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": false,
+                "kind": "typeConversion",
+                "lValueRequested": false,
+                "nameLocations": [],
+                "names": [],
+                "nodeType": "FunctionCall",
+                "src": "978:40:66",
+                "tryCall": false,
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "functionReturnParameters": 48343,
+              "id": 48353,
+              "nodeType": "Return",
+              "src": "971:47:66"
+            }
+          ]
+        },
+        "documentation": {
+          "id": 48335,
+          "nodeType": "StructuredDocumentation",
+          "src": "138:745:66",
+          "text": "@notice Free function to create a [ERC-1967](https://eips.ethereum.org/EIPS/eip-1967) proxy contract based on the passed base contract address.\n @param _logic The base contract address.\n @param _data The constructor arguments for this contract.\n @return The address of the proxy contract created.\n @dev Initializes the upgradeable proxy with an initial implementation specified by _logic. If _data is non-empty, it’s used as data in a delegate call to _logic. This will typically be an encoded function call, and allows initializing the storage of the proxy like a Solidity constructor (see [OpenZepplin ERC1967Proxy-constructor](https://docs.openzeppelin.com/contracts/4.x/api/proxy#ERC1967Proxy-constructor-address-bytes-))."
+        },
+        "implemented": true,
+        "kind": "freeFunction",
+        "modifiers": [],
+        "name": "createERC1967Proxy",
+        "nameLocation": "892:18:66",
+        "parameters": {
+          "id": 48340,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 48337,
+              "mutability": "mutable",
+              "name": "_logic",
+              "nameLocation": "919:6:66",
+              "nodeType": "VariableDeclaration",
+              "scope": 48355,
+              "src": "911:14:66",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "typeName": {
+                "id": 48336,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "911:7:66",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "visibility": "internal"
+            },
+            {
+              "constant": false,
+              "id": 48339,
+              "mutability": "mutable",
+              "name": "_data",
+              "nameLocation": "940:5:66",
+              "nodeType": "VariableDeclaration",
+              "scope": 48355,
+              "src": "927:18:66",
+              "stateVariable": false,
+              "storageLocation": "memory",
+              "typeDescriptions": {
+                "typeIdentifier": "t_bytes_memory_ptr",
+                "typeString": "bytes"
+              },
+              "typeName": {
+                "id": 48338,
+                "name": "bytes",
+                "nodeType": "ElementaryTypeName",
+                "src": "927:5:66",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "910:36:66"
+        },
+        "returnParameters": {
+          "id": 48343,
+          "nodeType": "ParameterList",
+          "parameters": [
+            {
+              "constant": false,
+              "id": 48342,
+              "mutability": "mutable",
+              "name": "",
+              "nameLocation": "-1:-1:-1",
+              "nodeType": "VariableDeclaration",
+              "scope": 48355,
+              "src": "956:7:66",
+              "stateVariable": false,
+              "storageLocation": "default",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              },
+              "typeName": {
+                "id": 48341,
+                "name": "address",
+                "nodeType": "ElementaryTypeName",
+                "src": "956:7:66",
+                "stateMutability": "nonpayable",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                }
+              },
+              "visibility": "internal"
+            }
+          ],
+          "src": "955:9:66"
+        },
+        "scope": 48356,
+        "stateMutability": "nonpayable",
+        "virtual": false,
+        "visibility": "internal"
+      }
+    ],
+    "license": "AGPL-3.0-or-later"
+  },
+  "id": 66
+}

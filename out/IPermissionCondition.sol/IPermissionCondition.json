@@ -1,0 +1,383 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_where",
+          "type": "address"
+        },
+        {
+          "internalType": "address",
+          "name": "_who",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes32",
+          "name": "_permissionId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "isGranted",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "allowed",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "isGranted(address,address,bytes32,bytes)": "2675fdd0"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_where\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"_who\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"_permissionId\",\"type\":\"bytes32\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"isGranted\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"allowed\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Aragon Association - 2021-2023\",\"kind\":\"dev\",\"methods\":{\"isGranted(address,address,bytes32,bytes)\":{\"params\":{\"_data\":\"Optional data passed to the `PermissionCondition` implementation.\",\"_permissionId\":\"The permission identifier.\",\"_where\":\"The address of the target contract.\",\"_who\":\"The address (EOA or contract) for which the permission are checked.\"},\"returns\":{\"allowed\":\"Returns true if the call is permitted.\"}}},\"title\":\"IPermissionCondition\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"isGranted(address,address,bytes32,bytes)\":{\"notice\":\"This method is used to check if a call is permitted.\"}},\"notice\":\"This interface can be implemented to support more customary permissions depending on on- or off-chain state, e.g., by querying token ownershop or a secondary condition, respectively.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/osx/packages/contracts/src/core/permission/IPermissionCondition.sol\":\"IPermissionCondition\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@aragon/osx/=lib/osx/packages/contracts/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":osx/=lib/osx/\"]},\"sources\":{\"lib/osx/packages/contracts/src/core/permission/IPermissionCondition.sol\":{\"keccak256\":\"0x38e4f91e06bb2255dae9c2305c05e511fddf773cf231be42aedee5e883255bb9\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://efa89b045dc87ff9c14ccf32de35a9d64d97cf3fb05c997ca31d672f56e74354\",\"dweb:/ipfs/QmRpD4XneUUfZzRPW6sgT66614cCV9rLU5aDa3AiDiyEnd\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_where",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "_who",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "_permissionId",
+              "type": "bytes32"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "isGranted",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "allowed",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "isGranted(address,address,bytes32,bytes)": {
+            "params": {
+              "_data": "Optional data passed to the `PermissionCondition` implementation.",
+              "_permissionId": "The permission identifier.",
+              "_where": "The address of the target contract.",
+              "_who": "The address (EOA or contract) for which the permission are checked."
+            },
+            "returns": {
+              "allowed": "Returns true if the call is permitted."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "isGranted(address,address,bytes32,bytes)": {
+            "notice": "This method is used to check if a call is permitted."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@aragon/osx/=lib/osx/packages/contracts/src/",
+        ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":osx/=lib/osx/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/osx/packages/contracts/src/core/permission/IPermissionCondition.sol": "IPermissionCondition"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/osx/packages/contracts/src/core/permission/IPermissionCondition.sol": {
+        "keccak256": "0x38e4f91e06bb2255dae9c2305c05e511fddf773cf231be42aedee5e883255bb9",
+        "urls": [
+          "bzz-raw://efa89b045dc87ff9c14ccf32de35a9d64d97cf3fb05c997ca31d672f56e74354",
+          "dweb:/ipfs/QmRpD4XneUUfZzRPW6sgT66614cCV9rLU5aDa3AiDiyEnd"
+        ],
+        "license": "AGPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/osx/packages/contracts/src/core/permission/IPermissionCondition.sol",
+    "id": 46975,
+    "exportedSymbols": {
+      "IPermissionCondition": [
+        46974
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "47:925:53",
+    "nodes": [
+      {
+        "id": 46958,
+        "nodeType": "PragmaDirective",
+        "src": "47:23:53",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 46974,
+        "nodeType": "ContractDefinition",
+        "src": "342:629:53",
+        "nodes": [
+          {
+            "id": 46973,
+            "nodeType": "FunctionDefinition",
+            "src": "800:169:53",
+            "nodes": [],
+            "documentation": {
+              "id": 46960,
+              "nodeType": "StructuredDocumentation",
+              "src": "379:416:53",
+              "text": "@notice This method is used to check if a call is permitted.\n @param _where The address of the target contract.\n @param _who The address (EOA or contract) for which the permission are checked.\n @param _permissionId The permission identifier.\n @param _data Optional data passed to the `PermissionCondition` implementation.\n @return allowed Returns true if the call is permitted."
+            },
+            "functionSelector": "2675fdd0",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "isGranted",
+            "nameLocation": "809:9:53",
+            "parameters": {
+              "id": 46969,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46962,
+                  "mutability": "mutable",
+                  "name": "_where",
+                  "nameLocation": "836:6:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46973,
+                  "src": "828:14:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 46961,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "828:7:53",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 46964,
+                  "mutability": "mutable",
+                  "name": "_who",
+                  "nameLocation": "860:4:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46973,
+                  "src": "852:12:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 46963,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "852:7:53",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 46966,
+                  "mutability": "mutable",
+                  "name": "_permissionId",
+                  "nameLocation": "882:13:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46973,
+                  "src": "874:21:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 46965,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "874:7:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 46968,
+                  "mutability": "mutable",
+                  "name": "_data",
+                  "nameLocation": "920:5:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46973,
+                  "src": "905:20:53",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 46967,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "905:5:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "818:113:53"
+            },
+            "returnParameters": {
+              "id": 46972,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46971,
+                  "mutability": "mutable",
+                  "name": "allowed",
+                  "nameLocation": "960:7:53",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46973,
+                  "src": "955:12:53",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 46970,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "955:4:53",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "954:14:53"
+            },
+            "scope": 46974,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPermissionCondition",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 46959,
+          "nodeType": "StructuredDocumentation",
+          "src": "72:270:53",
+          "text": "@title IPermissionCondition\n @author Aragon Association - 2021-2023\n @notice This interface can be implemented to support more customary permissions depending on on- or off-chain state, e.g., by querying token ownershop or a secondary condition, respectively."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          46974
+        ],
+        "name": "IPermissionCondition",
+        "nameLocation": "352:20:53",
+        "scope": 46975,
+        "usedErrors": []
+      }
+    ],
+    "license": "AGPL-3.0-or-later"
+  },
+  "id": 53
+}

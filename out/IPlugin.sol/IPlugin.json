@@ -1,0 +1,260 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "pluginType",
+      "outputs": [
+        {
+          "internalType": "enum IPlugin.PluginType",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "pluginType()": "41de6830"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"pluginType\",\"outputs\":[{\"internalType\":\"enum IPlugin.PluginType\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Aragon Association - 2022-2023\",\"kind\":\"dev\",\"methods\":{},\"title\":\"IPlugin\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"pluginType()\":{\"notice\":\"returns the plugin's type\"}},\"notice\":\"An interface defining the traits of a plugin.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/osx/packages/contracts/src/core/plugin/IPlugin.sol\":\"IPlugin\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@aragon/osx/=lib/osx/packages/contracts/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":osx/=lib/osx/\"]},\"sources\":{\"lib/osx/packages/contracts/src/core/plugin/IPlugin.sol\":{\"keccak256\":\"0xff0e60999c7f9c78bc57d4ca7eb53e38bd4eefbfb152784e98f8cf7530aad3b8\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://aad36220d44f088e77a9b1e0d0cbe22b869e496e405f09b9366748dc6d482331\",\"dweb:/ipfs/QmSxXpiYvhMarfoG9zXPmmBY9jQQqMtsn72mLc6jdbN8Uc\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "pluginType",
+          "outputs": [
+            {
+              "internalType": "enum IPlugin.PluginType",
+              "name": "",
+              "type": "uint8"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "pluginType()": {
+            "notice": "returns the plugin's type"
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@aragon/osx/=lib/osx/packages/contracts/src/",
+        ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":osx/=lib/osx/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/osx/packages/contracts/src/core/plugin/IPlugin.sol": "IPlugin"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/osx/packages/contracts/src/core/plugin/IPlugin.sol": {
+        "keccak256": "0xff0e60999c7f9c78bc57d4ca7eb53e38bd4eefbfb152784e98f8cf7530aad3b8",
+        "urls": [
+          "bzz-raw://aad36220d44f088e77a9b1e0d0cbe22b869e496e405f09b9366748dc6d482331",
+          "dweb:/ipfs/QmSxXpiYvhMarfoG9zXPmmBY9jQQqMtsn72mLc6jdbN8Uc"
+        ],
+        "license": "AGPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/osx/packages/contracts/src/core/plugin/IPlugin.sol",
+    "id": 47732,
+    "exportedSymbols": {
+      "IPlugin": [
+        47731
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "47:355:56",
+    "nodes": [
+      {
+        "id": 47718,
+        "nodeType": "PragmaDirective",
+        "src": "47:23:56",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 47731,
+        "nodeType": "ContractDefinition",
+        "src": "192:209:56",
+        "nodes": [
+          {
+            "id": 47723,
+            "nodeType": "EnumDefinition",
+            "src": "216:78:56",
+            "nodes": [],
+            "canonicalName": "IPlugin.PluginType",
+            "members": [
+              {
+                "id": 47720,
+                "name": "UUPS",
+                "nameLocation": "242:4:56",
+                "nodeType": "EnumValue",
+                "src": "242:4:56"
+              },
+              {
+                "id": 47721,
+                "name": "Cloneable",
+                "nameLocation": "256:9:56",
+                "nodeType": "EnumValue",
+                "src": "256:9:56"
+              },
+              {
+                "id": 47722,
+                "name": "Constructable",
+                "nameLocation": "275:13:56",
+                "nodeType": "EnumValue",
+                "src": "275:13:56"
+              }
+            ],
+            "name": "PluginType",
+            "nameLocation": "221:10:56"
+          },
+          {
+            "id": 47730,
+            "nodeType": "FunctionDefinition",
+            "src": "342:57:56",
+            "nodes": [],
+            "documentation": {
+              "id": 47724,
+              "nodeType": "StructuredDocumentation",
+              "src": "300:37:56",
+              "text": "@notice returns the plugin's type"
+            },
+            "functionSelector": "41de6830",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pluginType",
+            "nameLocation": "351:10:56",
+            "parameters": {
+              "id": 47725,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "361:2:56"
+            },
+            "returnParameters": {
+              "id": 47729,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47728,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47730,
+                  "src": "387:10:56",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_PluginType_$47723",
+                    "typeString": "enum IPlugin.PluginType"
+                  },
+                  "typeName": {
+                    "id": 47727,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 47726,
+                      "name": "PluginType",
+                      "nameLocations": [
+                        "387:10:56"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 47723,
+                      "src": "387:10:56"
+                    },
+                    "referencedDeclaration": 47723,
+                    "src": "387:10:56",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_PluginType_$47723",
+                      "typeString": "enum IPlugin.PluginType"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "386:12:56"
+            },
+            "scope": 47731,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPlugin",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 47719,
+          "nodeType": "StructuredDocumentation",
+          "src": "72:120:56",
+          "text": "@title IPlugin\n @author Aragon Association - 2022-2023\n @notice An interface defining the traits of a plugin."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          47731
+        ],
+        "name": "IPlugin",
+        "nameLocation": "202:7:56",
+        "scope": 47732,
+        "usedErrors": []
+      }
+    ],
+    "license": "AGPL-3.0-or-later"
+  },
+  "id": 56
+}

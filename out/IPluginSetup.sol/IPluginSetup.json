@@ -1,0 +1,1492 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_dao",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "prepareInstallation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "plugin",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address[]",
+              "name": "helpers",
+              "type": "address[]"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "enum PermissionLib.Operation",
+                  "name": "operation",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "where",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "who",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "condition",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "permissionId",
+                  "type": "bytes32"
+                }
+              ],
+              "internalType": "struct PermissionLib.MultiTargetPermission[]",
+              "name": "permissions",
+              "type": "tuple[]"
+            }
+          ],
+          "internalType": "struct IPluginSetup.PreparedSetupData",
+          "name": "preparedSetupData",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_dao",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "plugin",
+              "type": "address"
+            },
+            {
+              "internalType": "address[]",
+              "name": "currentHelpers",
+              "type": "address[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct IPluginSetup.SetupPayload",
+          "name": "_payload",
+          "type": "tuple"
+        }
+      ],
+      "name": "prepareUninstallation",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum PermissionLib.Operation",
+              "name": "operation",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address",
+              "name": "where",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "who",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "condition",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "permissionId",
+              "type": "bytes32"
+            }
+          ],
+          "internalType": "struct PermissionLib.MultiTargetPermission[]",
+          "name": "permissions",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_dao",
+          "type": "address"
+        },
+        {
+          "internalType": "uint16",
+          "name": "_currentBuild",
+          "type": "uint16"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "plugin",
+              "type": "address"
+            },
+            {
+              "internalType": "address[]",
+              "name": "currentHelpers",
+              "type": "address[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct IPluginSetup.SetupPayload",
+          "name": "_payload",
+          "type": "tuple"
+        }
+      ],
+      "name": "prepareUpdate",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "initData",
+          "type": "bytes"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address[]",
+              "name": "helpers",
+              "type": "address[]"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "enum PermissionLib.Operation",
+                  "name": "operation",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "where",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "who",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "condition",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "permissionId",
+                  "type": "bytes32"
+                }
+              ],
+              "internalType": "struct PermissionLib.MultiTargetPermission[]",
+              "name": "permissions",
+              "type": "tuple[]"
+            }
+          ],
+          "internalType": "struct IPluginSetup.PreparedSetupData",
+          "name": "preparedSetupData",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "implementation()": "5c60da1b",
+    "prepareInstallation(address,bytes)": "f10832f1",
+    "prepareUninstallation(address,(address,address[],bytes))": "9cb0a124",
+    "prepareUpdate(address,uint16,(address,address[],bytes))": "a8a9c29e"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_dao\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"prepareInstallation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"plugin\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"address[]\",\"name\":\"helpers\",\"type\":\"address[]\"},{\"components\":[{\"internalType\":\"enum PermissionLib.Operation\",\"name\":\"operation\",\"type\":\"uint8\"},{\"internalType\":\"address\",\"name\":\"where\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"who\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"condition\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"permissionId\",\"type\":\"bytes32\"}],\"internalType\":\"struct PermissionLib.MultiTargetPermission[]\",\"name\":\"permissions\",\"type\":\"tuple[]\"}],\"internalType\":\"struct IPluginSetup.PreparedSetupData\",\"name\":\"preparedSetupData\",\"type\":\"tuple\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_dao\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"plugin\",\"type\":\"address\"},{\"internalType\":\"address[]\",\"name\":\"currentHelpers\",\"type\":\"address[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct IPluginSetup.SetupPayload\",\"name\":\"_payload\",\"type\":\"tuple\"}],\"name\":\"prepareUninstallation\",\"outputs\":[{\"components\":[{\"internalType\":\"enum PermissionLib.Operation\",\"name\":\"operation\",\"type\":\"uint8\"},{\"internalType\":\"address\",\"name\":\"where\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"who\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"condition\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"permissionId\",\"type\":\"bytes32\"}],\"internalType\":\"struct PermissionLib.MultiTargetPermission[]\",\"name\":\"permissions\",\"type\":\"tuple[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_dao\",\"type\":\"address\"},{\"internalType\":\"uint16\",\"name\":\"_currentBuild\",\"type\":\"uint16\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"plugin\",\"type\":\"address\"},{\"internalType\":\"address[]\",\"name\":\"currentHelpers\",\"type\":\"address[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct IPluginSetup.SetupPayload\",\"name\":\"_payload\",\"type\":\"tuple\"}],\"name\":\"prepareUpdate\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"initData\",\"type\":\"bytes\"},{\"components\":[{\"internalType\":\"address[]\",\"name\":\"helpers\",\"type\":\"address[]\"},{\"components\":[{\"internalType\":\"enum PermissionLib.Operation\",\"name\":\"operation\",\"type\":\"uint8\"},{\"internalType\":\"address\",\"name\":\"where\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"who\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"condition\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"permissionId\",\"type\":\"bytes32\"}],\"internalType\":\"struct PermissionLib.MultiTargetPermission[]\",\"name\":\"permissions\",\"type\":\"tuple[]\"}],\"internalType\":\"struct IPluginSetup.PreparedSetupData\",\"name\":\"preparedSetupData\",\"type\":\"tuple\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Aragon Association - 2022-2023\",\"kind\":\"dev\",\"methods\":{\"implementation()\":{\"details\":\"The implementation can be instantiated via the `new` keyword, cloned via the minimal clones pattern (see [ERC-1167](https://eips.ethereum.org/EIPS/eip-1167)), or proxied via the UUPS pattern (see [ERC-1822](https://eips.ethereum.org/EIPS/eip-1822)).\",\"returns\":{\"_0\":\"The address of the plugin implementation contract.\"}},\"prepareInstallation(address,bytes)\":{\"params\":{\"_dao\":\"The address of the installing DAO.\",\"_data\":\"The bytes-encoded data containing the input parameters for the installation as specified in the plugin's build metadata JSON file.\"},\"returns\":{\"plugin\":\"The address of the `Plugin` contract being prepared for installation.\",\"preparedSetupData\":\"The deployed plugin's relevant data which consists of helpers and permissions.\"}},\"prepareUninstallation(address,(address,address[],bytes))\":{\"params\":{\"_dao\":\"The address of the uninstalling DAO.\",\"_payload\":\"The relevant data necessary for the `prepareUninstallation`. see above.\"},\"returns\":{\"permissions\":\"The array of multi-targeted permission operations to be applied by the `PluginSetupProcessor` to the uninstalling DAO.\"}},\"prepareUpdate(address,uint16,(address,address[],bytes))\":{\"params\":{\"_currentBuild\":\"The build number of the plugin to update from.\",\"_dao\":\"The address of the updating DAO.\",\"_payload\":\"The relevant data necessary for the `prepareUpdate`. see above.\"},\"returns\":{\"initData\":\"The initialization data to be passed to upgradeable contracts when the update is applied in the `PluginSetupProcessor`.\",\"preparedSetupData\":\"The deployed plugin's relevant data which consists of helpers and permissions.\"}}},\"title\":\"IPluginSetup\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"implementation()\":{\"notice\":\"Returns the plugin implementation address.\"},\"prepareInstallation(address,bytes)\":{\"notice\":\"Prepares the installation of a plugin.\"},\"prepareUninstallation(address,(address,address[],bytes))\":{\"notice\":\"Prepares the uninstallation of a plugin.\"},\"prepareUpdate(address,uint16,(address,address[],bytes))\":{\"notice\":\"Prepares the update of a plugin.\"}},\"notice\":\"The interface required for a plugin setup contract to be consumed by the `PluginSetupProcessor` for plugin installations, updates, and uninstallations.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol\":\"IPluginSetup\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@aragon/osx/=lib/osx/packages/contracts/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":osx/=lib/osx/\"]},\"sources\":{\"lib/osx/packages/contracts/src/core/dao/IDAO.sol\":{\"keccak256\":\"0x5da4fcc2ac043eebb78c8c278da86f0fa7ad71ec9ce35a398bcc60c25ba6c7c3\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://22dfd57672c31d73f65db47e55b19bfbfba15e4d8e570b5a4fb17288eba0f245\",\"dweb:/ipfs/QmPcBckvXy3TXZzSLF7cc1dnfF77V1Y5Zh1JweZ3uZUKND\"]},\"lib/osx/packages/contracts/src/core/permission/PermissionLib.sol\":{\"keccak256\":\"0xd1a00691deee7a95f44a7ea8bda5494a71ae2662d056315dbe260aadc4025cb6\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://fcb8b541e35540383fb0362aedc7ebe7297d64133f3b72a15100464ad29b8f41\",\"dweb:/ipfs/QmT4gj4Hf1apwCpfaHCxByRnNMYhc6gsGqNaETEHyAXfer\"]},\"lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol\":{\"keccak256\":\"0xa6b81957e83a369cd1bb7650cc874a3e41a47b091990216942217ea496e24356\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://dfb2e26ee31137804e2556fe8ab8a4596a82050dbd1f6adf9e8a937b2837c976\",\"dweb:/ipfs/QmQjbVD7w85f2Q7Eh9kaePmXKJPdy8ykVDjCS3UVLLGSPo\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "implementation",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_dao",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "prepareInstallation",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "plugin",
+              "type": "address"
+            },
+            {
+              "internalType": "struct IPluginSetup.PreparedSetupData",
+              "name": "preparedSetupData",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address[]",
+                  "name": "helpers",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "struct PermissionLib.MultiTargetPermission[]",
+                  "name": "permissions",
+                  "type": "tuple[]",
+                  "components": [
+                    {
+                      "internalType": "enum PermissionLib.Operation",
+                      "name": "operation",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "where",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "who",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "condition",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "bytes32",
+                      "name": "permissionId",
+                      "type": "bytes32"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_dao",
+              "type": "address"
+            },
+            {
+              "internalType": "struct IPluginSetup.SetupPayload",
+              "name": "_payload",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "plugin",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address[]",
+                  "name": "currentHelpers",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "prepareUninstallation",
+          "outputs": [
+            {
+              "internalType": "struct PermissionLib.MultiTargetPermission[]",
+              "name": "permissions",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "enum PermissionLib.Operation",
+                  "name": "operation",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "where",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "who",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "condition",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "permissionId",
+                  "type": "bytes32"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_dao",
+              "type": "address"
+            },
+            {
+              "internalType": "uint16",
+              "name": "_currentBuild",
+              "type": "uint16"
+            },
+            {
+              "internalType": "struct IPluginSetup.SetupPayload",
+              "name": "_payload",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "plugin",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address[]",
+                  "name": "currentHelpers",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "prepareUpdate",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "initData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "struct IPluginSetup.PreparedSetupData",
+              "name": "preparedSetupData",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address[]",
+                  "name": "helpers",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "struct PermissionLib.MultiTargetPermission[]",
+                  "name": "permissions",
+                  "type": "tuple[]",
+                  "components": [
+                    {
+                      "internalType": "enum PermissionLib.Operation",
+                      "name": "operation",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "where",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "who",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "condition",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "bytes32",
+                      "name": "permissionId",
+                      "type": "bytes32"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "implementation()": {
+            "details": "The implementation can be instantiated via the `new` keyword, cloned via the minimal clones pattern (see [ERC-1167](https://eips.ethereum.org/EIPS/eip-1167)), or proxied via the UUPS pattern (see [ERC-1822](https://eips.ethereum.org/EIPS/eip-1822)).",
+            "returns": {
+              "_0": "The address of the plugin implementation contract."
+            }
+          },
+          "prepareInstallation(address,bytes)": {
+            "params": {
+              "_dao": "The address of the installing DAO.",
+              "_data": "The bytes-encoded data containing the input parameters for the installation as specified in the plugin's build metadata JSON file."
+            },
+            "returns": {
+              "plugin": "The address of the `Plugin` contract being prepared for installation.",
+              "preparedSetupData": "The deployed plugin's relevant data which consists of helpers and permissions."
+            }
+          },
+          "prepareUninstallation(address,(address,address[],bytes))": {
+            "params": {
+              "_dao": "The address of the uninstalling DAO.",
+              "_payload": "The relevant data necessary for the `prepareUninstallation`. see above."
+            },
+            "returns": {
+              "permissions": "The array of multi-targeted permission operations to be applied by the `PluginSetupProcessor` to the uninstalling DAO."
+            }
+          },
+          "prepareUpdate(address,uint16,(address,address[],bytes))": {
+            "params": {
+              "_currentBuild": "The build number of the plugin to update from.",
+              "_dao": "The address of the updating DAO.",
+              "_payload": "The relevant data necessary for the `prepareUpdate`. see above."
+            },
+            "returns": {
+              "initData": "The initialization data to be passed to upgradeable contracts when the update is applied in the `PluginSetupProcessor`.",
+              "preparedSetupData": "The deployed plugin's relevant data which consists of helpers and permissions."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "implementation()": {
+            "notice": "Returns the plugin implementation address."
+          },
+          "prepareInstallation(address,bytes)": {
+            "notice": "Prepares the installation of a plugin."
+          },
+          "prepareUninstallation(address,(address,address[],bytes))": {
+            "notice": "Prepares the uninstallation of a plugin."
+          },
+          "prepareUpdate(address,uint16,(address,address[],bytes))": {
+            "notice": "Prepares the update of a plugin."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@aragon/osx/=lib/osx/packages/contracts/src/",
+        ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":osx/=lib/osx/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol": "IPluginSetup"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/osx/packages/contracts/src/core/dao/IDAO.sol": {
+        "keccak256": "0x5da4fcc2ac043eebb78c8c278da86f0fa7ad71ec9ce35a398bcc60c25ba6c7c3",
+        "urls": [
+          "bzz-raw://22dfd57672c31d73f65db47e55b19bfbfba15e4d8e570b5a4fb17288eba0f245",
+          "dweb:/ipfs/QmPcBckvXy3TXZzSLF7cc1dnfF77V1Y5Zh1JweZ3uZUKND"
+        ],
+        "license": "AGPL-3.0-or-later"
+      },
+      "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol": {
+        "keccak256": "0xd1a00691deee7a95f44a7ea8bda5494a71ae2662d056315dbe260aadc4025cb6",
+        "urls": [
+          "bzz-raw://fcb8b541e35540383fb0362aedc7ebe7297d64133f3b72a15100464ad29b8f41",
+          "dweb:/ipfs/QmT4gj4Hf1apwCpfaHCxByRnNMYhc6gsGqNaETEHyAXfer"
+        ],
+        "license": "AGPL-3.0-or-later"
+      },
+      "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol": {
+        "keccak256": "0xa6b81957e83a369cd1bb7650cc874a3e41a47b091990216942217ea496e24356",
+        "urls": [
+          "bzz-raw://dfb2e26ee31137804e2556fe8ab8a4596a82050dbd1f6adf9e8a937b2837c976",
+          "dweb:/ipfs/QmQjbVD7w85f2Q7Eh9kaePmXKJPdy8ykVDjCS3UVLLGSPo"
+        ],
+        "license": "AGPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol",
+    "id": 48244,
+    "exportedSymbols": {
+      "IDAO": [
+        46946
+      ],
+      "IPluginSetup": [
+        48243
+      ],
+      "PermissionLib": [
+        47009
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "47:3891:63",
+    "nodes": [
+      {
+        "id": 48173,
+        "nodeType": "PragmaDirective",
+        "src": "47:23:63",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 48175,
+        "nodeType": "ImportDirective",
+        "src": "72:73:63",
+        "nodes": [],
+        "absolutePath": "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol",
+        "file": "../../../core/permission/PermissionLib.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48244,
+        "sourceUnit": 47010,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48174,
+              "name": "PermissionLib",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 47009,
+              "src": "80:13:63",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48177,
+        "nodeType": "ImportDirective",
+        "src": "146:48:63",
+        "nodes": [],
+        "absolutePath": "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "file": "../../../core/dao/IDAO.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48244,
+        "sourceUnit": 46947,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48176,
+              "name": "IDAO",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 46946,
+              "src": "154:4:63",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48243,
+        "nodeType": "ContractDefinition",
+        "src": "427:3510:63",
+        "nodes": [
+          {
+            "id": 48186,
+            "nodeType": "StructDefinition",
+            "src": "813:118:63",
+            "nodes": [],
+            "canonicalName": "IPluginSetup.PreparedSetupData",
+            "members": [
+              {
+                "constant": false,
+                "id": 48181,
+                "mutability": "mutable",
+                "name": "helpers",
+                "nameLocation": "858:7:63",
+                "nodeType": "VariableDeclaration",
+                "scope": 48186,
+                "src": "848:17:63",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 48179,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "848:7:63",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 48180,
+                  "nodeType": "ArrayTypeName",
+                  "src": "848:9:63",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 48185,
+                "mutability": "mutable",
+                "name": "permissions",
+                "nameLocation": "913:11:63",
+                "nodeType": "VariableDeclaration",
+                "scope": 48186,
+                "src": "875:49:63",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_struct$_MultiTargetPermission_$47008_storage_$dyn_storage_ptr",
+                  "typeString": "struct PermissionLib.MultiTargetPermission[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 48183,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 48182,
+                      "name": "PermissionLib.MultiTargetPermission",
+                      "nameLocations": [
+                        "875:13:63",
+                        "889:21:63"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 47008,
+                      "src": "875:35:63"
+                    },
+                    "referencedDeclaration": 47008,
+                    "src": "875:35:63",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_MultiTargetPermission_$47008_storage_ptr",
+                      "typeString": "struct PermissionLib.MultiTargetPermission"
+                    }
+                  },
+                  "id": 48184,
+                  "nodeType": "ArrayTypeName",
+                  "src": "875:37:63",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_MultiTargetPermission_$47008_storage_$dyn_storage_ptr",
+                    "typeString": "struct PermissionLib.MultiTargetPermission[]"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "PreparedSetupData",
+            "nameLocation": "820:17:63",
+            "scope": 48243,
+            "visibility": "public"
+          },
+          {
+            "id": 48194,
+            "nodeType": "StructDefinition",
+            "src": "1464:105:63",
+            "nodes": [],
+            "canonicalName": "IPluginSetup.SetupPayload",
+            "members": [
+              {
+                "constant": false,
+                "id": 48188,
+                "mutability": "mutable",
+                "name": "plugin",
+                "nameLocation": "1502:6:63",
+                "nodeType": "VariableDeclaration",
+                "scope": 48194,
+                "src": "1494:14:63",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 48187,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1494:7:63",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 48191,
+                "mutability": "mutable",
+                "name": "currentHelpers",
+                "nameLocation": "1528:14:63",
+                "nodeType": "VariableDeclaration",
+                "scope": 48194,
+                "src": "1518:24:63",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                  "typeString": "address[]"
+                },
+                "typeName": {
+                  "baseType": {
+                    "id": 48189,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1518:7:63",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "id": 48190,
+                  "nodeType": "ArrayTypeName",
+                  "src": "1518:9:63",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_address_$dyn_storage_ptr",
+                    "typeString": "address[]"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 48193,
+                "mutability": "mutable",
+                "name": "data",
+                "nameLocation": "1558:4:63",
+                "nodeType": "VariableDeclaration",
+                "scope": 48194,
+                "src": "1552:10:63",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes_storage_ptr",
+                  "typeString": "bytes"
+                },
+                "typeName": {
+                  "id": 48192,
+                  "name": "bytes",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1552:5:63",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_storage_ptr",
+                    "typeString": "bytes"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "SetupPayload",
+            "nameLocation": "1471:12:63",
+            "scope": 48243,
+            "visibility": "public"
+          },
+          {
+            "id": 48207,
+            "nodeType": "FunctionDefinition",
+            "src": "2043:165:63",
+            "nodes": [],
+            "documentation": {
+              "id": 48195,
+              "nodeType": "StructuredDocumentation",
+              "src": "1575:463:63",
+              "text": "@notice Prepares the installation of a plugin.\n @param _dao The address of the installing DAO.\n @param _data The bytes-encoded data containing the input parameters for the installation as specified in the plugin's build metadata JSON file.\n @return plugin The address of the `Plugin` contract being prepared for installation.\n @return preparedSetupData The deployed plugin's relevant data which consists of helpers and permissions."
+            },
+            "functionSelector": "f10832f1",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "prepareInstallation",
+            "nameLocation": "2052:19:63",
+            "parameters": {
+              "id": 48200,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48197,
+                  "mutability": "mutable",
+                  "name": "_dao",
+                  "nameLocation": "2089:4:63",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48207,
+                  "src": "2081:12:63",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48196,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2081:7:63",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48199,
+                  "mutability": "mutable",
+                  "name": "_data",
+                  "nameLocation": "2118:5:63",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48207,
+                  "src": "2103:20:63",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_calldata_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 48198,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2103:5:63",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2071:58:63"
+            },
+            "returnParameters": {
+              "id": 48206,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48202,
+                  "mutability": "mutable",
+                  "name": "plugin",
+                  "nameLocation": "2156:6:63",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48207,
+                  "src": "2148:14:63",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48201,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2148:7:63",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48205,
+                  "mutability": "mutable",
+                  "name": "preparedSetupData",
+                  "nameLocation": "2189:17:63",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48207,
+                  "src": "2164:42:63",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PreparedSetupData_$48186_memory_ptr",
+                    "typeString": "struct IPluginSetup.PreparedSetupData"
+                  },
+                  "typeName": {
+                    "id": 48204,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 48203,
+                      "name": "PreparedSetupData",
+                      "nameLocations": [
+                        "2164:17:63"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 48186,
+                      "src": "2164:17:63"
+                    },
+                    "referencedDeclaration": 48186,
+                    "src": "2164:17:63",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_PreparedSetupData_$48186_storage_ptr",
+                      "typeString": "struct IPluginSetup.PreparedSetupData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2147:60:63"
+            },
+            "scope": 48243,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 48223,
+            "nodeType": "FunctionDefinition",
+            "src": "2738:206:63",
+            "nodes": [],
+            "documentation": {
+              "id": 48208,
+              "nodeType": "StructuredDocumentation",
+              "src": "2214:519:63",
+              "text": "@notice Prepares the update of a plugin.\n @param _dao The address of the updating DAO.\n @param _currentBuild The build number of the plugin to update from.\n @param _payload The relevant data necessary for the `prepareUpdate`. see above.\n @return initData The initialization data to be passed to upgradeable contracts when the update is applied in the `PluginSetupProcessor`.\n @return preparedSetupData The deployed plugin's relevant data which consists of helpers and permissions."
+            },
+            "functionSelector": "a8a9c29e",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "prepareUpdate",
+            "nameLocation": "2747:13:63",
+            "parameters": {
+              "id": 48216,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48210,
+                  "mutability": "mutable",
+                  "name": "_dao",
+                  "nameLocation": "2778:4:63",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48223,
+                  "src": "2770:12:63",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48209,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2770:7:63",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48212,
+                  "mutability": "mutable",
+                  "name": "_currentBuild",
+                  "nameLocation": "2799:13:63",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48223,
+                  "src": "2792:20:63",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 48211,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2792:6:63",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48215,
+                  "mutability": "mutable",
+                  "name": "_payload",
+                  "nameLocation": "2844:8:63",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48223,
+                  "src": "2822:30:63",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SetupPayload_$48194_calldata_ptr",
+                    "typeString": "struct IPluginSetup.SetupPayload"
+                  },
+                  "typeName": {
+                    "id": 48214,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 48213,
+                      "name": "SetupPayload",
+                      "nameLocations": [
+                        "2822:12:63"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 48194,
+                      "src": "2822:12:63"
+                    },
+                    "referencedDeclaration": 48194,
+                    "src": "2822:12:63",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SetupPayload_$48194_storage_ptr",
+                      "typeString": "struct IPluginSetup.SetupPayload"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2760:98:63"
+            },
+            "returnParameters": {
+              "id": 48222,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48218,
+                  "mutability": "mutable",
+                  "name": "initData",
+                  "nameLocation": "2890:8:63",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48223,
+                  "src": "2877:21:63",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 48217,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "2877:5:63",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48221,
+                  "mutability": "mutable",
+                  "name": "preparedSetupData",
+                  "nameLocation": "2925:17:63",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48223,
+                  "src": "2900:42:63",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PreparedSetupData_$48186_memory_ptr",
+                    "typeString": "struct IPluginSetup.PreparedSetupData"
+                  },
+                  "typeName": {
+                    "id": 48220,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 48219,
+                      "name": "PreparedSetupData",
+                      "nameLocations": [
+                        "2900:17:63"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 48186,
+                      "src": "2900:17:63"
+                    },
+                    "referencedDeclaration": 48186,
+                    "src": "2900:17:63",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_PreparedSetupData_$48186_storage_ptr",
+                      "typeString": "struct IPluginSetup.PreparedSetupData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "2876:67:63"
+            },
+            "scope": 48243,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 48236,
+            "nodeType": "FunctionDefinition",
+            "src": "3307:175:63",
+            "nodes": [],
+            "documentation": {
+              "id": 48224,
+              "nodeType": "StructuredDocumentation",
+              "src": "2950:352:63",
+              "text": "@notice Prepares the uninstallation of a plugin.\n @param _dao The address of the uninstalling DAO.\n @param _payload The relevant data necessary for the `prepareUninstallation`. see above.\n @return permissions The array of multi-targeted permission operations to be applied by the `PluginSetupProcessor` to the uninstalling DAO."
+            },
+            "functionSelector": "9cb0a124",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "prepareUninstallation",
+            "nameLocation": "3316:21:63",
+            "parameters": {
+              "id": 48230,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48226,
+                  "mutability": "mutable",
+                  "name": "_dao",
+                  "nameLocation": "3355:4:63",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48236,
+                  "src": "3347:12:63",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48225,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3347:7:63",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48229,
+                  "mutability": "mutable",
+                  "name": "_payload",
+                  "nameLocation": "3391:8:63",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48236,
+                  "src": "3369:30:63",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SetupPayload_$48194_calldata_ptr",
+                    "typeString": "struct IPluginSetup.SetupPayload"
+                  },
+                  "typeName": {
+                    "id": 48228,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 48227,
+                      "name": "SetupPayload",
+                      "nameLocations": [
+                        "3369:12:63"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 48194,
+                      "src": "3369:12:63"
+                    },
+                    "referencedDeclaration": 48194,
+                    "src": "3369:12:63",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SetupPayload_$48194_storage_ptr",
+                      "typeString": "struct IPluginSetup.SetupPayload"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3337:68:63"
+            },
+            "returnParameters": {
+              "id": 48235,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48234,
+                  "mutability": "mutable",
+                  "name": "permissions",
+                  "nameLocation": "3469:11:63",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48236,
+                  "src": "3424:56:63",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_array$_t_struct$_MultiTargetPermission_$47008_memory_ptr_$dyn_memory_ptr",
+                    "typeString": "struct PermissionLib.MultiTargetPermission[]"
+                  },
+                  "typeName": {
+                    "baseType": {
+                      "id": 48232,
+                      "nodeType": "UserDefinedTypeName",
+                      "pathNode": {
+                        "id": 48231,
+                        "name": "PermissionLib.MultiTargetPermission",
+                        "nameLocations": [
+                          "3424:13:63",
+                          "3438:21:63"
+                        ],
+                        "nodeType": "IdentifierPath",
+                        "referencedDeclaration": 47008,
+                        "src": "3424:35:63"
+                      },
+                      "referencedDeclaration": 47008,
+                      "src": "3424:35:63",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_struct$_MultiTargetPermission_$47008_storage_ptr",
+                        "typeString": "struct PermissionLib.MultiTargetPermission"
+                      }
+                    },
+                    "id": 48233,
+                    "nodeType": "ArrayTypeName",
+                    "src": "3424:37:63",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_array$_t_struct$_MultiTargetPermission_$47008_storage_$dyn_storage_ptr",
+                      "typeString": "struct PermissionLib.MultiTargetPermission[]"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3423:58:63"
+            },
+            "scope": 48243,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          },
+          {
+            "id": 48242,
+            "nodeType": "FunctionDefinition",
+            "src": "3877:58:63",
+            "nodes": [],
+            "documentation": {
+              "id": 48237,
+              "nodeType": "StructuredDocumentation",
+              "src": "3488:384:63",
+              "text": "@notice Returns the plugin implementation address.\n @return The address of the plugin implementation contract.\n @dev The implementation can be instantiated via the `new` keyword, cloned via the minimal clones pattern (see [ERC-1167](https://eips.ethereum.org/EIPS/eip-1167)), or proxied via the UUPS pattern (see [ERC-1822](https://eips.ethereum.org/EIPS/eip-1822))."
+            },
+            "functionSelector": "5c60da1b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "implementation",
+            "nameLocation": "3886:14:63",
+            "parameters": {
+              "id": 48238,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "3900:2:63"
+            },
+            "returnParameters": {
+              "id": 48241,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48240,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48242,
+                  "src": "3926:7:63",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48239,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "3926:7:63",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "3925:9:63"
+            },
+            "scope": 48243,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IPluginSetup",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 48178,
+          "nodeType": "StructuredDocumentation",
+          "src": "196:231:63",
+          "text": "@title IPluginSetup\n @author Aragon Association - 2022-2023\n @notice The interface required for a plugin setup contract to be consumed by the `PluginSetupProcessor` for plugin installations, updates, and uninstallations."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          48243
+        ],
+        "name": "IPluginSetup",
+        "nameLocation": "437:12:63",
+        "scope": 48244,
+        "usedErrors": []
+      }
+    ],
+    "license": "AGPL-3.0-or-later"
+  },
+  "id": 63
+}

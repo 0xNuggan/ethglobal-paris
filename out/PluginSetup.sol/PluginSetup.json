@@ -1,0 +1,1739 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "implementation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_dao",
+          "type": "address"
+        },
+        {
+          "internalType": "bytes",
+          "name": "_data",
+          "type": "bytes"
+        }
+      ],
+      "name": "prepareInstallation",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "plugin",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address[]",
+              "name": "helpers",
+              "type": "address[]"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "enum PermissionLib.Operation",
+                  "name": "operation",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "where",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "who",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "condition",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "permissionId",
+                  "type": "bytes32"
+                }
+              ],
+              "internalType": "struct PermissionLib.MultiTargetPermission[]",
+              "name": "permissions",
+              "type": "tuple[]"
+            }
+          ],
+          "internalType": "struct IPluginSetup.PreparedSetupData",
+          "name": "preparedSetupData",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_dao",
+          "type": "address"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "plugin",
+              "type": "address"
+            },
+            {
+              "internalType": "address[]",
+              "name": "currentHelpers",
+              "type": "address[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct IPluginSetup.SetupPayload",
+          "name": "_payload",
+          "type": "tuple"
+        }
+      ],
+      "name": "prepareUninstallation",
+      "outputs": [
+        {
+          "components": [
+            {
+              "internalType": "enum PermissionLib.Operation",
+              "name": "operation",
+              "type": "uint8"
+            },
+            {
+              "internalType": "address",
+              "name": "where",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "who",
+              "type": "address"
+            },
+            {
+              "internalType": "address",
+              "name": "condition",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes32",
+              "name": "permissionId",
+              "type": "bytes32"
+            }
+          ],
+          "internalType": "struct PermissionLib.MultiTargetPermission[]",
+          "name": "permissions",
+          "type": "tuple[]"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_dao",
+          "type": "address"
+        },
+        {
+          "internalType": "uint16",
+          "name": "_currentBuild",
+          "type": "uint16"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address",
+              "name": "plugin",
+              "type": "address"
+            },
+            {
+              "internalType": "address[]",
+              "name": "currentHelpers",
+              "type": "address[]"
+            },
+            {
+              "internalType": "bytes",
+              "name": "data",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct IPluginSetup.SetupPayload",
+          "name": "_payload",
+          "type": "tuple"
+        }
+      ],
+      "name": "prepareUpdate",
+      "outputs": [
+        {
+          "internalType": "bytes",
+          "name": "initData",
+          "type": "bytes"
+        },
+        {
+          "components": [
+            {
+              "internalType": "address[]",
+              "name": "helpers",
+              "type": "address[]"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "enum PermissionLib.Operation",
+                  "name": "operation",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "where",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "who",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "condition",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "permissionId",
+                  "type": "bytes32"
+                }
+              ],
+              "internalType": "struct PermissionLib.MultiTargetPermission[]",
+              "name": "permissions",
+              "type": "tuple[]"
+            }
+          ],
+          "internalType": "struct IPluginSetup.PreparedSetupData",
+          "name": "preparedSetupData",
+          "type": "tuple"
+        }
+      ],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "_interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "implementation()": "5c60da1b",
+    "prepareInstallation(address,bytes)": "f10832f1",
+    "prepareUninstallation(address,(address,address[],bytes))": "9cb0a124",
+    "prepareUpdate(address,uint16,(address,address[],bytes))": "a8a9c29e",
+    "supportsInterface(bytes4)": "01ffc9a7"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"implementation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_dao\",\"type\":\"address\"},{\"internalType\":\"bytes\",\"name\":\"_data\",\"type\":\"bytes\"}],\"name\":\"prepareInstallation\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"plugin\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"address[]\",\"name\":\"helpers\",\"type\":\"address[]\"},{\"components\":[{\"internalType\":\"enum PermissionLib.Operation\",\"name\":\"operation\",\"type\":\"uint8\"},{\"internalType\":\"address\",\"name\":\"where\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"who\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"condition\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"permissionId\",\"type\":\"bytes32\"}],\"internalType\":\"struct PermissionLib.MultiTargetPermission[]\",\"name\":\"permissions\",\"type\":\"tuple[]\"}],\"internalType\":\"struct IPluginSetup.PreparedSetupData\",\"name\":\"preparedSetupData\",\"type\":\"tuple\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_dao\",\"type\":\"address\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"plugin\",\"type\":\"address\"},{\"internalType\":\"address[]\",\"name\":\"currentHelpers\",\"type\":\"address[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct IPluginSetup.SetupPayload\",\"name\":\"_payload\",\"type\":\"tuple\"}],\"name\":\"prepareUninstallation\",\"outputs\":[{\"components\":[{\"internalType\":\"enum PermissionLib.Operation\",\"name\":\"operation\",\"type\":\"uint8\"},{\"internalType\":\"address\",\"name\":\"where\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"who\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"condition\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"permissionId\",\"type\":\"bytes32\"}],\"internalType\":\"struct PermissionLib.MultiTargetPermission[]\",\"name\":\"permissions\",\"type\":\"tuple[]\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_dao\",\"type\":\"address\"},{\"internalType\":\"uint16\",\"name\":\"_currentBuild\",\"type\":\"uint16\"},{\"components\":[{\"internalType\":\"address\",\"name\":\"plugin\",\"type\":\"address\"},{\"internalType\":\"address[]\",\"name\":\"currentHelpers\",\"type\":\"address[]\"},{\"internalType\":\"bytes\",\"name\":\"data\",\"type\":\"bytes\"}],\"internalType\":\"struct IPluginSetup.SetupPayload\",\"name\":\"_payload\",\"type\":\"tuple\"}],\"name\":\"prepareUpdate\",\"outputs\":[{\"internalType\":\"bytes\",\"name\":\"initData\",\"type\":\"bytes\"},{\"components\":[{\"internalType\":\"address[]\",\"name\":\"helpers\",\"type\":\"address[]\"},{\"components\":[{\"internalType\":\"enum PermissionLib.Operation\",\"name\":\"operation\",\"type\":\"uint8\"},{\"internalType\":\"address\",\"name\":\"where\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"who\",\"type\":\"address\"},{\"internalType\":\"address\",\"name\":\"condition\",\"type\":\"address\"},{\"internalType\":\"bytes32\",\"name\":\"permissionId\",\"type\":\"bytes32\"}],\"internalType\":\"struct PermissionLib.MultiTargetPermission[]\",\"name\":\"permissions\",\"type\":\"tuple[]\"}],\"internalType\":\"struct IPluginSetup.PreparedSetupData\",\"name\":\"preparedSetupData\",\"type\":\"tuple\"}],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Aragon Association - 2022-2023\",\"kind\":\"dev\",\"methods\":{\"implementation()\":{\"details\":\"The implementation can be instantiated via the `new` keyword, cloned via the minimal clones pattern (see [ERC-1167](https://eips.ethereum.org/EIPS/eip-1167)), or proxied via the UUPS pattern (see [ERC-1822](https://eips.ethereum.org/EIPS/eip-1822)).\",\"returns\":{\"_0\":\"The address of the plugin implementation contract.\"}},\"prepareInstallation(address,bytes)\":{\"params\":{\"_dao\":\"The address of the installing DAO.\",\"_data\":\"The bytes-encoded data containing the input parameters for the installation as specified in the plugin's build metadata JSON file.\"},\"returns\":{\"plugin\":\"The address of the `Plugin` contract being prepared for installation.\",\"preparedSetupData\":\"The deployed plugin's relevant data which consists of helpers and permissions.\"}},\"prepareUninstallation(address,(address,address[],bytes))\":{\"params\":{\"_dao\":\"The address of the uninstalling DAO.\",\"_payload\":\"The relevant data necessary for the `prepareUninstallation`. see above.\"},\"returns\":{\"permissions\":\"The array of multi-targeted permission operations to be applied by the `PluginSetupProcessor` to the uninstalling DAO.\"}},\"prepareUpdate(address,uint16,(address,address[],bytes))\":{\"params\":{\"_currentBuild\":\"The build number of the plugin to update from.\",\"_dao\":\"The address of the updating DAO.\",\"_payload\":\"The relevant data necessary for the `prepareUpdate`. see above.\"},\"returns\":{\"initData\":\"The initialization data to be passed to upgradeable contracts when the update is applied in the `PluginSetupProcessor`.\",\"preparedSetupData\":\"The deployed plugin's relevant data which consists of helpers and permissions.\"}},\"supportsInterface(bytes4)\":{\"params\":{\"_interfaceId\":\"The ID of the interface.\"},\"returns\":{\"_0\":\"Returns `true` if the interface is supported.\"}}},\"title\":\"PluginSetup\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"implementation()\":{\"notice\":\"Returns the plugin implementation address.\"},\"prepareInstallation(address,bytes)\":{\"notice\":\"Prepares the installation of a plugin.\"},\"prepareUninstallation(address,(address,address[],bytes))\":{\"notice\":\"Prepares the uninstallation of a plugin.\"},\"prepareUpdate(address,uint16,(address,address[],bytes))\":{\"notice\":\"Prepares the update of a plugin.\"},\"supportsInterface(bytes4)\":{\"notice\":\"Checks if this or the parent contract supports an interface by its ID.\"}},\"notice\":\"An abstract contract that developers have to inherit from to write the setup of a plugin.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol\":\"PluginSetup\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@aragon/osx/=lib/osx/packages/contracts/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":osx/=lib/osx/\"]},\"sources\":{\"lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol\":{\"keccak256\":\"0x3cbef5ebc24b415252e2f8c0c9254555d30d9f085603b4b80d9b5ed20ab87e90\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e8fa670c3bdce78e642cc6ae11c4cb38b133499cdce5e1990a9979d424703263\",\"dweb:/ipfs/QmVxeCUk4jL2pXQyhsoNJwyU874wRufS2WvGe8TgPKPqhE\"]},\"lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol\":{\"keccak256\":\"0x1d4afe6cb24200cc4545eed814ecf5847277dfe5d613a1707aad5fceecebcfff\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://383fb7b8181016ac5ccf07bc9cdb7c1b5045ea36e2cc4df52bcbf20396fc7688\",\"dweb:/ipfs/QmYJ7Cg4WmE3rR8KGQxjUCXFfTH6TcwZ2Z1f6tPrq7jHFr\"]},\"lib/openzeppelin-contracts/contracts/proxy/Clones.sol\":{\"keccak256\":\"0x01f055f5c26ba25d7f83e9aa9ba877fbea4d0bf22227de046ea67494bc932999\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e1306add0c9388918d04c45f6acae3551f019ebf8a77e6cc1c0958316ce1c1eb\",\"dweb:/ipfs/QmR4KHkcfP65RfZtH8TcC7rSdCoWk2Dnog6fhzzjLad8Aa\"]},\"lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol\":{\"keccak256\":\"0xa2b22da3032e50b55f95ec1d13336102d675f341167aa76db571ef7f8bb7975d\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://96b6d77a20bebd4eb06b801d3d020c7e82be13bd535cb0d0a6b7181c51dab5d5\",\"dweb:/ipfs/QmPUR9Cv9jNFdQX6PtBfaBW1ZCnKwiu65R2VD5kbdanDyn\"]},\"lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol\":{\"keccak256\":\"0x3b21ae06bf5957f73fa16754b0669c77b7abd8ba6c072d35c3281d446fdb86c2\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2db8e18505e86e02526847005d7287a33e397ed7fb9eaba3fd4a4a197add16e2\",\"dweb:/ipfs/QmW9BSuKTzHWHBNSHF4L8XfVuU1uJrP2vLg84YtBd8mL82\"]},\"lib/openzeppelin-contracts/contracts/proxy/Proxy.sol\":{\"keccak256\":\"0xc130fe33f1b2132158531a87734153293f6d07bc263ff4ac90e85da9c82c0e27\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://8831721b6f4cc26534d190f9f1631c3f59c9ff38efdd911f85e0882b8e360472\",\"dweb:/ipfs/QmQZnLErZNStirSQ13ZNWQgvEYUtGE5tXYwn4QUPaVUfPN\"]},\"lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol\":{\"keccak256\":\"0xd50a3421ac379ccb1be435fa646d66a65c986b4924f0849839f08692f39dde61\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://ada1e030c0231db8d143b44ce92b4d1158eedb087880cad6d8cc7bd7ebe7b354\",\"dweb:/ipfs/QmWZ2NHZweRpz1U9GF6R1h65ri76dnX7fNxLBeM2t5N5Ce\"]},\"lib/openzeppelin-contracts/contracts/utils/Address.sol\":{\"keccak256\":\"0x006dd67219697fe68d7fbfdea512e7c4cb64a43565ed86171d67e844982da6fa\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://2455248c8ddd9cc6a7af76a13973cddf222072427e7b0e2a7d1aff345145e931\",\"dweb:/ipfs/QmfYjnjRbWqYpuxurqveE6HtzsY1Xx323J428AKQgtBJZm\"]},\"lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol\":{\"keccak256\":\"0xf09e68aa0dc6722a25bc46490e8d48ed864466d17313b8a0b254c36b54e49899\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://e26daf81e2252dc1fe1ce0e4b55c2eb7c6d1ee84ae6558d1a9554432ea1d32da\",\"dweb:/ipfs/Qmb1UANWiWq5pCKbmHSu772hd4nt374dVaghGmwSVNuk8Q\"]},\"lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol\":{\"keccak256\":\"0xd10975de010d89fd1c78dc5e8a9a7e7f496198085c151648f20cba166b32582b\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://fb0048dee081f6fffa5f74afc3fb328483c2a30504e94a0ddd2a5114d731ec4d\",\"dweb:/ipfs/QmZptt1nmYoA5SgjwnSgWqgUSDgm4q52Yos3xhnMv3MV43\"]},\"lib/openzeppelin-contracts/contracts/utils/introspection/ERC165Checker.sol\":{\"keccak256\":\"0x5a08ad61f4e82b8a3323562661a86fb10b10190848073fdc13d4ac43710ffba5\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://6f7bb74cf88fd88daa34e118bc6e363381d05044f34f391d39a10c0c9dac3ebd\",\"dweb:/ipfs/QmNbQ3v8v4zuDtg7VeLAbdhAm3tCzUodNoDZZ8ekmCHWZX\"]},\"lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol\":{\"keccak256\":\"0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f\",\"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy\"]},\"lib/osx/packages/contracts/src/core/dao/IDAO.sol\":{\"keccak256\":\"0x5da4fcc2ac043eebb78c8c278da86f0fa7ad71ec9ce35a398bcc60c25ba6c7c3\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://22dfd57672c31d73f65db47e55b19bfbfba15e4d8e570b5a4fb17288eba0f245\",\"dweb:/ipfs/QmPcBckvXy3TXZzSLF7cc1dnfF77V1Y5Zh1JweZ3uZUKND\"]},\"lib/osx/packages/contracts/src/core/permission/PermissionLib.sol\":{\"keccak256\":\"0xd1a00691deee7a95f44a7ea8bda5494a71ae2662d056315dbe260aadc4025cb6\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://fcb8b541e35540383fb0362aedc7ebe7297d64133f3b72a15100464ad29b8f41\",\"dweb:/ipfs/QmT4gj4Hf1apwCpfaHCxByRnNMYhc6gsGqNaETEHyAXfer\"]},\"lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol\":{\"keccak256\":\"0xa6b81957e83a369cd1bb7650cc874a3e41a47b091990216942217ea496e24356\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://dfb2e26ee31137804e2556fe8ab8a4596a82050dbd1f6adf9e8a937b2837c976\",\"dweb:/ipfs/QmQjbVD7w85f2Q7Eh9kaePmXKJPdy8ykVDjCS3UVLLGSPo\"]},\"lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol\":{\"keccak256\":\"0x7fb55d45f49556316c47eb43bda5367c0cf348290e798225e92e0f5495a6cf28\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://b5a57126910f044f9d029b61a0d1c346e0902b2ef39a2a5bf865f2bfb9ec7f65\",\"dweb:/ipfs/QmWPTwoy9kfVGURaPGJZ4AHps4wDUay8xfmxPTGxXBpXCs\"]},\"lib/osx/packages/contracts/src/utils/Proxy.sol\":{\"keccak256\":\"0x4850fcd37ce5e3747d067fd0d50bd9df2b9a1a5c18d19b9d18861191c1943e03\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://e5b685c89e687f6a83c0dd3a54de555f209edb170ec2951b1f529a8e15b6c929\",\"dweb:/ipfs/Qma4N68QwZJeLiZzUdUZw4Nnj6vaavoQSNBa7roWLvZGwc\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "implementation",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_dao",
+              "type": "address"
+            },
+            {
+              "internalType": "bytes",
+              "name": "_data",
+              "type": "bytes"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "prepareInstallation",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "plugin",
+              "type": "address"
+            },
+            {
+              "internalType": "struct IPluginSetup.PreparedSetupData",
+              "name": "preparedSetupData",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address[]",
+                  "name": "helpers",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "struct PermissionLib.MultiTargetPermission[]",
+                  "name": "permissions",
+                  "type": "tuple[]",
+                  "components": [
+                    {
+                      "internalType": "enum PermissionLib.Operation",
+                      "name": "operation",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "where",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "who",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "condition",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "bytes32",
+                      "name": "permissionId",
+                      "type": "bytes32"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_dao",
+              "type": "address"
+            },
+            {
+              "internalType": "struct IPluginSetup.SetupPayload",
+              "name": "_payload",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "plugin",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address[]",
+                  "name": "currentHelpers",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "prepareUninstallation",
+          "outputs": [
+            {
+              "internalType": "struct PermissionLib.MultiTargetPermission[]",
+              "name": "permissions",
+              "type": "tuple[]",
+              "components": [
+                {
+                  "internalType": "enum PermissionLib.Operation",
+                  "name": "operation",
+                  "type": "uint8"
+                },
+                {
+                  "internalType": "address",
+                  "name": "where",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "who",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address",
+                  "name": "condition",
+                  "type": "address"
+                },
+                {
+                  "internalType": "bytes32",
+                  "name": "permissionId",
+                  "type": "bytes32"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_dao",
+              "type": "address"
+            },
+            {
+              "internalType": "uint16",
+              "name": "_currentBuild",
+              "type": "uint16"
+            },
+            {
+              "internalType": "struct IPluginSetup.SetupPayload",
+              "name": "_payload",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address",
+                  "name": "plugin",
+                  "type": "address"
+                },
+                {
+                  "internalType": "address[]",
+                  "name": "currentHelpers",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "bytes",
+                  "name": "data",
+                  "type": "bytes"
+                }
+              ]
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "prepareUpdate",
+          "outputs": [
+            {
+              "internalType": "bytes",
+              "name": "initData",
+              "type": "bytes"
+            },
+            {
+              "internalType": "struct IPluginSetup.PreparedSetupData",
+              "name": "preparedSetupData",
+              "type": "tuple",
+              "components": [
+                {
+                  "internalType": "address[]",
+                  "name": "helpers",
+                  "type": "address[]"
+                },
+                {
+                  "internalType": "struct PermissionLib.MultiTargetPermission[]",
+                  "name": "permissions",
+                  "type": "tuple[]",
+                  "components": [
+                    {
+                      "internalType": "enum PermissionLib.Operation",
+                      "name": "operation",
+                      "type": "uint8"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "where",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "who",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "address",
+                      "name": "condition",
+                      "type": "address"
+                    },
+                    {
+                      "internalType": "bytes32",
+                      "name": "permissionId",
+                      "type": "bytes32"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "_interfaceId",
+              "type": "bytes4"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "supportsInterface",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "implementation()": {
+            "details": "The implementation can be instantiated via the `new` keyword, cloned via the minimal clones pattern (see [ERC-1167](https://eips.ethereum.org/EIPS/eip-1167)), or proxied via the UUPS pattern (see [ERC-1822](https://eips.ethereum.org/EIPS/eip-1822)).",
+            "returns": {
+              "_0": "The address of the plugin implementation contract."
+            }
+          },
+          "prepareInstallation(address,bytes)": {
+            "params": {
+              "_dao": "The address of the installing DAO.",
+              "_data": "The bytes-encoded data containing the input parameters for the installation as specified in the plugin's build metadata JSON file."
+            },
+            "returns": {
+              "plugin": "The address of the `Plugin` contract being prepared for installation.",
+              "preparedSetupData": "The deployed plugin's relevant data which consists of helpers and permissions."
+            }
+          },
+          "prepareUninstallation(address,(address,address[],bytes))": {
+            "params": {
+              "_dao": "The address of the uninstalling DAO.",
+              "_payload": "The relevant data necessary for the `prepareUninstallation`. see above."
+            },
+            "returns": {
+              "permissions": "The array of multi-targeted permission operations to be applied by the `PluginSetupProcessor` to the uninstalling DAO."
+            }
+          },
+          "prepareUpdate(address,uint16,(address,address[],bytes))": {
+            "params": {
+              "_currentBuild": "The build number of the plugin to update from.",
+              "_dao": "The address of the updating DAO.",
+              "_payload": "The relevant data necessary for the `prepareUpdate`. see above."
+            },
+            "returns": {
+              "initData": "The initialization data to be passed to upgradeable contracts when the update is applied in the `PluginSetupProcessor`.",
+              "preparedSetupData": "The deployed plugin's relevant data which consists of helpers and permissions."
+            }
+          },
+          "supportsInterface(bytes4)": {
+            "params": {
+              "_interfaceId": "The ID of the interface."
+            },
+            "returns": {
+              "_0": "Returns `true` if the interface is supported."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "implementation()": {
+            "notice": "Returns the plugin implementation address."
+          },
+          "prepareInstallation(address,bytes)": {
+            "notice": "Prepares the installation of a plugin."
+          },
+          "prepareUninstallation(address,(address,address[],bytes))": {
+            "notice": "Prepares the uninstallation of a plugin."
+          },
+          "prepareUpdate(address,uint16,(address,address[],bytes))": {
+            "notice": "Prepares the update of a plugin."
+          },
+          "supportsInterface(bytes4)": {
+            "notice": "Checks if this or the parent contract supports an interface by its ID."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@aragon/osx/=lib/osx/packages/contracts/src/",
+        ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":osx/=lib/osx/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol": "PluginSetup"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol": {
+        "keccak256": "0x3cbef5ebc24b415252e2f8c0c9254555d30d9f085603b4b80d9b5ed20ab87e90",
+        "urls": [
+          "bzz-raw://e8fa670c3bdce78e642cc6ae11c4cb38b133499cdce5e1990a9979d424703263",
+          "dweb:/ipfs/QmVxeCUk4jL2pXQyhsoNJwyU874wRufS2WvGe8TgPKPqhE"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol": {
+        "keccak256": "0x1d4afe6cb24200cc4545eed814ecf5847277dfe5d613a1707aad5fceecebcfff",
+        "urls": [
+          "bzz-raw://383fb7b8181016ac5ccf07bc9cdb7c1b5045ea36e2cc4df52bcbf20396fc7688",
+          "dweb:/ipfs/QmYJ7Cg4WmE3rR8KGQxjUCXFfTH6TcwZ2Z1f6tPrq7jHFr"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/proxy/Clones.sol": {
+        "keccak256": "0x01f055f5c26ba25d7f83e9aa9ba877fbea4d0bf22227de046ea67494bc932999",
+        "urls": [
+          "bzz-raw://e1306add0c9388918d04c45f6acae3551f019ebf8a77e6cc1c0958316ce1c1eb",
+          "dweb:/ipfs/QmR4KHkcfP65RfZtH8TcC7rSdCoWk2Dnog6fhzzjLad8Aa"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol": {
+        "keccak256": "0xa2b22da3032e50b55f95ec1d13336102d675f341167aa76db571ef7f8bb7975d",
+        "urls": [
+          "bzz-raw://96b6d77a20bebd4eb06b801d3d020c7e82be13bd535cb0d0a6b7181c51dab5d5",
+          "dweb:/ipfs/QmPUR9Cv9jNFdQX6PtBfaBW1ZCnKwiu65R2VD5kbdanDyn"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol": {
+        "keccak256": "0x3b21ae06bf5957f73fa16754b0669c77b7abd8ba6c072d35c3281d446fdb86c2",
+        "urls": [
+          "bzz-raw://2db8e18505e86e02526847005d7287a33e397ed7fb9eaba3fd4a4a197add16e2",
+          "dweb:/ipfs/QmW9BSuKTzHWHBNSHF4L8XfVuU1uJrP2vLg84YtBd8mL82"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol": {
+        "keccak256": "0xc130fe33f1b2132158531a87734153293f6d07bc263ff4ac90e85da9c82c0e27",
+        "urls": [
+          "bzz-raw://8831721b6f4cc26534d190f9f1631c3f59c9ff38efdd911f85e0882b8e360472",
+          "dweb:/ipfs/QmQZnLErZNStirSQ13ZNWQgvEYUtGE5tXYwn4QUPaVUfPN"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol": {
+        "keccak256": "0xd50a3421ac379ccb1be435fa646d66a65c986b4924f0849839f08692f39dde61",
+        "urls": [
+          "bzz-raw://ada1e030c0231db8d143b44ce92b4d1158eedb087880cad6d8cc7bd7ebe7b354",
+          "dweb:/ipfs/QmWZ2NHZweRpz1U9GF6R1h65ri76dnX7fNxLBeM2t5N5Ce"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/Address.sol": {
+        "keccak256": "0x006dd67219697fe68d7fbfdea512e7c4cb64a43565ed86171d67e844982da6fa",
+        "urls": [
+          "bzz-raw://2455248c8ddd9cc6a7af76a13973cddf222072427e7b0e2a7d1aff345145e931",
+          "dweb:/ipfs/QmfYjnjRbWqYpuxurqveE6HtzsY1Xx323J428AKQgtBJZm"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol": {
+        "keccak256": "0xf09e68aa0dc6722a25bc46490e8d48ed864466d17313b8a0b254c36b54e49899",
+        "urls": [
+          "bzz-raw://e26daf81e2252dc1fe1ce0e4b55c2eb7c6d1ee84ae6558d1a9554432ea1d32da",
+          "dweb:/ipfs/Qmb1UANWiWq5pCKbmHSu772hd4nt374dVaghGmwSVNuk8Q"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol": {
+        "keccak256": "0xd10975de010d89fd1c78dc5e8a9a7e7f496198085c151648f20cba166b32582b",
+        "urls": [
+          "bzz-raw://fb0048dee081f6fffa5f74afc3fb328483c2a30504e94a0ddd2a5114d731ec4d",
+          "dweb:/ipfs/QmZptt1nmYoA5SgjwnSgWqgUSDgm4q52Yos3xhnMv3MV43"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165Checker.sol": {
+        "keccak256": "0x5a08ad61f4e82b8a3323562661a86fb10b10190848073fdc13d4ac43710ffba5",
+        "urls": [
+          "bzz-raw://6f7bb74cf88fd88daa34e118bc6e363381d05044f34f391d39a10c0c9dac3ebd",
+          "dweb:/ipfs/QmNbQ3v8v4zuDtg7VeLAbdhAm3tCzUodNoDZZ8ekmCHWZX"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
+        "keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+        "urls": [
+          "bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+          "dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+        ],
+        "license": "MIT"
+      },
+      "lib/osx/packages/contracts/src/core/dao/IDAO.sol": {
+        "keccak256": "0x5da4fcc2ac043eebb78c8c278da86f0fa7ad71ec9ce35a398bcc60c25ba6c7c3",
+        "urls": [
+          "bzz-raw://22dfd57672c31d73f65db47e55b19bfbfba15e4d8e570b5a4fb17288eba0f245",
+          "dweb:/ipfs/QmPcBckvXy3TXZzSLF7cc1dnfF77V1Y5Zh1JweZ3uZUKND"
+        ],
+        "license": "AGPL-3.0-or-later"
+      },
+      "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol": {
+        "keccak256": "0xd1a00691deee7a95f44a7ea8bda5494a71ae2662d056315dbe260aadc4025cb6",
+        "urls": [
+          "bzz-raw://fcb8b541e35540383fb0362aedc7ebe7297d64133f3b72a15100464ad29b8f41",
+          "dweb:/ipfs/QmT4gj4Hf1apwCpfaHCxByRnNMYhc6gsGqNaETEHyAXfer"
+        ],
+        "license": "AGPL-3.0-or-later"
+      },
+      "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol": {
+        "keccak256": "0xa6b81957e83a369cd1bb7650cc874a3e41a47b091990216942217ea496e24356",
+        "urls": [
+          "bzz-raw://dfb2e26ee31137804e2556fe8ab8a4596a82050dbd1f6adf9e8a937b2837c976",
+          "dweb:/ipfs/QmQjbVD7w85f2Q7Eh9kaePmXKJPdy8ykVDjCS3UVLLGSPo"
+        ],
+        "license": "AGPL-3.0-or-later"
+      },
+      "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol": {
+        "keccak256": "0x7fb55d45f49556316c47eb43bda5367c0cf348290e798225e92e0f5495a6cf28",
+        "urls": [
+          "bzz-raw://b5a57126910f044f9d029b61a0d1c346e0902b2ef39a2a5bf865f2bfb9ec7f65",
+          "dweb:/ipfs/QmWPTwoy9kfVGURaPGJZ4AHps4wDUay8xfmxPTGxXBpXCs"
+        ],
+        "license": "AGPL-3.0-or-later"
+      },
+      "lib/osx/packages/contracts/src/utils/Proxy.sol": {
+        "keccak256": "0x4850fcd37ce5e3747d067fd0d50bd9df2b9a1a5c18d19b9d18861191c1943e03",
+        "urls": [
+          "bzz-raw://e5b685c89e687f6a83c0dd3a54de555f209edb170ec2951b1f529a8e15b6c929",
+          "dweb:/ipfs/Qma4N68QwZJeLiZzUdUZw4Nnj6vaavoQSNBa7roWLvZGwc"
+        ],
+        "license": "AGPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol",
+    "id": 48320,
+    "exportedSymbols": {
+      "Clones": [
+        44966
+      ],
+      "ERC165": [
+        45833
+      ],
+      "ERC165Checker": [
+        46027
+      ],
+      "IPluginSetup": [
+        48243
+      ],
+      "PermissionLib": [
+        47009
+      ],
+      "PluginSetup": [
+        48319
+      ],
+      "createERC1967": [
+        48355
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "47:2029:64",
+    "nodes": [
+      {
+        "id": 48245,
+        "nodeType": "PragmaDirective",
+        "src": "47:23:64",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 48247,
+        "nodeType": "ImportDirective",
+        "src": "72:78:64",
+        "nodes": [],
+        "absolutePath": "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/ERC165.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48320,
+        "sourceUnit": 45834,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48246,
+              "name": "ERC165",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 45833,
+              "src": "80:6:64",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48249,
+        "nodeType": "ImportDirective",
+        "src": "151:92:64",
+        "nodes": [],
+        "absolutePath": "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165Checker.sol",
+        "file": "@openzeppelin/contracts/utils/introspection/ERC165Checker.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48320,
+        "sourceUnit": 46028,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48248,
+              "name": "ERC165Checker",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 46027,
+              "src": "159:13:64",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48251,
+        "nodeType": "ImportDirective",
+        "src": "244:64:64",
+        "nodes": [],
+        "absolutePath": "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
+        "file": "@openzeppelin/contracts/proxy/Clones.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48320,
+        "sourceUnit": 44967,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48250,
+              "name": "Clones",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 44966,
+              "src": "252:6:64",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48253,
+        "nodeType": "ImportDirective",
+        "src": "310:73:64",
+        "nodes": [],
+        "absolutePath": "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol",
+        "file": "../../../core/permission/PermissionLib.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48320,
+        "sourceUnit": 47010,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48252,
+              "name": "PermissionLib",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 47009,
+              "src": "318:13:64",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48255,
+        "nodeType": "ImportDirective",
+        "src": "384:77:64",
+        "nodes": [],
+        "absolutePath": "lib/osx/packages/contracts/src/utils/Proxy.sol",
+        "file": "../../../utils/Proxy.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48320,
+        "sourceUnit": 48356,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48254,
+              "name": "createERC1967Proxy",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 48355,
+              "src": "392:18:64",
+              "typeDescriptions": {}
+            },
+            "local": "createERC1967",
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48257,
+        "nodeType": "ImportDirective",
+        "src": "462:48:64",
+        "nodes": [],
+        "absolutePath": "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol",
+        "file": "./IPluginSetup.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 48320,
+        "sourceUnit": 48244,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 48256,
+              "name": "IPluginSetup",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 48243,
+              "src": "470:12:64",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 48319,
+        "nodeType": "ContractDefinition",
+        "src": "680:1395:64",
+        "nodes": [
+          {
+            "id": 48280,
+            "nodeType": "FunctionDefinition",
+            "src": "773:261:64",
+            "nodes": [],
+            "body": {
+              "id": 48279,
+              "nodeType": "Block",
+              "src": "1032:2:64",
+              "nodes": [],
+              "statements": []
+            },
+            "baseFunctions": [
+              48223
+            ],
+            "documentation": {
+              "id": 48263,
+              "nodeType": "StructuredDocumentation",
+              "src": "740:28:64",
+              "text": "@inheritdoc IPluginSetup"
+            },
+            "functionSelector": "a8a9c29e",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "prepareUpdate",
+            "nameLocation": "782:13:64",
+            "overrides": {
+              "id": 48272,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "935:8:64"
+            },
+            "parameters": {
+              "id": 48271,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48265,
+                  "mutability": "mutable",
+                  "name": "_dao",
+                  "nameLocation": "813:4:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48280,
+                  "src": "805:12:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48264,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "805:7:64",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48267,
+                  "mutability": "mutable",
+                  "name": "_currentBuild",
+                  "nameLocation": "834:13:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48280,
+                  "src": "827:20:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint16",
+                    "typeString": "uint16"
+                  },
+                  "typeName": {
+                    "id": 48266,
+                    "name": "uint16",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "827:6:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint16",
+                      "typeString": "uint16"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48270,
+                  "mutability": "mutable",
+                  "name": "_payload",
+                  "nameLocation": "879:8:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48280,
+                  "src": "857:30:64",
+                  "stateVariable": false,
+                  "storageLocation": "calldata",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_SetupPayload_$48194_calldata_ptr",
+                    "typeString": "struct IPluginSetup.SetupPayload"
+                  },
+                  "typeName": {
+                    "id": 48269,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 48268,
+                      "name": "SetupPayload",
+                      "nameLocations": [
+                        "857:12:64"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 48194,
+                      "src": "857:12:64"
+                    },
+                    "referencedDeclaration": 48194,
+                    "src": "857:12:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_SetupPayload_$48194_storage_ptr",
+                      "typeString": "struct IPluginSetup.SetupPayload"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "795:98:64"
+            },
+            "returnParameters": {
+              "id": 48278,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48274,
+                  "mutability": "mutable",
+                  "name": "initData",
+                  "nameLocation": "974:8:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48280,
+                  "src": "961:21:64",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 48273,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "961:5:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48277,
+                  "mutability": "mutable",
+                  "name": "preparedSetupData",
+                  "nameLocation": "1009:17:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48280,
+                  "src": "984:42:64",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_struct$_PreparedSetupData_$48186_memory_ptr",
+                    "typeString": "struct IPluginSetup.PreparedSetupData"
+                  },
+                  "typeName": {
+                    "id": 48276,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 48275,
+                      "name": "PreparedSetupData",
+                      "nameLocations": [
+                        "984:17:64"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 48186,
+                      "src": "984:17:64"
+                    },
+                    "referencedDeclaration": 48186,
+                    "src": "984:17:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_struct$_PreparedSetupData_$48186_storage_ptr",
+                      "typeString": "struct IPluginSetup.PreparedSetupData"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "960:67:64"
+            },
+            "scope": 48319,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "external"
+          },
+          {
+            "id": 48296,
+            "nodeType": "FunctionDefinition",
+            "src": "1467:183:64",
+            "nodes": [],
+            "body": {
+              "id": 48295,
+              "nodeType": "Block",
+              "src": "1589:61:64",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 48291,
+                        "name": "_implementation",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48283,
+                        "src": "1620:15:64",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 48292,
+                        "name": "_data",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48285,
+                        "src": "1637:5:64",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_memory_ptr",
+                          "typeString": "bytes memory"
+                        }
+                      ],
+                      "id": 48290,
+                      "name": "createERC1967",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48355,
+                      "src": "1606:13:64",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_address_$_t_bytes_memory_ptr_$returns$_t_address_$",
+                        "typeString": "function (address,bytes memory) returns (address)"
+                      }
+                    },
+                    "id": 48293,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1606:37:64",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "functionReturnParameters": 48289,
+                  "id": 48294,
+                  "nodeType": "Return",
+                  "src": "1599:44:64"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 48281,
+              "nodeType": "StructuredDocumentation",
+              "src": "1040:422:64",
+              "text": "@notice A convenience function to create an [ERC-1967](https://eips.ethereum.org/EIPS/eip-1967) proxy contract pointing to an implementation and being associated to a DAO.\n @param _implementation The address of the implementation contract to which the proxy is pointing to.\n @param _data The data to initialize the storage of the proxy contract.\n @return The address of the created proxy contract."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "createERC1967Proxy",
+            "nameLocation": "1476:18:64",
+            "parameters": {
+              "id": 48286,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48283,
+                  "mutability": "mutable",
+                  "name": "_implementation",
+                  "nameLocation": "1512:15:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48296,
+                  "src": "1504:23:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48282,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1504:7:64",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48285,
+                  "mutability": "mutable",
+                  "name": "_data",
+                  "nameLocation": "1550:5:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48296,
+                  "src": "1537:18:64",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes_memory_ptr",
+                    "typeString": "bytes"
+                  },
+                  "typeName": {
+                    "id": 48284,
+                    "name": "bytes",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1537:5:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes_storage_ptr",
+                      "typeString": "bytes"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1494:67:64"
+            },
+            "returnParameters": {
+              "id": 48289,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48288,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48296,
+                  "src": "1580:7:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48287,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1580:7:64",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1579:9:64"
+            },
+            "scope": 48319,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 48318,
+            "nodeType": "FunctionDefinition",
+            "src": "1858:215:64",
+            "nodes": [],
+            "body": {
+              "id": 48317,
+              "nodeType": "Block",
+              "src": "1950:123:64",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 48315,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "commonType": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      },
+                      "id": 48310,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "id": 48305,
+                        "name": "_interfaceId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 48299,
+                        "src": "1979:12:64",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 48307,
+                              "name": "IPluginSetup",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 48243,
+                              "src": "2000:12:64",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_IPluginSetup_$48243_$",
+                                "typeString": "type(contract IPluginSetup)"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_type$_t_contract$_IPluginSetup_$48243_$",
+                                "typeString": "type(contract IPluginSetup)"
+                              }
+                            ],
+                            "id": 48306,
+                            "name": "type",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -27,
+                            "src": "1995:4:64",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_metatype_pure$__$returns$__$",
+                              "typeString": "function () pure"
+                            }
+                          },
+                          "id": 48308,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1995:18:64",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_meta_type_t_contract$_IPluginSetup_$48243",
+                            "typeString": "type(contract IPluginSetup)"
+                          }
+                        },
+                        "id": 48309,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberLocation": "2014:11:64",
+                        "memberName": "interfaceId",
+                        "nodeType": "MemberAccess",
+                        "src": "1995:30:64",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "src": "1979:46:64",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "||",
+                    "rightExpression": {
+                      "arguments": [
+                        {
+                          "id": 48313,
+                          "name": "_interfaceId",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 48299,
+                          "src": "2053:12:64",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes4",
+                            "typeString": "bytes4"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes4",
+                            "typeString": "bytes4"
+                          }
+                        ],
+                        "expression": {
+                          "id": 48311,
+                          "name": "super",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -25,
+                          "src": "2029:5:64",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_super$_PluginSetup_$48319_$",
+                            "typeString": "type(contract super PluginSetup)"
+                          }
+                        },
+                        "id": 48312,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "2035:17:64",
+                        "memberName": "supportsInterface",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 45832,
+                        "src": "2029:23:64",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$_t_bytes4_$returns$_t_bool_$",
+                          "typeString": "function (bytes4) view returns (bool)"
+                        }
+                      },
+                      "id": 48314,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "2029:37:64",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "1979:87:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 48304,
+                  "id": 48316,
+                  "nodeType": "Return",
+                  "src": "1960:106:64"
+                }
+              ]
+            },
+            "baseFunctions": [
+              45832
+            ],
+            "documentation": {
+              "id": 48297,
+              "nodeType": "StructuredDocumentation",
+              "src": "1656:197:64",
+              "text": "@notice Checks if this or the parent contract supports an interface by its ID.\n @param _interfaceId The ID of the interface.\n @return Returns `true` if the interface is supported."
+            },
+            "functionSelector": "01ffc9a7",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "supportsInterface",
+            "nameLocation": "1867:17:64",
+            "overrides": {
+              "id": 48301,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1926:8:64"
+            },
+            "parameters": {
+              "id": 48300,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48299,
+                  "mutability": "mutable",
+                  "name": "_interfaceId",
+                  "nameLocation": "1892:12:64",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48318,
+                  "src": "1885:19:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 48298,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1885:6:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1884:21:64"
+            },
+            "returnParameters": {
+              "id": 48304,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48303,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48318,
+                  "src": "1944:4:64",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 48302,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1944:4:64",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1943:6:64"
+            },
+            "scope": 48319,
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 48259,
+              "name": "ERC165",
+              "nameLocations": [
+                "713:6:64"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 45833,
+              "src": "713:6:64"
+            },
+            "id": 48260,
+            "nodeType": "InheritanceSpecifier",
+            "src": "713:6:64"
+          },
+          {
+            "baseName": {
+              "id": 48261,
+              "name": "IPluginSetup",
+              "nameLocations": [
+                "721:12:64"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 48243,
+              "src": "721:12:64"
+            },
+            "id": 48262,
+            "nodeType": "InheritanceSpecifier",
+            "src": "721:12:64"
+          }
+        ],
+        "canonicalName": "PluginSetup",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 48258,
+          "nodeType": "StructuredDocumentation",
+          "src": "512:168:64",
+          "text": "@title PluginSetup\n @author Aragon Association - 2022-2023\n @notice An abstract contract that developers have to inherit from to write the setup of a plugin."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          48319,
+          48243,
+          45833,
+          46039
+        ],
+        "name": "PluginSetup",
+        "nameLocation": "698:11:64",
+        "scope": 48320,
+        "usedErrors": []
+      }
+    ],
+    "license": "AGPL-3.0-or-later"
+  },
+  "id": 64
+}

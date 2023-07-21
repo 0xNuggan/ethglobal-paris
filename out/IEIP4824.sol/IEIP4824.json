@@ -1,0 +1,218 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "daoURI",
+      "outputs": [
+        {
+          "internalType": "string",
+          "name": "_daoURI",
+          "type": "string"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "daoURI()": "7034731b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"daoURI\",\"outputs\":[{\"internalType\":\"string\",\"name\":\"_daoURI\",\"type\":\"string\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Aragon Association - 2021-2023\",\"details\":\"See https://eips.ethereum.org/EIPS/eip-4824\",\"kind\":\"dev\",\"methods\":{},\"title\":\"EIP-4824 Common Interfaces for DAOs\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"daoURI()\":{\"notice\":\"A distinct Uniform Resource Identifier (URI) pointing to a JSON object following the \\\"EIP-4824 DAO JSON-LD Schema\\\". This JSON file splits into four URIs: membersURI, proposalsURI, activityLogURI, and governanceURI. The membersURI should point to a JSON file that conforms to the \\\"EIP-4824 Members JSON-LD Schema\\\". The proposalsURI should point to a JSON file that conforms to the \\\"EIP-4824 Proposals JSON-LD Schema\\\". The activityLogURI should point to a JSON file that conforms to the \\\"EIP-4824 Activity Log JSON-LD Schema\\\". The governanceURI should point to a flatfile, normatively a .md file. Each of the JSON files named above can be statically-hosted or dynamically-generated.\"}},\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/osx/packages/contracts/src/core/dao/IEIP4824.sol\":\"IEIP4824\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@aragon/osx/=lib/osx/packages/contracts/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":osx/=lib/osx/\"]},\"sources\":{\"lib/osx/packages/contracts/src/core/dao/IEIP4824.sol\":{\"keccak256\":\"0x98086083fd347aa128d8fcf85fc259f1bc7be7a4ab028183fe6ae6f4b7ba4159\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://026c86b6e119f2df305db01cc3f40d54ac6f23b0a75a48273bc9131c9a6b1262\",\"dweb:/ipfs/Qmf8EYwPmPYgQxtChUYKd1NT957iraJUVBsrFFFFzM22FZ\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "daoURI",
+          "outputs": [
+            {
+              "internalType": "string",
+              "name": "_daoURI",
+              "type": "string"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "daoURI()": {
+            "notice": "A distinct Uniform Resource Identifier (URI) pointing to a JSON object following the \"EIP-4824 DAO JSON-LD Schema\". This JSON file splits into four URIs: membersURI, proposalsURI, activityLogURI, and governanceURI. The membersURI should point to a JSON file that conforms to the \"EIP-4824 Members JSON-LD Schema\". The proposalsURI should point to a JSON file that conforms to the \"EIP-4824 Proposals JSON-LD Schema\". The activityLogURI should point to a JSON file that conforms to the \"EIP-4824 Activity Log JSON-LD Schema\". The governanceURI should point to a flatfile, normatively a .md file. Each of the JSON files named above can be statically-hosted or dynamically-generated."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@aragon/osx/=lib/osx/packages/contracts/src/",
+        ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":osx/=lib/osx/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/osx/packages/contracts/src/core/dao/IEIP4824.sol": "IEIP4824"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/osx/packages/contracts/src/core/dao/IEIP4824.sol": {
+        "keccak256": "0x98086083fd347aa128d8fcf85fc259f1bc7be7a4ab028183fe6ae6f4b7ba4159",
+        "urls": [
+          "bzz-raw://026c86b6e119f2df305db01cc3f40d54ac6f23b0a75a48273bc9131c9a6b1262",
+          "dweb:/ipfs/Qmf8EYwPmPYgQxtChUYKd1NT957iraJUVBsrFFFFzM22FZ"
+        ],
+        "license": "AGPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/osx/packages/contracts/src/core/dao/IEIP4824.sol",
+    "id": 46957,
+    "exportedSymbols": {
+      "IEIP4824": [
+        46956
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "47:957:52",
+    "nodes": [
+      {
+        "id": 46948,
+        "nodeType": "PragmaDirective",
+        "src": "47:23:52",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 46956,
+        "nodeType": "ContractDefinition",
+        "src": "215:788:52",
+        "nodes": [
+          {
+            "id": 46955,
+            "nodeType": "FunctionDefinition",
+            "src": "937:64:52",
+            "nodes": [],
+            "documentation": {
+              "id": 46950,
+              "nodeType": "StructuredDocumentation",
+              "src": "240:692:52",
+              "text": "@notice A distinct Uniform Resource Identifier (URI) pointing to a JSON object following the \"EIP-4824 DAO JSON-LD Schema\". This JSON file splits into four URIs: membersURI, proposalsURI, activityLogURI, and governanceURI. The membersURI should point to a JSON file that conforms to the \"EIP-4824 Members JSON-LD Schema\". The proposalsURI should point to a JSON file that conforms to the \"EIP-4824 Proposals JSON-LD Schema\". The activityLogURI should point to a JSON file that conforms to the \"EIP-4824 Activity Log JSON-LD Schema\". The governanceURI should point to a flatfile, normatively a .md file. Each of the JSON files named above can be statically-hosted or dynamically-generated."
+            },
+            "functionSelector": "7034731b",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "daoURI",
+            "nameLocation": "946:6:52",
+            "parameters": {
+              "id": 46951,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "952:2:52"
+            },
+            "returnParameters": {
+              "id": 46954,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 46953,
+                  "mutability": "mutable",
+                  "name": "_daoURI",
+                  "nameLocation": "992:7:52",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 46955,
+                  "src": "978:21:52",
+                  "stateVariable": false,
+                  "storageLocation": "memory",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_string_memory_ptr",
+                    "typeString": "string"
+                  },
+                  "typeName": {
+                    "id": 46952,
+                    "name": "string",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "978:6:52",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_string_storage_ptr",
+                      "typeString": "string"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "977:23:52"
+            },
+            "scope": 46956,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IEIP4824",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 46949,
+          "nodeType": "StructuredDocumentation",
+          "src": "72:143:52",
+          "text": "@title EIP-4824 Common Interfaces for DAOs\n @dev See https://eips.ethereum.org/EIPS/eip-4824\n @author Aragon Association - 2021-2023"
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          46956
+        ],
+        "name": "IEIP4824",
+        "nameLocation": "225:8:52",
+        "scope": 46957,
+        "usedErrors": []
+      }
+    ],
+    "license": "AGPL-3.0-or-later"
+  },
+  "id": 52
+}

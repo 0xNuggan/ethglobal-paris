@@ -1,0 +1,551 @@
+{
+  "abi": [
+    {
+      "inputs": [],
+      "name": "NO_CONDITION",
+      "outputs": [
+        {
+          "internalType": "address",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x6091610038600b82828239805160001a607314602b57634e487b7160e01b600052600060045260246000fd5b30600052607381538281f3fe730000000000000000000000000000000000000000301460806040526004361060335760003560e01c80636dd02a5b146038575b600080fd5b603f600081565b6040516001600160a01b03909116815260200160405180910390f3fea26469706673582212205e45f146c6867bbae635486f734ab77b312917b44c70804681f790a2fd49e16064736f6c63430008110033",
+    "sourceMap": "208:1809:54:-:0;;;;;;;;;;;;;;;-1:-1:-1;;;208:1809:54;;;;;;;;;;;;;;;;;",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x730000000000000000000000000000000000000000301460806040526004361060335760003560e01c80636dd02a5b146038575b600080fd5b603f600081565b6040516001600160a01b03909116815260200160405180910390f3fea26469706673582212205e45f146c6867bbae635486f734ab77b312917b44c70804681f790a2fd49e16064736f6c63430008110033",
+    "sourceMap": "208:1809:54:-:0;;;;;;;;;;;;;;;;;;;;;;;;320:49;;367:1;320:49;;;;;-1:-1:-1;;;;;186:32:72;;;168:51;;156:2;141:18;320:49:54;;;;;;",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "NO_CONDITION()": "6dd02a5b"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[],\"name\":\"NO_CONDITION\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Aragon Association - 2021-2023\",\"kind\":\"dev\",\"methods\":{},\"title\":\"PermissionLib\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"NO_CONDITION()\":{\"notice\":\"A constant expressing that no condition is applied to a permission.\"}},\"notice\":\"A library containing objects for permission processing.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/osx/packages/contracts/src/core/permission/PermissionLib.sol\":\"PermissionLib\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@aragon/osx/=lib/osx/packages/contracts/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":osx/=lib/osx/\"]},\"sources\":{\"lib/osx/packages/contracts/src/core/permission/PermissionLib.sol\":{\"keccak256\":\"0xd1a00691deee7a95f44a7ea8bda5494a71ae2662d056315dbe260aadc4025cb6\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://fcb8b541e35540383fb0362aedc7ebe7297d64133f3b72a15100464ad29b8f41\",\"dweb:/ipfs/QmT4gj4Hf1apwCpfaHCxByRnNMYhc6gsGqNaETEHyAXfer\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "NO_CONDITION",
+          "outputs": [
+            {
+              "internalType": "address",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {},
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "NO_CONDITION()": {
+            "notice": "A constant expressing that no condition is applied to a permission."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@aragon/osx/=lib/osx/packages/contracts/src/",
+        ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":osx/=lib/osx/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol": "PermissionLib"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol": {
+        "keccak256": "0xd1a00691deee7a95f44a7ea8bda5494a71ae2662d056315dbe260aadc4025cb6",
+        "urls": [
+          "bzz-raw://fcb8b541e35540383fb0362aedc7ebe7297d64133f3b72a15100464ad29b8f41",
+          "dweb:/ipfs/QmT4gj4Hf1apwCpfaHCxByRnNMYhc6gsGqNaETEHyAXfer"
+        ],
+        "license": "AGPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol",
+    "id": 47010,
+    "exportedSymbols": {
+      "PermissionLib": [
+        47009
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "47:1971:54",
+    "nodes": [
+      {
+        "id": 46976,
+        "nodeType": "PragmaDirective",
+        "src": "47:23:54",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 47009,
+        "nodeType": "ContractDefinition",
+        "src": "208:1809:54",
+        "nodes": [
+          {
+            "id": 46984,
+            "nodeType": "VariableDeclaration",
+            "src": "320:49:54",
+            "nodes": [],
+            "constant": true,
+            "documentation": {
+              "id": 46978,
+              "nodeType": "StructuredDocumentation",
+              "src": "236:79:54",
+              "text": "@notice A constant expressing that no condition is applied to a permission."
+            },
+            "functionSelector": "6dd02a5b",
+            "mutability": "constant",
+            "name": "NO_CONDITION",
+            "nameLocation": "344:12:54",
+            "scope": 47009,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_address",
+              "typeString": "address"
+            },
+            "typeName": {
+              "id": 46979,
+              "name": "address",
+              "nodeType": "ElementaryTypeName",
+              "src": "320:7:54",
+              "stateMutability": "nonpayable",
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "value": {
+              "arguments": [
+                {
+                  "hexValue": "30",
+                  "id": 46982,
+                  "isConstant": false,
+                  "isLValue": false,
+                  "isPure": true,
+                  "kind": "number",
+                  "lValueRequested": false,
+                  "nodeType": "Literal",
+                  "src": "367:1:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  },
+                  "value": "0"
+                }
+              ],
+              "expression": {
+                "argumentTypes": [
+                  {
+                    "typeIdentifier": "t_rational_0_by_1",
+                    "typeString": "int_const 0"
+                  }
+                ],
+                "id": 46981,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "lValueRequested": false,
+                "nodeType": "ElementaryTypeNameExpression",
+                "src": "359:7:54",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_type$_t_address_$",
+                  "typeString": "type(address)"
+                },
+                "typeName": {
+                  "id": 46980,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "359:7:54",
+                  "typeDescriptions": {}
+                }
+              },
+              "id": 46983,
+              "isConstant": false,
+              "isLValue": false,
+              "isPure": true,
+              "kind": "typeConversion",
+              "lValueRequested": false,
+              "nameLocations": [],
+              "names": [],
+              "nodeType": "FunctionCall",
+              "src": "359:10:54",
+              "tryCall": false,
+              "typeDescriptions": {
+                "typeIdentifier": "t_address",
+                "typeString": "address"
+              }
+            },
+            "visibility": "public"
+          },
+          {
+            "id": 46988,
+            "nodeType": "EnumDefinition",
+            "src": "754:80:54",
+            "nodes": [],
+            "canonicalName": "PermissionLib.Operation",
+            "members": [
+              {
+                "id": 46985,
+                "name": "Grant",
+                "nameLocation": "779:5:54",
+                "nodeType": "EnumValue",
+                "src": "779:5:54"
+              },
+              {
+                "id": 46986,
+                "name": "Revoke",
+                "nameLocation": "794:6:54",
+                "nodeType": "EnumValue",
+                "src": "794:6:54"
+              },
+              {
+                "id": 46987,
+                "name": "GrantWithCondition",
+                "nameLocation": "810:18:54",
+                "nodeType": "EnumValue",
+                "src": "810:18:54"
+              }
+            ],
+            "name": "Operation",
+            "nameLocation": "759:9:54"
+          },
+          {
+            "id": 46996,
+            "nodeType": "StructDefinition",
+            "src": "1158:117:54",
+            "nodes": [],
+            "canonicalName": "PermissionLib.SingleTargetPermission",
+            "members": [
+              {
+                "constant": false,
+                "id": 46991,
+                "mutability": "mutable",
+                "name": "operation",
+                "nameLocation": "1208:9:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 46996,
+                "src": "1198:19:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_Operation_$46988",
+                  "typeString": "enum PermissionLib.Operation"
+                },
+                "typeName": {
+                  "id": 46990,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 46989,
+                    "name": "Operation",
+                    "nameLocations": [
+                      "1198:9:54"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 46988,
+                    "src": "1198:9:54"
+                  },
+                  "referencedDeclaration": 46988,
+                  "src": "1198:9:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Operation_$46988",
+                    "typeString": "enum PermissionLib.Operation"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 46993,
+                "mutability": "mutable",
+                "name": "who",
+                "nameLocation": "1235:3:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 46996,
+                "src": "1227:11:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 46992,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1227:7:54",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 46995,
+                "mutability": "mutable",
+                "name": "permissionId",
+                "nameLocation": "1256:12:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 46996,
+                "src": "1248:20:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 46994,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1248:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "SingleTargetPermission",
+            "nameLocation": "1165:22:54",
+            "scope": 47009,
+            "visibility": "public"
+          },
+          {
+            "id": 47008,
+            "nodeType": "StructDefinition",
+            "src": "1849:166:54",
+            "nodes": [],
+            "canonicalName": "PermissionLib.MultiTargetPermission",
+            "members": [
+              {
+                "constant": false,
+                "id": 46999,
+                "mutability": "mutable",
+                "name": "operation",
+                "nameLocation": "1898:9:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 47008,
+                "src": "1888:19:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_enum$_Operation_$46988",
+                  "typeString": "enum PermissionLib.Operation"
+                },
+                "typeName": {
+                  "id": 46998,
+                  "nodeType": "UserDefinedTypeName",
+                  "pathNode": {
+                    "id": 46997,
+                    "name": "Operation",
+                    "nameLocations": [
+                      "1888:9:54"
+                    ],
+                    "nodeType": "IdentifierPath",
+                    "referencedDeclaration": 46988,
+                    "src": "1888:9:54"
+                  },
+                  "referencedDeclaration": 46988,
+                  "src": "1888:9:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_Operation_$46988",
+                    "typeString": "enum PermissionLib.Operation"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 47001,
+                "mutability": "mutable",
+                "name": "where",
+                "nameLocation": "1925:5:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 47008,
+                "src": "1917:13:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 47000,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1917:7:54",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 47003,
+                "mutability": "mutable",
+                "name": "who",
+                "nameLocation": "1948:3:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 47008,
+                "src": "1940:11:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 47002,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1940:7:54",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 47005,
+                "mutability": "mutable",
+                "name": "condition",
+                "nameLocation": "1969:9:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 47008,
+                "src": "1961:17:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_address",
+                  "typeString": "address"
+                },
+                "typeName": {
+                  "id": 47004,
+                  "name": "address",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1961:7:54",
+                  "stateMutability": "nonpayable",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  }
+                },
+                "visibility": "internal"
+              },
+              {
+                "constant": false,
+                "id": 47007,
+                "mutability": "mutable",
+                "name": "permissionId",
+                "nameLocation": "1996:12:54",
+                "nodeType": "VariableDeclaration",
+                "scope": 47008,
+                "src": "1988:20:54",
+                "stateVariable": false,
+                "storageLocation": "default",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_bytes32",
+                  "typeString": "bytes32"
+                },
+                "typeName": {
+                  "id": 47006,
+                  "name": "bytes32",
+                  "nodeType": "ElementaryTypeName",
+                  "src": "1988:7:54",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  }
+                },
+                "visibility": "internal"
+              }
+            ],
+            "name": "MultiTargetPermission",
+            "nameLocation": "1856:21:54",
+            "scope": 47009,
+            "visibility": "public"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "PermissionLib",
+        "contractDependencies": [],
+        "contractKind": "library",
+        "documentation": {
+          "id": 46977,
+          "nodeType": "StructuredDocumentation",
+          "src": "72:136:54",
+          "text": "@title PermissionLib\n @author Aragon Association - 2021-2023\n @notice A library containing objects for permission processing."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          47009
+        ],
+        "name": "PermissionLib",
+        "nameLocation": "216:13:54",
+        "scope": 47010,
+        "usedErrors": []
+      }
+    ],
+    "license": "AGPL-3.0-or-later"
+  },
+  "id": 54
+}

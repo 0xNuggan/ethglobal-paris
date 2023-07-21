@@ -1,0 +1,937 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "dao",
+      "outputs": [
+        {
+          "internalType": "contract IDAO",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "dao()": "4162169f"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"dao\",\"outputs\":[{\"internalType\":\"contract IDAO\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Aragon Association - 2022-2023\",\"details\":\"Make sure to call `__DaoAuthorizableUpgradeable_init` during initialization of the inheriting contract.\",\"kind\":\"dev\",\"methods\":{\"dao()\":{\"returns\":{\"_0\":\"The DAO contract.\"}}},\"title\":\"DaoAuthorizableUpgradeable\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"dao()\":{\"notice\":\"Returns the DAO contract.\"}},\"notice\":\"An abstract contract providing a meta-transaction compatible modifier for upgradeable or cloneable contracts to authorize function calls through an associated DAO.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol\":\"DaoAuthorizableUpgradeable\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@aragon/osx/=lib/osx/packages/contracts/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":osx/=lib/osx/\"]},\"sources\":{\"lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x89be10e757d242e9b18d5a32c9fbe2019f6d63052bbe46397a430a1d60d7f794\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f103ee2e4aecd37aac6ceefe670709cdd7613dee25fa2d4d9feaf7fc0aaa155e\",\"dweb:/ipfs/QmRiNZLoJk5k3HPMYGPGjZFd2ke1ZxjhJZkM45Ec9GH9hv\"]},\"lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0x9c80f545915582e63fe206c6ce27cbe85a86fc10b9cd2a0e8c9488fb7c2ee422\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://310136ad60820af4177a11a61d77a3686faf5fca4942b600e08fc940db38396b\",\"dweb:/ipfs/QmbCzMNSTL7Zi7M4UCSqBrkHtp4jjxUnGbkneCZKdR1qeq\"]},\"lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c\",\"dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a\"]},\"lib/osx/packages/contracts/src/core/dao/IDAO.sol\":{\"keccak256\":\"0x5da4fcc2ac043eebb78c8c278da86f0fa7ad71ec9ce35a398bcc60c25ba6c7c3\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://22dfd57672c31d73f65db47e55b19bfbfba15e4d8e570b5a4fb17288eba0f245\",\"dweb:/ipfs/QmPcBckvXy3TXZzSLF7cc1dnfF77V1Y5Zh1JweZ3uZUKND\"]},\"lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol\":{\"keccak256\":\"0x4d57aea8920987f368cc6d610a462fb929df38872b174e4fc15d3eaf8bb5e47c\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://e399447f5f219bffc0225f3189e153037e8113c1f3e165b49bb65c7973d9df09\",\"dweb:/ipfs/QmXanA1LgAn3rLqJLmUPcyi9FDcqnYbLk8UNZwM4Jgfbor\"]},\"lib/osx/packages/contracts/src/core/utils/auth.sol\":{\"keccak256\":\"0x5452788bbdaf93868177c15cefd71f57b5f83293d94a69d98d9505d4c9ec0015\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://33607f6e03e69014d0080a7fd5e1be93ff3a8b80d406b407d2094db4adaf85f2\",\"dweb:/ipfs/QmNxaCF8wTfNUd7Ck942dji6MecuT5HsDrFEwS83ZRgCre\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint8",
+              "name": "version",
+              "type": "uint8",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Initialized",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "dao",
+          "outputs": [
+            {
+              "internalType": "contract IDAO",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "dao()": {
+            "returns": {
+              "_0": "The DAO contract."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "dao()": {
+            "notice": "Returns the DAO contract."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@aragon/osx/=lib/osx/packages/contracts/src/",
+        ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":osx/=lib/osx/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol": "DaoAuthorizableUpgradeable"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol": {
+        "keccak256": "0x89be10e757d242e9b18d5a32c9fbe2019f6d63052bbe46397a430a1d60d7f794",
+        "urls": [
+          "bzz-raw://f103ee2e4aecd37aac6ceefe670709cdd7613dee25fa2d4d9feaf7fc0aaa155e",
+          "dweb:/ipfs/QmRiNZLoJk5k3HPMYGPGjZFd2ke1ZxjhJZkM45Ec9GH9hv"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol": {
+        "keccak256": "0x9c80f545915582e63fe206c6ce27cbe85a86fc10b9cd2a0e8c9488fb7c2ee422",
+        "urls": [
+          "bzz-raw://310136ad60820af4177a11a61d77a3686faf5fca4942b600e08fc940db38396b",
+          "dweb:/ipfs/QmbCzMNSTL7Zi7M4UCSqBrkHtp4jjxUnGbkneCZKdR1qeq"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol": {
+        "keccak256": "0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149",
+        "urls": [
+          "bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c",
+          "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
+        ],
+        "license": "MIT"
+      },
+      "lib/osx/packages/contracts/src/core/dao/IDAO.sol": {
+        "keccak256": "0x5da4fcc2ac043eebb78c8c278da86f0fa7ad71ec9ce35a398bcc60c25ba6c7c3",
+        "urls": [
+          "bzz-raw://22dfd57672c31d73f65db47e55b19bfbfba15e4d8e570b5a4fb17288eba0f245",
+          "dweb:/ipfs/QmPcBckvXy3TXZzSLF7cc1dnfF77V1Y5Zh1JweZ3uZUKND"
+        ],
+        "license": "AGPL-3.0-or-later"
+      },
+      "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol": {
+        "keccak256": "0x4d57aea8920987f368cc6d610a462fb929df38872b174e4fc15d3eaf8bb5e47c",
+        "urls": [
+          "bzz-raw://e399447f5f219bffc0225f3189e153037e8113c1f3e165b49bb65c7973d9df09",
+          "dweb:/ipfs/QmXanA1LgAn3rLqJLmUPcyi9FDcqnYbLk8UNZwM4Jgfbor"
+        ],
+        "license": "AGPL-3.0-or-later"
+      },
+      "lib/osx/packages/contracts/src/core/utils/auth.sol": {
+        "keccak256": "0x5452788bbdaf93868177c15cefd71f57b5f83293d94a69d98d9505d4c9ec0015",
+        "urls": [
+          "bzz-raw://33607f6e03e69014d0080a7fd5e1be93ff3a8b80d406b407d2094db4adaf85f2",
+          "dweb:/ipfs/QmNxaCF8wTfNUd7Ck942dji6MecuT5HsDrFEwS83ZRgCre"
+        ],
+        "license": "AGPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol",
+    "id": 47990,
+    "exportedSymbols": {
+      "ContextUpgradeable": [
+        44604
+      ],
+      "DaoAuthorizableUpgradeable": [
+        47989
+      ],
+      "IDAO": [
+        46946
+      ],
+      "_auth": [
+        48171
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "47:1881:59",
+    "nodes": [
+      {
+        "id": 47926,
+        "nodeType": "PragmaDirective",
+        "src": "47:23:59",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 47928,
+        "nodeType": "ImportDirective",
+        "src": "72:100:59",
+        "nodes": [],
+        "absolutePath": "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 47990,
+        "sourceUnit": 44605,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 47927,
+              "name": "ContextUpgradeable",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 44604,
+              "src": "80:18:59",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 47930,
+        "nodeType": "ImportDirective",
+        "src": "174:40:59",
+        "nodes": [],
+        "absolutePath": "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "file": "../../dao/IDAO.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 47990,
+        "sourceUnit": 46947,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 47929,
+              "name": "IDAO",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 46946,
+              "src": "182:4:59",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 47932,
+        "nodeType": "ImportDirective",
+        "src": "215:43:59",
+        "nodes": [],
+        "absolutePath": "lib/osx/packages/contracts/src/core/utils/auth.sol",
+        "file": "../../utils/auth.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 47990,
+        "sourceUnit": 48172,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 47931,
+              "name": "_auth",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 48171,
+              "src": "223:5:59",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 47989,
+        "nodeType": "ContractDefinition",
+        "src": "630:1297:59",
+        "nodes": [
+          {
+            "id": 47939,
+            "nodeType": "VariableDeclaration",
+            "src": "788:17:59",
+            "nodes": [],
+            "constant": false,
+            "documentation": {
+              "id": 47936,
+              "nodeType": "StructuredDocumentation",
+              "src": "703:80:59",
+              "text": "@notice The associated DAO managing the permissions of inheriting contracts."
+            },
+            "mutability": "mutable",
+            "name": "dao_",
+            "nameLocation": "801:4:59",
+            "scope": 47989,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_contract$_IDAO_$46946",
+              "typeString": "contract IDAO"
+            },
+            "typeName": {
+              "id": 47938,
+              "nodeType": "UserDefinedTypeName",
+              "pathNode": {
+                "id": 47937,
+                "name": "IDAO",
+                "nameLocations": [
+                  "788:4:59"
+                ],
+                "nodeType": "IdentifierPath",
+                "referencedDeclaration": 46946,
+                "src": "788:4:59"
+              },
+              "referencedDeclaration": 46946,
+              "src": "788:4:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_contract$_IDAO_$46946",
+                "typeString": "contract IDAO"
+              }
+            },
+            "visibility": "private"
+          },
+          {
+            "id": 47953,
+            "nodeType": "FunctionDefinition",
+            "src": "932:108:59",
+            "nodes": [],
+            "body": {
+              "id": 47952,
+              "nodeType": "Block",
+              "src": "1012:28:59",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 47950,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftHandSide": {
+                      "id": 47948,
+                      "name": "dao_",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47939,
+                      "src": "1022:4:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IDAO_$46946",
+                        "typeString": "contract IDAO"
+                      }
+                    },
+                    "nodeType": "Assignment",
+                    "operator": "=",
+                    "rightHandSide": {
+                      "id": 47949,
+                      "name": "_dao",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47943,
+                      "src": "1029:4:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_contract$_IDAO_$46946",
+                        "typeString": "contract IDAO"
+                      }
+                    },
+                    "src": "1022:11:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IDAO_$46946",
+                      "typeString": "contract IDAO"
+                    }
+                  },
+                  "id": 47951,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1022:11:59"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 47940,
+              "nodeType": "StructuredDocumentation",
+              "src": "812:115:59",
+              "text": "@notice Initializes the contract by setting the associated DAO.\n @param _dao The associated DAO address."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 47946,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 47945,
+                  "name": "onlyInitializing",
+                  "nameLocations": [
+                    "995:16:59"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 43370,
+                  "src": "995:16:59"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "995:16:59"
+              }
+            ],
+            "name": "__DaoAuthorizableUpgradeable_init",
+            "nameLocation": "941:33:59",
+            "parameters": {
+              "id": 47944,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47943,
+                  "mutability": "mutable",
+                  "name": "_dao",
+                  "nameLocation": "980:4:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47953,
+                  "src": "975:9:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IDAO_$46946",
+                    "typeString": "contract IDAO"
+                  },
+                  "typeName": {
+                    "id": 47942,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 47941,
+                      "name": "IDAO",
+                      "nameLocations": [
+                        "975:4:59"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 46946,
+                      "src": "975:4:59"
+                    },
+                    "referencedDeclaration": 46946,
+                    "src": "975:4:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IDAO_$46946",
+                      "typeString": "contract IDAO"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "974:11:59"
+            },
+            "returnParameters": {
+              "id": 47947,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1012:0:59"
+            },
+            "scope": 47989,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 47963,
+            "nodeType": "FunctionDefinition",
+            "src": "1122:70:59",
+            "nodes": [],
+            "body": {
+              "id": 47962,
+              "nodeType": "Block",
+              "src": "1164:28:59",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "id": 47960,
+                    "name": "dao_",
+                    "nodeType": "Identifier",
+                    "overloadedDeclarations": [],
+                    "referencedDeclaration": 47939,
+                    "src": "1181:4:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IDAO_$46946",
+                      "typeString": "contract IDAO"
+                    }
+                  },
+                  "functionReturnParameters": 47959,
+                  "id": 47961,
+                  "nodeType": "Return",
+                  "src": "1174:11:59"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 47954,
+              "nodeType": "StructuredDocumentation",
+              "src": "1046:71:59",
+              "text": "@notice Returns the DAO contract.\n @return The DAO contract."
+            },
+            "functionSelector": "4162169f",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "dao",
+            "nameLocation": "1131:3:59",
+            "parameters": {
+              "id": 47955,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1134:2:59"
+            },
+            "returnParameters": {
+              "id": 47959,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47958,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47963,
+                  "src": "1158:4:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IDAO_$46946",
+                    "typeString": "contract IDAO"
+                  },
+                  "typeName": {
+                    "id": 47957,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 47956,
+                      "name": "IDAO",
+                      "nameLocations": [
+                        "1158:4:59"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 46946,
+                      "src": "1158:4:59"
+                    },
+                    "referencedDeclaration": 46946,
+                    "src": "1158:4:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IDAO_$46946",
+                      "typeString": "contract IDAO"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1157:6:59"
+            },
+            "scope": 47989,
+            "stateMutability": "view",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 47983,
+            "nodeType": "ModifierDefinition",
+            "src": "1485:132:59",
+            "nodes": [],
+            "body": {
+              "id": 47982,
+              "nodeType": "Block",
+              "src": "1522:95:59",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 47969,
+                        "name": "dao_",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47939,
+                        "src": "1538:4:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IDAO_$46946",
+                          "typeString": "contract IDAO"
+                        }
+                      },
+                      {
+                        "arguments": [
+                          {
+                            "id": 47972,
+                            "name": "this",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -28,
+                            "src": "1552:4:59",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_contract$_DaoAuthorizableUpgradeable_$47989",
+                              "typeString": "contract DaoAuthorizableUpgradeable"
+                            }
+                          }
+                        ],
+                        "expression": {
+                          "argumentTypes": [
+                            {
+                              "typeIdentifier": "t_contract$_DaoAuthorizableUpgradeable_$47989",
+                              "typeString": "contract DaoAuthorizableUpgradeable"
+                            }
+                          ],
+                          "id": 47971,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "lValueRequested": false,
+                          "nodeType": "ElementaryTypeNameExpression",
+                          "src": "1544:7:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_address_$",
+                            "typeString": "type(address)"
+                          },
+                          "typeName": {
+                            "id": 47970,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "1544:7:59",
+                            "typeDescriptions": {}
+                          }
+                        },
+                        "id": 47973,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "typeConversion",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1544:13:59",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 47974,
+                          "name": "_msgSender",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 44589,
+                          "src": "1559:10:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_address_$",
+                            "typeString": "function () view returns (address)"
+                          }
+                        },
+                        "id": 47975,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1559:12:59",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        }
+                      },
+                      {
+                        "id": 47976,
+                        "name": "_permissionId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47966,
+                        "src": "1573:13:59",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        }
+                      },
+                      {
+                        "arguments": [],
+                        "expression": {
+                          "argumentTypes": [],
+                          "id": 47977,
+                          "name": "_msgData",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 44598,
+                          "src": "1588:8:59",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_function_internal_view$__$returns$_t_bytes_calldata_ptr_$",
+                            "typeString": "function () view returns (bytes calldata)"
+                          }
+                        },
+                        "id": 47978,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "kind": "functionCall",
+                        "lValueRequested": false,
+                        "nameLocations": [],
+                        "names": [],
+                        "nodeType": "FunctionCall",
+                        "src": "1588:10:59",
+                        "tryCall": false,
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_IDAO_$46946",
+                          "typeString": "contract IDAO"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_address",
+                          "typeString": "address"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes32",
+                          "typeString": "bytes32"
+                        },
+                        {
+                          "typeIdentifier": "t_bytes_calldata_ptr",
+                          "typeString": "bytes calldata"
+                        }
+                      ],
+                      "id": 47968,
+                      "name": "_auth",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 48171,
+                      "src": "1532:5:59",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_view$_t_contract$_IDAO_$46946_$_t_address_$_t_address_$_t_bytes32_$_t_bytes_calldata_ptr_$returns$__$",
+                        "typeString": "function (contract IDAO,address,address,bytes32,bytes calldata) view"
+                      }
+                    },
+                    "id": 47979,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1532:67:59",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 47980,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1532:67:59"
+                },
+                {
+                  "id": 47981,
+                  "nodeType": "PlaceholderStatement",
+                  "src": "1609:1:59"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 47964,
+              "nodeType": "StructuredDocumentation",
+              "src": "1198:282:59",
+              "text": "@notice A modifier to make functions on inheriting contracts authorized. Permissions to call the function are checked through the associated DAO's permission manager.\n @param _permissionId The permission identifier required to call the method this modifier is applied to."
+            },
+            "name": "auth",
+            "nameLocation": "1494:4:59",
+            "parameters": {
+              "id": 47967,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47966,
+                  "mutability": "mutable",
+                  "name": "_permissionId",
+                  "nameLocation": "1507:13:59",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47983,
+                  "src": "1499:21:59",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes32",
+                    "typeString": "bytes32"
+                  },
+                  "typeName": {
+                    "id": 47965,
+                    "name": "bytes32",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1499:7:59",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes32",
+                      "typeString": "bytes32"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1498:23:59"
+            },
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 47988,
+            "nodeType": "VariableDeclaration",
+            "src": "1899:25:59",
+            "nodes": [],
+            "constant": false,
+            "documentation": {
+              "id": 47984,
+              "nodeType": "StructuredDocumentation",
+              "src": "1623:271:59",
+              "text": "@notice This empty reserved space is put in place to allow future versions to add new variables without shifting down storage in the inheritance chain (see [OpenZepplins guide about storage gaps](https://docs.openzeppelin.com/contracts/4.x/upgradeable#storage_gaps))."
+            },
+            "mutability": "mutable",
+            "name": "__gap",
+            "nameLocation": "1919:5:59",
+            "scope": 47989,
+            "stateVariable": true,
+            "storageLocation": "default",
+            "typeDescriptions": {
+              "typeIdentifier": "t_array$_t_uint256_$49_storage",
+              "typeString": "uint256[49]"
+            },
+            "typeName": {
+              "baseType": {
+                "id": 47985,
+                "name": "uint256",
+                "nodeType": "ElementaryTypeName",
+                "src": "1899:7:59",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_uint256",
+                  "typeString": "uint256"
+                }
+              },
+              "id": 47987,
+              "length": {
+                "hexValue": "3439",
+                "id": 47986,
+                "isConstant": false,
+                "isLValue": false,
+                "isPure": true,
+                "kind": "number",
+                "lValueRequested": false,
+                "nodeType": "Literal",
+                "src": "1907:2:59",
+                "typeDescriptions": {
+                  "typeIdentifier": "t_rational_49_by_1",
+                  "typeString": "int_const 49"
+                },
+                "value": "49"
+              },
+              "nodeType": "ArrayTypeName",
+              "src": "1899:11:59",
+              "typeDescriptions": {
+                "typeIdentifier": "t_array$_t_uint256_$49_storage_ptr",
+                "typeString": "uint256[49]"
+              }
+            },
+            "visibility": "private"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 47934,
+              "name": "ContextUpgradeable",
+              "nameLocations": [
+                "678:18:59"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 44604,
+              "src": "678:18:59"
+            },
+            "id": 47935,
+            "nodeType": "InheritanceSpecifier",
+            "src": "678:18:59"
+          }
+        ],
+        "canonicalName": "DaoAuthorizableUpgradeable",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 47933,
+          "nodeType": "StructuredDocumentation",
+          "src": "260:370:59",
+          "text": "@title DaoAuthorizableUpgradeable\n @author Aragon Association - 2022-2023\n @notice An abstract contract providing a meta-transaction compatible modifier for upgradeable or cloneable contracts to authorize function calls through an associated DAO.\n @dev Make sure to call `__DaoAuthorizableUpgradeable_init` during initialization of the inheriting contract."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          47989,
+          44604,
+          43425
+        ],
+        "name": "DaoAuthorizableUpgradeable",
+        "nameLocation": "648:26:59",
+        "scope": 47990,
+        "usedErrors": []
+      }
+    ],
+    "license": "AGPL-3.0-or-later"
+  },
+  "id": 59
+}

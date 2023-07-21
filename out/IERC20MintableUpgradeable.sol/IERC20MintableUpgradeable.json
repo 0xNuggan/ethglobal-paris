@@ -1,0 +1,262 @@
+{
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "address",
+          "name": "_to",
+          "type": "address"
+        },
+        {
+          "internalType": "uint256",
+          "name": "_amount",
+          "type": "uint256"
+        }
+      ],
+      "name": "mint",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "mint(address,uint256)": "40c10f19"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"address\",\"name\":\"_to\",\"type\":\"address\"},{\"internalType\":\"uint256\",\"name\":\"_amount\",\"type\":\"uint256\"}],\"name\":\"mint\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{\"mint(address,uint256)\":{\"params\":{\"_amount\":\"The amount of tokens.\",\"_to\":\"The receiving address.\"}}},\"title\":\"IERC20MintableUpgradeable\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"mint(address,uint256)\":{\"notice\":\"Mints [ERC-20](https://eips.ethereum.org/EIPS/eip-20) tokens for a receiving address.\"}},\"notice\":\"Interface to allow minting of [ERC-20](https://eips.ethereum.org/EIPS/eip-20) tokens.\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/osx/packages/contracts/src/token/ERC20/IERC20MintableUpgradeable.sol\":\"IERC20MintableUpgradeable\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@aragon/osx/=lib/osx/packages/contracts/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":osx/=lib/osx/\"]},\"sources\":{\"lib/osx/packages/contracts/src/token/ERC20/IERC20MintableUpgradeable.sol\":{\"keccak256\":\"0x67c5e5b94e83984da5427057e3945f1863c5d2a6f35fddd6abc1a11927167a46\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://ae9d9bca9d15cb4ea1bc00d384d0c1eded9109887b482bbe9765b0e46f1ba618\",\"dweb:/ipfs/QmXkPGCDAP92ZXSGesQUSA197ZcEonQ8nQaK4iPyvwCFXi\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "address",
+              "name": "_to",
+              "type": "address"
+            },
+            {
+              "internalType": "uint256",
+              "name": "_amount",
+              "type": "uint256"
+            }
+          ],
+          "stateMutability": "nonpayable",
+          "type": "function",
+          "name": "mint"
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "mint(address,uint256)": {
+            "params": {
+              "_amount": "The amount of tokens.",
+              "_to": "The receiving address."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "mint(address,uint256)": {
+            "notice": "Mints [ERC-20](https://eips.ethereum.org/EIPS/eip-20) tokens for a receiving address."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@aragon/osx/=lib/osx/packages/contracts/src/",
+        ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":osx/=lib/osx/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/osx/packages/contracts/src/token/ERC20/IERC20MintableUpgradeable.sol": "IERC20MintableUpgradeable"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/osx/packages/contracts/src/token/ERC20/IERC20MintableUpgradeable.sol": {
+        "keccak256": "0x67c5e5b94e83984da5427057e3945f1863c5d2a6f35fddd6abc1a11927167a46",
+        "urls": [
+          "bzz-raw://ae9d9bca9d15cb4ea1bc00d384d0c1eded9109887b482bbe9765b0e46f1ba618",
+          "dweb:/ipfs/QmXkPGCDAP92ZXSGesQUSA197ZcEonQ8nQaK4iPyvwCFXi"
+        ],
+        "license": "AGPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/osx/packages/contracts/src/token/ERC20/IERC20MintableUpgradeable.sol",
+    "id": 48332,
+    "exportedSymbols": {
+      "IERC20MintableUpgradeable": [
+        48331
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "47:447:65",
+    "nodes": [
+      {
+        "id": 48321,
+        "nodeType": "PragmaDirective",
+        "src": "47:23:65",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 48331,
+        "nodeType": "ContractDefinition",
+        "src": "207:286:65",
+        "nodes": [
+          {
+            "id": 48330,
+            "nodeType": "FunctionDefinition",
+            "src": "438:53:65",
+            "nodes": [],
+            "documentation": {
+              "id": 48323,
+              "nodeType": "StructuredDocumentation",
+              "src": "249:184:65",
+              "text": "@notice Mints [ERC-20](https://eips.ethereum.org/EIPS/eip-20) tokens for a receiving address.\n @param _to The receiving address.\n @param _amount The amount of tokens."
+            },
+            "functionSelector": "40c10f19",
+            "implemented": false,
+            "kind": "function",
+            "modifiers": [],
+            "name": "mint",
+            "nameLocation": "447:4:65",
+            "parameters": {
+              "id": 48328,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 48325,
+                  "mutability": "mutable",
+                  "name": "_to",
+                  "nameLocation": "460:3:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48330,
+                  "src": "452:11:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_address",
+                    "typeString": "address"
+                  },
+                  "typeName": {
+                    "id": 48324,
+                    "name": "address",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "452:7:65",
+                    "stateMutability": "nonpayable",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_address",
+                      "typeString": "address"
+                    }
+                  },
+                  "visibility": "internal"
+                },
+                {
+                  "constant": false,
+                  "id": 48327,
+                  "mutability": "mutable",
+                  "name": "_amount",
+                  "nameLocation": "473:7:65",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 48330,
+                  "src": "465:15:65",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_uint256",
+                    "typeString": "uint256"
+                  },
+                  "typeName": {
+                    "id": 48326,
+                    "name": "uint256",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "465:7:65",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_uint256",
+                      "typeString": "uint256"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "451:30:65"
+            },
+            "returnParameters": {
+              "id": 48329,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "490:0:65"
+            },
+            "scope": 48331,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "external"
+          }
+        ],
+        "abstract": false,
+        "baseContracts": [],
+        "canonicalName": "IERC20MintableUpgradeable",
+        "contractDependencies": [],
+        "contractKind": "interface",
+        "documentation": {
+          "id": 48322,
+          "nodeType": "StructuredDocumentation",
+          "src": "72:135:65",
+          "text": "@title IERC20MintableUpgradeable\n @notice Interface to allow minting of [ERC-20](https://eips.ethereum.org/EIPS/eip-20) tokens."
+        },
+        "fullyImplemented": false,
+        "linearizedBaseContracts": [
+          48331
+        ],
+        "name": "IERC20MintableUpgradeable",
+        "nameLocation": "217:25:65",
+        "scope": 48332,
+        "usedErrors": []
+      }
+    ],
+    "license": "AGPL-3.0-or-later"
+  },
+  "id": 65
+}

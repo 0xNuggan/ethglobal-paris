@@ -1,0 +1,1151 @@
+{
+  "abi": [
+    {
+      "anonymous": false,
+      "inputs": [
+        {
+          "indexed": false,
+          "internalType": "uint8",
+          "name": "version",
+          "type": "uint8"
+        }
+      ],
+      "name": "Initialized",
+      "type": "event"
+    },
+    {
+      "inputs": [],
+      "name": "dao",
+      "outputs": [
+        {
+          "internalType": "contract IDAO",
+          "name": "",
+          "type": "address"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    },
+    {
+      "inputs": [],
+      "name": "pluginType",
+      "outputs": [
+        {
+          "internalType": "enum IPlugin.PluginType",
+          "name": "",
+          "type": "uint8"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes4",
+          "name": "_interfaceId",
+          "type": "bytes4"
+        }
+      ],
+      "name": "supportsInterface",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "deployedBytecode": {
+    "object": "0x",
+    "sourceMap": "",
+    "linkReferences": {}
+  },
+  "methodIdentifiers": {
+    "dao()": "4162169f",
+    "pluginType()": "41de6830",
+    "supportsInterface(bytes4)": "01ffc9a7"
+  },
+  "rawMetadata": "{\"compiler\":{\"version\":\"0.8.17+commit.8df45f5f\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"anonymous\":false,\"inputs\":[{\"indexed\":false,\"internalType\":\"uint8\",\"name\":\"version\",\"type\":\"uint8\"}],\"name\":\"Initialized\",\"type\":\"event\"},{\"inputs\":[],\"name\":\"dao\",\"outputs\":[{\"internalType\":\"contract IDAO\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"pluginType\",\"outputs\":[{\"internalType\":\"enum IPlugin.PluginType\",\"name\":\"\",\"type\":\"uint8\"}],\"stateMutability\":\"pure\",\"type\":\"function\"},{\"inputs\":[{\"internalType\":\"bytes4\",\"name\":\"_interfaceId\",\"type\":\"bytes4\"}],\"name\":\"supportsInterface\",\"outputs\":[{\"internalType\":\"bool\",\"name\":\"\",\"type\":\"bool\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"author\":\"Aragon Association - 2022-2023\",\"kind\":\"dev\",\"methods\":{\"dao()\":{\"returns\":{\"_0\":\"The DAO contract.\"}},\"supportsInterface(bytes4)\":{\"params\":{\"_interfaceId\":\"The ID of the interface.\"},\"returns\":{\"_0\":\"Returns `true` if the interface is supported.\"}}},\"title\":\"PluginCloneable\",\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{\"constructor\":{\"notice\":\"Disables the initializers on the implementation contract to prevent it from being left uninitialized.\"},\"dao()\":{\"notice\":\"Returns the DAO contract.\"},\"pluginType()\":{\"notice\":\"returns the plugin's type\"},\"supportsInterface(bytes4)\":{\"notice\":\"Checks if this or the parent contract supports an interface by its ID.\"}},\"notice\":\"An abstract, non-upgradeable contract to inherit from when creating a plugin being deployed via the minimal clones pattern (see [ERC-1167](https://eips.ethereum.org/EIPS/eip-1167)).\",\"version\":1}},\"settings\":{\"compilationTarget\":{\"lib/osx/packages/contracts/src/core/plugin/PluginCloneable.sol\":\"PluginCloneable\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[\":@aragon/osx/=lib/osx/packages/contracts/src/\",\":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/\",\":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/\",\":ds-test/=lib/forge-std/lib/ds-test/src/\",\":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/\",\":forge-std/=lib/forge-std/src/\",\":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/\",\":openzeppelin-contracts/=lib/openzeppelin-contracts/\",\":openzeppelin/=lib/openzeppelin-contracts/contracts/\",\":osx/=lib/osx/\"]},\"sources\":{\"lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol\":{\"keccak256\":\"0x89be10e757d242e9b18d5a32c9fbe2019f6d63052bbe46397a430a1d60d7f794\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://f103ee2e4aecd37aac6ceefe670709cdd7613dee25fa2d4d9feaf7fc0aaa155e\",\"dweb:/ipfs/QmRiNZLoJk5k3HPMYGPGjZFd2ke1ZxjhJZkM45Ec9GH9hv\"]},\"lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol\":{\"keccak256\":\"0x9c80f545915582e63fe206c6ce27cbe85a86fc10b9cd2a0e8c9488fb7c2ee422\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://310136ad60820af4177a11a61d77a3686faf5fca4942b600e08fc940db38396b\",\"dweb:/ipfs/QmbCzMNSTL7Zi7M4UCSqBrkHtp4jjxUnGbkneCZKdR1qeq\"]},\"lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol\":{\"keccak256\":\"0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c\",\"dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a\"]},\"lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol\":{\"keccak256\":\"0x9a3b990bd56d139df3e454a9edf1c64668530b5a77fc32eb063bc206f958274a\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://0895399d170daab2d69b4c43a0202e5a07f2e67a93b26e3354dcbedb062232f7\",\"dweb:/ipfs/QmUM1VH3XDk559Dsgh4QPvupr3YVKjz87HrSyYzzVFZbxw\"]},\"lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol\":{\"keccak256\":\"0xc6cef87559d0aeffdf0a99803de655938a7779ec0a3cd5d4383483ad85565a09\",\"license\":\"MIT\",\"urls\":[\"bzz-raw://92ad7e572cf44e6b4b37631b44b62f9eb9fb1cf14d9ce51c1504d5dc7ccaf758\",\"dweb:/ipfs/QmcnbqX85tsWnUXPmtuPLE4SczME2sJaTfmqEFkuAJvWhy\"]},\"lib/osx/packages/contracts/src/core/dao/IDAO.sol\":{\"keccak256\":\"0x5da4fcc2ac043eebb78c8c278da86f0fa7ad71ec9ce35a398bcc60c25ba6c7c3\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://22dfd57672c31d73f65db47e55b19bfbfba15e4d8e570b5a4fb17288eba0f245\",\"dweb:/ipfs/QmPcBckvXy3TXZzSLF7cc1dnfF77V1Y5Zh1JweZ3uZUKND\"]},\"lib/osx/packages/contracts/src/core/plugin/IPlugin.sol\":{\"keccak256\":\"0xff0e60999c7f9c78bc57d4ca7eb53e38bd4eefbfb152784e98f8cf7530aad3b8\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://aad36220d44f088e77a9b1e0d0cbe22b869e496e405f09b9366748dc6d482331\",\"dweb:/ipfs/QmSxXpiYvhMarfoG9zXPmmBY9jQQqMtsn72mLc6jdbN8Uc\"]},\"lib/osx/packages/contracts/src/core/plugin/PluginCloneable.sol\":{\"keccak256\":\"0xfdfce6920f7163cda9cd930762b225c64f50a9625d34f888fea9c771a12f777b\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://cc690f097210b301b04681de986de4ed83058d5baf712054e4cf040a33197c4a\",\"dweb:/ipfs/Qmb5ENaUrSoL1ttc2op9LQEWUQJww6kneN4FwLKPvJf7ca\"]},\"lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol\":{\"keccak256\":\"0x4d57aea8920987f368cc6d610a462fb929df38872b174e4fc15d3eaf8bb5e47c\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://e399447f5f219bffc0225f3189e153037e8113c1f3e165b49bb65c7973d9df09\",\"dweb:/ipfs/QmXanA1LgAn3rLqJLmUPcyi9FDcqnYbLk8UNZwM4Jgfbor\"]},\"lib/osx/packages/contracts/src/core/utils/auth.sol\":{\"keccak256\":\"0x5452788bbdaf93868177c15cefd71f57b5f83293d94a69d98d9505d4c9ec0015\",\"license\":\"AGPL-3.0-or-later\",\"urls\":[\"bzz-raw://33607f6e03e69014d0080a7fd5e1be93ff3a8b80d406b407d2094db4adaf85f2\",\"dweb:/ipfs/QmNxaCF8wTfNUd7Ck942dji6MecuT5HsDrFEwS83ZRgCre\"]}},\"version\":1}",
+  "metadata": {
+    "compiler": {
+      "version": "0.8.17+commit.8df45f5f"
+    },
+    "language": "Solidity",
+    "output": {
+      "abi": [
+        {
+          "inputs": [
+            {
+              "internalType": "uint8",
+              "name": "version",
+              "type": "uint8",
+              "indexed": false
+            }
+          ],
+          "type": "event",
+          "name": "Initialized",
+          "anonymous": false
+        },
+        {
+          "inputs": [],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "dao",
+          "outputs": [
+            {
+              "internalType": "contract IDAO",
+              "name": "",
+              "type": "address"
+            }
+          ]
+        },
+        {
+          "inputs": [],
+          "stateMutability": "pure",
+          "type": "function",
+          "name": "pluginType",
+          "outputs": [
+            {
+              "internalType": "enum IPlugin.PluginType",
+              "name": "",
+              "type": "uint8"
+            }
+          ]
+        },
+        {
+          "inputs": [
+            {
+              "internalType": "bytes4",
+              "name": "_interfaceId",
+              "type": "bytes4"
+            }
+          ],
+          "stateMutability": "view",
+          "type": "function",
+          "name": "supportsInterface",
+          "outputs": [
+            {
+              "internalType": "bool",
+              "name": "",
+              "type": "bool"
+            }
+          ]
+        }
+      ],
+      "devdoc": {
+        "kind": "dev",
+        "methods": {
+          "dao()": {
+            "returns": {
+              "_0": "The DAO contract."
+            }
+          },
+          "supportsInterface(bytes4)": {
+            "params": {
+              "_interfaceId": "The ID of the interface."
+            },
+            "returns": {
+              "_0": "Returns `true` if the interface is supported."
+            }
+          }
+        },
+        "version": 1
+      },
+      "userdoc": {
+        "kind": "user",
+        "methods": {
+          "constructor": {
+            "notice": "Disables the initializers on the implementation contract to prevent it from being left uninitialized."
+          },
+          "dao()": {
+            "notice": "Returns the DAO contract."
+          },
+          "pluginType()": {
+            "notice": "returns the plugin's type"
+          },
+          "supportsInterface(bytes4)": {
+            "notice": "Checks if this or the parent contract supports an interface by its ID."
+          }
+        },
+        "version": 1
+      }
+    },
+    "settings": {
+      "remappings": [
+        ":@aragon/osx/=lib/osx/packages/contracts/src/",
+        ":@openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/",
+        ":@openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/",
+        ":ds-test/=lib/forge-std/lib/ds-test/src/",
+        ":erc4626-tests/=lib/openzeppelin-contracts/lib/erc4626-tests/",
+        ":forge-std/=lib/forge-std/src/",
+        ":openzeppelin-contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/",
+        ":openzeppelin-contracts/=lib/openzeppelin-contracts/",
+        ":openzeppelin/=lib/openzeppelin-contracts/contracts/",
+        ":osx/=lib/osx/"
+      ],
+      "optimizer": {
+        "enabled": true,
+        "runs": 200
+      },
+      "metadata": {
+        "bytecodeHash": "ipfs"
+      },
+      "compilationTarget": {
+        "lib/osx/packages/contracts/src/core/plugin/PluginCloneable.sol": "PluginCloneable"
+      },
+      "libraries": {}
+    },
+    "sources": {
+      "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol": {
+        "keccak256": "0x89be10e757d242e9b18d5a32c9fbe2019f6d63052bbe46397a430a1d60d7f794",
+        "urls": [
+          "bzz-raw://f103ee2e4aecd37aac6ceefe670709cdd7613dee25fa2d4d9feaf7fc0aaa155e",
+          "dweb:/ipfs/QmRiNZLoJk5k3HPMYGPGjZFd2ke1ZxjhJZkM45Ec9GH9hv"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol": {
+        "keccak256": "0x9c80f545915582e63fe206c6ce27cbe85a86fc10b9cd2a0e8c9488fb7c2ee422",
+        "urls": [
+          "bzz-raw://310136ad60820af4177a11a61d77a3686faf5fca4942b600e08fc940db38396b",
+          "dweb:/ipfs/QmbCzMNSTL7Zi7M4UCSqBrkHtp4jjxUnGbkneCZKdR1qeq"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol": {
+        "keccak256": "0x963ea7f0b48b032eef72fe3a7582edf78408d6f834115b9feadd673a4d5bd149",
+        "urls": [
+          "bzz-raw://d6520943ea55fdf5f0bafb39ed909f64de17051bc954ff3e88c9e5621412c79c",
+          "dweb:/ipfs/QmWZ4rAKTQbNG2HxGs46AcTXShsVytKeLs7CUCdCSv5N7a"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol": {
+        "keccak256": "0x9a3b990bd56d139df3e454a9edf1c64668530b5a77fc32eb063bc206f958274a",
+        "urls": [
+          "bzz-raw://0895399d170daab2d69b4c43a0202e5a07f2e67a93b26e3354dcbedb062232f7",
+          "dweb:/ipfs/QmUM1VH3XDk559Dsgh4QPvupr3YVKjz87HrSyYzzVFZbxw"
+        ],
+        "license": "MIT"
+      },
+      "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol": {
+        "keccak256": "0xc6cef87559d0aeffdf0a99803de655938a7779ec0a3cd5d4383483ad85565a09",
+        "urls": [
+          "bzz-raw://92ad7e572cf44e6b4b37631b44b62f9eb9fb1cf14d9ce51c1504d5dc7ccaf758",
+          "dweb:/ipfs/QmcnbqX85tsWnUXPmtuPLE4SczME2sJaTfmqEFkuAJvWhy"
+        ],
+        "license": "MIT"
+      },
+      "lib/osx/packages/contracts/src/core/dao/IDAO.sol": {
+        "keccak256": "0x5da4fcc2ac043eebb78c8c278da86f0fa7ad71ec9ce35a398bcc60c25ba6c7c3",
+        "urls": [
+          "bzz-raw://22dfd57672c31d73f65db47e55b19bfbfba15e4d8e570b5a4fb17288eba0f245",
+          "dweb:/ipfs/QmPcBckvXy3TXZzSLF7cc1dnfF77V1Y5Zh1JweZ3uZUKND"
+        ],
+        "license": "AGPL-3.0-or-later"
+      },
+      "lib/osx/packages/contracts/src/core/plugin/IPlugin.sol": {
+        "keccak256": "0xff0e60999c7f9c78bc57d4ca7eb53e38bd4eefbfb152784e98f8cf7530aad3b8",
+        "urls": [
+          "bzz-raw://aad36220d44f088e77a9b1e0d0cbe22b869e496e405f09b9366748dc6d482331",
+          "dweb:/ipfs/QmSxXpiYvhMarfoG9zXPmmBY9jQQqMtsn72mLc6jdbN8Uc"
+        ],
+        "license": "AGPL-3.0-or-later"
+      },
+      "lib/osx/packages/contracts/src/core/plugin/PluginCloneable.sol": {
+        "keccak256": "0xfdfce6920f7163cda9cd930762b225c64f50a9625d34f888fea9c771a12f777b",
+        "urls": [
+          "bzz-raw://cc690f097210b301b04681de986de4ed83058d5baf712054e4cf040a33197c4a",
+          "dweb:/ipfs/Qmb5ENaUrSoL1ttc2op9LQEWUQJww6kneN4FwLKPvJf7ca"
+        ],
+        "license": "AGPL-3.0-or-later"
+      },
+      "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol": {
+        "keccak256": "0x4d57aea8920987f368cc6d610a462fb929df38872b174e4fc15d3eaf8bb5e47c",
+        "urls": [
+          "bzz-raw://e399447f5f219bffc0225f3189e153037e8113c1f3e165b49bb65c7973d9df09",
+          "dweb:/ipfs/QmXanA1LgAn3rLqJLmUPcyi9FDcqnYbLk8UNZwM4Jgfbor"
+        ],
+        "license": "AGPL-3.0-or-later"
+      },
+      "lib/osx/packages/contracts/src/core/utils/auth.sol": {
+        "keccak256": "0x5452788bbdaf93868177c15cefd71f57b5f83293d94a69d98d9505d4c9ec0015",
+        "urls": [
+          "bzz-raw://33607f6e03e69014d0080a7fd5e1be93ff3a8b80d406b407d2094db4adaf85f2",
+          "dweb:/ipfs/QmNxaCF8wTfNUd7Ck942dji6MecuT5HsDrFEwS83ZRgCre"
+        ],
+        "license": "AGPL-3.0-or-later"
+      }
+    },
+    "version": 1
+  },
+  "ast": {
+    "absolutePath": "lib/osx/packages/contracts/src/core/plugin/PluginCloneable.sol",
+    "id": 47806,
+    "exportedSymbols": {
+      "DaoAuthorizableUpgradeable": [
+        47989
+      ],
+      "ERC165Upgradeable": [
+        44829
+      ],
+      "IDAO": [
+        46946
+      ],
+      "IPlugin": [
+        47731
+      ],
+      "PluginCloneable": [
+        47805
+      ]
+    },
+    "nodeType": "SourceUnit",
+    "src": "47:1642:57",
+    "nodes": [
+      {
+        "id": 47733,
+        "nodeType": "PragmaDirective",
+        "src": "47:23:57",
+        "nodes": [],
+        "literals": [
+          "solidity",
+          "0.8",
+          ".17"
+        ]
+      },
+      {
+        "id": 47735,
+        "nodeType": "ImportDirective",
+        "src": "72:112:57",
+        "nodes": [],
+        "absolutePath": "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
+        "file": "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 47806,
+        "sourceUnit": 44830,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 47734,
+              "name": "ERC165Upgradeable",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 44829,
+              "src": "80:17:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 47737,
+        "nodeType": "ImportDirective",
+        "src": "186:93:57",
+        "nodes": [],
+        "absolutePath": "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol",
+        "file": "./dao-authorizable/DaoAuthorizableUpgradeable.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 47806,
+        "sourceUnit": 47990,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 47736,
+              "name": "DaoAuthorizableUpgradeable",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 47989,
+              "src": "194:26:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 47739,
+        "nodeType": "ImportDirective",
+        "src": "280:37:57",
+        "nodes": [],
+        "absolutePath": "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "file": "../dao/IDAO.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 47806,
+        "sourceUnit": 46947,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 47738,
+              "name": "IDAO",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 46946,
+              "src": "288:4:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 47741,
+        "nodeType": "ImportDirective",
+        "src": "318:38:57",
+        "nodes": [],
+        "absolutePath": "lib/osx/packages/contracts/src/core/plugin/IPlugin.sol",
+        "file": "./IPlugin.sol",
+        "nameLocation": "-1:-1:-1",
+        "scope": 47806,
+        "sourceUnit": 47732,
+        "symbolAliases": [
+          {
+            "foreign": {
+              "id": 47740,
+              "name": "IPlugin",
+              "nodeType": "Identifier",
+              "overloadedDeclarations": [],
+              "referencedDeclaration": 47731,
+              "src": "326:7:57",
+              "typeDescriptions": {}
+            },
+            "nameLocation": "-1:-1:-1"
+          }
+        ],
+        "unitAlias": ""
+      },
+      {
+        "id": 47805,
+        "nodeType": "ContractDefinition",
+        "src": "622:1066:57",
+        "nodes": [
+          {
+            "id": 47756,
+            "nodeType": "FunctionDefinition",
+            "src": "838:53:57",
+            "nodes": [],
+            "body": {
+              "id": 47755,
+              "nodeType": "Block",
+              "src": "852:39:57",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [],
+                    "expression": {
+                      "argumentTypes": [],
+                      "id": 47752,
+                      "name": "_disableInitializers",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 43406,
+                      "src": "862:20:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$__$returns$__$",
+                        "typeString": "function ()"
+                      }
+                    },
+                    "id": 47753,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "862:22:57",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 47754,
+                  "nodeType": "ExpressionStatement",
+                  "src": "862:22:57"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 47749,
+              "nodeType": "StructuredDocumentation",
+              "src": "720:113:57",
+              "text": "@notice Disables the initializers on the implementation contract to prevent it from being left uninitialized."
+            },
+            "implemented": true,
+            "kind": "constructor",
+            "modifiers": [],
+            "name": "",
+            "nameLocation": "-1:-1:-1",
+            "parameters": {
+              "id": 47750,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "849:2:57"
+            },
+            "returnParameters": {
+              "id": 47751,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "852:0:57"
+            },
+            "scope": 47805,
+            "stateMutability": "nonpayable",
+            "virtual": false,
+            "visibility": "internal"
+          },
+          {
+            "id": 47770,
+            "nodeType": "FunctionDefinition",
+            "src": "1005:133:57",
+            "nodes": [],
+            "body": {
+              "id": 47769,
+              "nodeType": "Block",
+              "src": "1082:56:57",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "arguments": [
+                      {
+                        "id": 47766,
+                        "name": "_dao",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47760,
+                        "src": "1126:4:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_contract$_IDAO_$46946",
+                          "typeString": "contract IDAO"
+                        }
+                      }
+                    ],
+                    "expression": {
+                      "argumentTypes": [
+                        {
+                          "typeIdentifier": "t_contract$_IDAO_$46946",
+                          "typeString": "contract IDAO"
+                        }
+                      ],
+                      "id": 47765,
+                      "name": "__DaoAuthorizableUpgradeable_init",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47953,
+                      "src": "1092:33:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_function_internal_nonpayable$_t_contract$_IDAO_$46946_$returns$__$",
+                        "typeString": "function (contract IDAO)"
+                      }
+                    },
+                    "id": 47767,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "kind": "functionCall",
+                    "lValueRequested": false,
+                    "nameLocations": [],
+                    "names": [],
+                    "nodeType": "FunctionCall",
+                    "src": "1092:39:57",
+                    "tryCall": false,
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_tuple$__$",
+                      "typeString": "tuple()"
+                    }
+                  },
+                  "id": 47768,
+                  "nodeType": "ExpressionStatement",
+                  "src": "1092:39:57"
+                }
+              ]
+            },
+            "documentation": {
+              "id": 47757,
+              "nodeType": "StructuredDocumentation",
+              "src": "897:103:57",
+              "text": "@notice Initializes the plugin by storing the associated DAO.\n @param _dao The DAO contract."
+            },
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [
+              {
+                "id": 47763,
+                "kind": "modifierInvocation",
+                "modifierName": {
+                  "id": 47762,
+                  "name": "onlyInitializing",
+                  "nameLocations": [
+                    "1065:16:57"
+                  ],
+                  "nodeType": "IdentifierPath",
+                  "referencedDeclaration": 43370,
+                  "src": "1065:16:57"
+                },
+                "nodeType": "ModifierInvocation",
+                "src": "1065:16:57"
+              }
+            ],
+            "name": "__PluginCloneable_init",
+            "nameLocation": "1014:22:57",
+            "parameters": {
+              "id": 47761,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47760,
+                  "mutability": "mutable",
+                  "name": "_dao",
+                  "nameLocation": "1042:4:57",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47770,
+                  "src": "1037:9:57",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_contract$_IDAO_$46946",
+                    "typeString": "contract IDAO"
+                  },
+                  "typeName": {
+                    "id": 47759,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 47758,
+                      "name": "IDAO",
+                      "nameLocations": [
+                        "1037:4:57"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 46946,
+                      "src": "1037:4:57"
+                    },
+                    "referencedDeclaration": 46946,
+                    "src": "1037:4:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_contract$_IDAO_$46946",
+                      "typeString": "contract IDAO"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1036:11:57"
+            },
+            "returnParameters": {
+              "id": 47764,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1082:0:57"
+            },
+            "scope": 47805,
+            "stateMutability": "nonpayable",
+            "virtual": true,
+            "visibility": "internal"
+          },
+          {
+            "id": 47782,
+            "nodeType": "FunctionDefinition",
+            "src": "1172:108:57",
+            "nodes": [],
+            "body": {
+              "id": 47781,
+              "nodeType": "Block",
+              "src": "1236:44:57",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "expression": {
+                      "id": 47778,
+                      "name": "PluginType",
+                      "nodeType": "Identifier",
+                      "overloadedDeclarations": [],
+                      "referencedDeclaration": 47723,
+                      "src": "1253:10:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_type$_t_enum$_PluginType_$47723_$",
+                        "typeString": "type(enum IPlugin.PluginType)"
+                      }
+                    },
+                    "id": 47779,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": true,
+                    "lValueRequested": false,
+                    "memberLocation": "1264:9:57",
+                    "memberName": "Cloneable",
+                    "nodeType": "MemberAccess",
+                    "referencedDeclaration": 47721,
+                    "src": "1253:20:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_PluginType_$47723",
+                      "typeString": "enum IPlugin.PluginType"
+                    }
+                  },
+                  "functionReturnParameters": 47777,
+                  "id": 47780,
+                  "nodeType": "Return",
+                  "src": "1246:27:57"
+                }
+              ]
+            },
+            "baseFunctions": [
+              47730
+            ],
+            "documentation": {
+              "id": 47771,
+              "nodeType": "StructuredDocumentation",
+              "src": "1144:23:57",
+              "text": "@inheritdoc IPlugin"
+            },
+            "functionSelector": "41de6830",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "pluginType",
+            "nameLocation": "1181:10:57",
+            "overrides": {
+              "id": 47773,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1206:8:57"
+            },
+            "parameters": {
+              "id": 47772,
+              "nodeType": "ParameterList",
+              "parameters": [],
+              "src": "1191:2:57"
+            },
+            "returnParameters": {
+              "id": 47777,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47776,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47782,
+                  "src": "1224:10:57",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_enum$_PluginType_$47723",
+                    "typeString": "enum IPlugin.PluginType"
+                  },
+                  "typeName": {
+                    "id": 47775,
+                    "nodeType": "UserDefinedTypeName",
+                    "pathNode": {
+                      "id": 47774,
+                      "name": "PluginType",
+                      "nameLocations": [
+                        "1224:10:57"
+                      ],
+                      "nodeType": "IdentifierPath",
+                      "referencedDeclaration": 47723,
+                      "src": "1224:10:57"
+                    },
+                    "referencedDeclaration": 47723,
+                    "src": "1224:10:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_enum$_PluginType_$47723",
+                      "typeString": "enum IPlugin.PluginType"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1223:12:57"
+            },
+            "scope": 47805,
+            "stateMutability": "pure",
+            "virtual": false,
+            "visibility": "public"
+          },
+          {
+            "id": 47804,
+            "nodeType": "FunctionDefinition",
+            "src": "1488:198:57",
+            "nodes": [],
+            "body": {
+              "id": 47803,
+              "nodeType": "Block",
+              "src": "1580:106:57",
+              "nodes": [],
+              "statements": [
+                {
+                  "expression": {
+                    "commonType": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    },
+                    "id": 47801,
+                    "isConstant": false,
+                    "isLValue": false,
+                    "isPure": false,
+                    "lValueRequested": false,
+                    "leftExpression": {
+                      "commonType": {
+                        "typeIdentifier": "t_bytes4",
+                        "typeString": "bytes4"
+                      },
+                      "id": 47796,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "lValueRequested": false,
+                      "leftExpression": {
+                        "id": 47791,
+                        "name": "_interfaceId",
+                        "nodeType": "Identifier",
+                        "overloadedDeclarations": [],
+                        "referencedDeclaration": 47785,
+                        "src": "1597:12:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "nodeType": "BinaryOperation",
+                      "operator": "==",
+                      "rightExpression": {
+                        "expression": {
+                          "arguments": [
+                            {
+                              "id": 47793,
+                              "name": "IPlugin",
+                              "nodeType": "Identifier",
+                              "overloadedDeclarations": [],
+                              "referencedDeclaration": 47731,
+                              "src": "1618:7:57",
+                              "typeDescriptions": {
+                                "typeIdentifier": "t_type$_t_contract$_IPlugin_$47731_$",
+                                "typeString": "type(contract IPlugin)"
+                              }
+                            }
+                          ],
+                          "expression": {
+                            "argumentTypes": [
+                              {
+                                "typeIdentifier": "t_type$_t_contract$_IPlugin_$47731_$",
+                                "typeString": "type(contract IPlugin)"
+                              }
+                            ],
+                            "id": 47792,
+                            "name": "type",
+                            "nodeType": "Identifier",
+                            "overloadedDeclarations": [],
+                            "referencedDeclaration": -27,
+                            "src": "1613:4:57",
+                            "typeDescriptions": {
+                              "typeIdentifier": "t_function_metatype_pure$__$returns$__$",
+                              "typeString": "function () pure"
+                            }
+                          },
+                          "id": 47794,
+                          "isConstant": false,
+                          "isLValue": false,
+                          "isPure": true,
+                          "kind": "functionCall",
+                          "lValueRequested": false,
+                          "nameLocations": [],
+                          "names": [],
+                          "nodeType": "FunctionCall",
+                          "src": "1613:13:57",
+                          "tryCall": false,
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_magic_meta_type_t_contract$_IPlugin_$47731",
+                            "typeString": "type(contract IPlugin)"
+                          }
+                        },
+                        "id": 47795,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": true,
+                        "lValueRequested": false,
+                        "memberLocation": "1627:11:57",
+                        "memberName": "interfaceId",
+                        "nodeType": "MemberAccess",
+                        "src": "1613:25:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_bytes4",
+                          "typeString": "bytes4"
+                        }
+                      },
+                      "src": "1597:41:57",
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "nodeType": "BinaryOperation",
+                    "operator": "||",
+                    "rightExpression": {
+                      "arguments": [
+                        {
+                          "id": 47799,
+                          "name": "_interfaceId",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": 47785,
+                          "src": "1666:12:57",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_bytes4",
+                            "typeString": "bytes4"
+                          }
+                        }
+                      ],
+                      "expression": {
+                        "argumentTypes": [
+                          {
+                            "typeIdentifier": "t_bytes4",
+                            "typeString": "bytes4"
+                          }
+                        ],
+                        "expression": {
+                          "id": 47797,
+                          "name": "super",
+                          "nodeType": "Identifier",
+                          "overloadedDeclarations": [],
+                          "referencedDeclaration": -25,
+                          "src": "1642:5:57",
+                          "typeDescriptions": {
+                            "typeIdentifier": "t_type$_t_super$_PluginCloneable_$47805_$",
+                            "typeString": "type(contract super PluginCloneable)"
+                          }
+                        },
+                        "id": 47798,
+                        "isConstant": false,
+                        "isLValue": false,
+                        "isPure": false,
+                        "lValueRequested": false,
+                        "memberLocation": "1648:17:57",
+                        "memberName": "supportsInterface",
+                        "nodeType": "MemberAccess",
+                        "referencedDeclaration": 44823,
+                        "src": "1642:23:57",
+                        "typeDescriptions": {
+                          "typeIdentifier": "t_function_internal_view$_t_bytes4_$returns$_t_bool_$",
+                          "typeString": "function (bytes4) view returns (bool)"
+                        }
+                      },
+                      "id": 47800,
+                      "isConstant": false,
+                      "isLValue": false,
+                      "isPure": false,
+                      "kind": "functionCall",
+                      "lValueRequested": false,
+                      "nameLocations": [],
+                      "names": [],
+                      "nodeType": "FunctionCall",
+                      "src": "1642:37:57",
+                      "tryCall": false,
+                      "typeDescriptions": {
+                        "typeIdentifier": "t_bool",
+                        "typeString": "bool"
+                      }
+                    },
+                    "src": "1597:82:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "functionReturnParameters": 47790,
+                  "id": 47802,
+                  "nodeType": "Return",
+                  "src": "1590:89:57"
+                }
+              ]
+            },
+            "baseFunctions": [
+              44823
+            ],
+            "documentation": {
+              "id": 47783,
+              "nodeType": "StructuredDocumentation",
+              "src": "1286:197:57",
+              "text": "@notice Checks if this or the parent contract supports an interface by its ID.\n @param _interfaceId The ID of the interface.\n @return Returns `true` if the interface is supported."
+            },
+            "functionSelector": "01ffc9a7",
+            "implemented": true,
+            "kind": "function",
+            "modifiers": [],
+            "name": "supportsInterface",
+            "nameLocation": "1497:17:57",
+            "overrides": {
+              "id": 47787,
+              "nodeType": "OverrideSpecifier",
+              "overrides": [],
+              "src": "1556:8:57"
+            },
+            "parameters": {
+              "id": 47786,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47785,
+                  "mutability": "mutable",
+                  "name": "_interfaceId",
+                  "nameLocation": "1522:12:57",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47804,
+                  "src": "1515:19:57",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bytes4",
+                    "typeString": "bytes4"
+                  },
+                  "typeName": {
+                    "id": 47784,
+                    "name": "bytes4",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1515:6:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bytes4",
+                      "typeString": "bytes4"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1514:21:57"
+            },
+            "returnParameters": {
+              "id": 47790,
+              "nodeType": "ParameterList",
+              "parameters": [
+                {
+                  "constant": false,
+                  "id": 47789,
+                  "mutability": "mutable",
+                  "name": "",
+                  "nameLocation": "-1:-1:-1",
+                  "nodeType": "VariableDeclaration",
+                  "scope": 47804,
+                  "src": "1574:4:57",
+                  "stateVariable": false,
+                  "storageLocation": "default",
+                  "typeDescriptions": {
+                    "typeIdentifier": "t_bool",
+                    "typeString": "bool"
+                  },
+                  "typeName": {
+                    "id": 47788,
+                    "name": "bool",
+                    "nodeType": "ElementaryTypeName",
+                    "src": "1574:4:57",
+                    "typeDescriptions": {
+                      "typeIdentifier": "t_bool",
+                      "typeString": "bool"
+                    }
+                  },
+                  "visibility": "internal"
+                }
+              ],
+              "src": "1573:6:57"
+            },
+            "scope": 47805,
+            "stateMutability": "view",
+            "virtual": true,
+            "visibility": "public"
+          }
+        ],
+        "abstract": true,
+        "baseContracts": [
+          {
+            "baseName": {
+              "id": 47743,
+              "name": "IPlugin",
+              "nameLocations": [
+                "659:7:57"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 47731,
+              "src": "659:7:57"
+            },
+            "id": 47744,
+            "nodeType": "InheritanceSpecifier",
+            "src": "659:7:57"
+          },
+          {
+            "baseName": {
+              "id": 47745,
+              "name": "ERC165Upgradeable",
+              "nameLocations": [
+                "668:17:57"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 44829,
+              "src": "668:17:57"
+            },
+            "id": 47746,
+            "nodeType": "InheritanceSpecifier",
+            "src": "668:17:57"
+          },
+          {
+            "baseName": {
+              "id": 47747,
+              "name": "DaoAuthorizableUpgradeable",
+              "nameLocations": [
+                "687:26:57"
+              ],
+              "nodeType": "IdentifierPath",
+              "referencedDeclaration": 47989,
+              "src": "687:26:57"
+            },
+            "id": 47748,
+            "nodeType": "InheritanceSpecifier",
+            "src": "687:26:57"
+          }
+        ],
+        "canonicalName": "PluginCloneable",
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": {
+          "id": 47742,
+          "nodeType": "StructuredDocumentation",
+          "src": "358:264:57",
+          "text": "@title PluginCloneable\n @author Aragon Association - 2022-2023\n @notice An abstract, non-upgradeable contract to inherit from when creating a plugin being deployed via the minimal clones pattern (see [ERC-1167](https://eips.ethereum.org/EIPS/eip-1167))."
+        },
+        "fullyImplemented": true,
+        "linearizedBaseContracts": [
+          47805,
+          47989,
+          44604,
+          44829,
+          44841,
+          43425,
+          47731
+        ],
+        "name": "PluginCloneable",
+        "nameLocation": "640:15:57",
+        "scope": 47806,
+        "usedErrors": []
+      }
+    ],
+    "license": "AGPL-3.0-or-later"
+  },
+  "id": 57
+}
