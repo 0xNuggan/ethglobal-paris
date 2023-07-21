@@ -5,14 +5,14 @@ import {Clones} from '@openzeppelin/contracts/proxy/Clones.sol';
 
 import {PermissionLib} from '@aragon/osx/core/permission/PermissionLib.sol';
 import {PluginSetup, IPluginSetup} from '@aragon/osx/framework/plugin/setup/PluginSetup.sol';
-import {SimpleAdmin} from './SymbioticBondingCurve.sol';
+import {SymbioticBondingCurvePlugin} from './SymbioticBondingCurve.sol';
 import {DAO, IDAO} from '@aragon/osx/core/dao/DAO.sol';
 
-contract SimpleAdminSetup is PluginSetup {
+contract SymbioticBondingCurvePluginSetup is PluginSetup {
   using Clones for address;
 
-  /// @notice The address of `SimpleAdmin` plugin logic contract to be cloned.
-  address private immutable simpleAdminImplementation;
+  /// @notice The address of `SymbioticBondingCurvePlugin` plugin logic contract to be cloned.
+  address private immutable SymbioticBondingCurvePluginImplementation;
 
   /// @notice Thrown if the admin address is zero.
   /// @param admin The admin address.
@@ -20,7 +20,7 @@ contract SimpleAdminSetup is PluginSetup {
 
   /// @notice The constructor setting the `Admin` implementation contract to clone from.
   constructor() {
-    simpleAdminImplementation = address(new SimpleAdmin());
+    SymbioticBondingCurvePluginImplementation = address(new SymbioticBondingCurvePlugin());
   }
 
   /// @inheritdoc IPluginSetup
@@ -28,7 +28,7 @@ contract SimpleAdminSetup is PluginSetup {
     address _dao,
     bytes calldata _data
   ) external returns (address plugin, PreparedSetupData memory preparedSetupData) {
-    // Decode `_data` to extract the params needed for cloning and initializing the `Admin` plugin.
+/*     // Decode `_data` to extract the params needed for cloning and initializing the `Admin` plugin.
     address admin = abi.decode(_data, (address));
 
     if (admin == address(0)) {
@@ -36,10 +36,10 @@ contract SimpleAdminSetup is PluginSetup {
     }
 
     // Clone plugin contract.
-    plugin = simpleAdminImplementation.clone();
+    plugin = SymbioticBondingCurvePluginImplementation.clone();
 
     // Initialize cloned plugin contract.
-    SimpleAdmin(plugin).initialize(IDAO(_dao), admin);
+    SymbioticBondingCurvePlugin(plugin).initialize(IDAO(_dao), admin);
 
     // Prepare permissions
     PermissionLib.MultiTargetPermission[]
@@ -51,7 +51,7 @@ contract SimpleAdminSetup is PluginSetup {
       where: plugin,
       who: admin,
       condition: PermissionLib.NO_CONDITION,
-      permissionId: SimpleAdmin(plugin).ADMIN_EXECUTE_PERMISSION_ID()
+      permissionId: SymbioticBondingCurvePlugin(plugin).ADMIN_EXECUTE_PERMISSION_ID()
     });
 
     // Grant the `EXECUTE_PERMISSION` on the DAO to the plugin.
@@ -63,7 +63,7 @@ contract SimpleAdminSetup is PluginSetup {
       permissionId: DAO(payable(_dao)).EXECUTE_PERMISSION_ID()
     });
 
-    preparedSetupData.permissions = permissions;
+    preparedSetupData.permissions = permissions; */
   }
 
   /// @inheritdoc IPluginSetup
@@ -71,9 +71,9 @@ contract SimpleAdminSetup is PluginSetup {
     address _dao,
     SetupPayload calldata _payload
   ) external view returns (PermissionLib.MultiTargetPermission[] memory permissions) {
-    // Collect addresses
+  /*   // Collect addresses
     address plugin = _payload.plugin;
-    address admin = SimpleAdmin(plugin).admin();
+    address admin = SymbioticBondingCurvePlugin(plugin).admin();
 
     // Prepare permissions
     permissions = new PermissionLib.MultiTargetPermission[](2);
@@ -83,7 +83,7 @@ contract SimpleAdminSetup is PluginSetup {
       where: plugin,
       who: admin,
       condition: PermissionLib.NO_CONDITION,
-      permissionId: SimpleAdmin(plugin).ADMIN_EXECUTE_PERMISSION_ID()
+      permissionId: SymbioticBondingCurvePlugin(plugin).ADMIN_EXECUTE_PERMISSION_ID()
     });
 
     permissions[1] = PermissionLib.MultiTargetPermission({
@@ -92,11 +92,11 @@ contract SimpleAdminSetup is PluginSetup {
       who: plugin,
       condition: PermissionLib.NO_CONDITION,
       permissionId: DAO(payable(_dao)).EXECUTE_PERMISSION_ID()
-    });
+    }); */
   }
 
   /// @inheritdoc IPluginSetup
   function implementation() external view returns (address) {
-    return simpleAdminImplementation;
+    return SymbioticBondingCurvePluginImplementation;
   }
 }

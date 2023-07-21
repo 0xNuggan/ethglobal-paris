@@ -16,11 +16,13 @@ abstract contract ContinuousToken is Ownable, ERC20, BancorBondingCurve {
 
     constructor(
         string memory _name,
-        string memory _symbol,
-        uint _initialSupply,
-        uint32 _reserveRatio
-    )  ERC20(_name, _symbol) BancorBondingCurve(_reserveRatio) {
-        _mint(msg.sender, _initialSupply);
+        string memory _symbol
+    )  ERC20(_name, _symbol) BancorBondingCurve(300000) {
+    }
+
+    // Note: since I made this internal, it now depends on the inheriting plugin to call it
+    function __ContinuousToken__initialize(uint _initialSupply, uint32 _reserveRatio) internal {
+         _mint(msg.sender, _initialSupply);
     }
 
     function continuousSupply() override public view returns (uint) {

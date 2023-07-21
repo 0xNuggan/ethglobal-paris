@@ -17,6 +17,10 @@ abstract contract BancorBondingCurve is IBondingCurve, BancorFormula {
         reserveRatio = _reserveRatio;
     }
 
+    function updateReserveRatio(uint32 _reserveRatio) internal {
+        reserveRatio = _reserveRatio;
+    }
+
     function getContinuousMintReward(uint _reserveTokenAmount) public override view returns (uint) {
         return calculatePurchaseReturn(continuousSupply(), reserveBalance(), reserveRatio, _reserveTokenAmount);
     }

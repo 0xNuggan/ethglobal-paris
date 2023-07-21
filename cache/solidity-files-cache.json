@@ -838,6 +838,48 @@
         }
       }
     },
+    "lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
+      "lastModificationDate": 1689972984251,
+      "contentHash": "5a20b2cad87ddb61c7a3a6af21289e28",
+      "sourceName": "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Ownable": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "Ownable.sol/Ownable.json"
+        }
+      }
+    },
     "lib/openzeppelin-contracts/contracts/interfaces/IERC1271.sol": {
       "lastModificationDate": 1689972984255,
       "contentHash": "8fe867b95c856b204f954a1910e28a1e",
@@ -1172,6 +1214,132 @@
         }
       }
     },
+    "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol": {
+      "lastModificationDate": 1689972984259,
+      "contentHash": "3ae5166c6827a9cf1a7a462d1632b464",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "ERC20": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "ERC20.sol/ERC20.json"
+        }
+      }
+    },
+    "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol": {
+      "lastModificationDate": 1689972984259,
+      "contentHash": "df36f7051335cd1e748b1b6463b7fdd3",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC20": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "IERC20.sol/IERC20.json"
+        }
+      }
+    },
+    "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol": {
+      "lastModificationDate": 1689972984259,
+      "contentHash": "909ab67fc5c25033fe6cd364f8c056f9",
+      "sourceName": "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "IERC20Metadata": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "IERC20Metadata.sol/IERC20Metadata.json"
+        }
+      }
+    },
     "lib/openzeppelin-contracts/contracts/utils/Address.sol": {
       "lastModificationDate": 1689972984259,
       "contentHash": "211ffd288c1588ba8c10eae668ca3c66",
@@ -1209,6 +1377,46 @@
       "artifacts": {
         "Address": {
           "0.8.17+commit.8df45f5f.Linux.gcc": "Address.sol/Address.json"
+        }
+      }
+    },
+    "lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+      "lastModificationDate": 1689972984259,
+      "contentHash": "5f2c5c4b6af2dd4551027144797bc8be",
+      "sourceName": "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "Context": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "Context.sol/Context.json"
         }
       }
     },
@@ -2962,10 +3170,50 @@
         }
       }
     },
-    "src/AragonPlugin.sol": {
-      "lastModificationDate": 1689974622259,
-      "contentHash": "7e6b2348be084d440c2b060492571ce7",
-      "sourceName": "src/AragonPlugin.sol",
+    "src/Counter.sol": {
+      "lastModificationDate": 1689967346160,
+      "contentHash": "ae6c800a2b4c57768024d6e9423d39e8",
+      "sourceName": "src/Counter.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "Counter": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "Counter.sol/Counter.json"
+        }
+      }
+    },
+    "src/SymbioticBondingCurve.sol": {
+      "lastModificationDate": 1689981127951,
+      "contentHash": "ad98f6521228b0fa28fd9a6e1516e47a",
+      "sourceName": "src/SymbioticBondingCurve.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -2995,6 +3243,8 @@
         }
       },
       "imports": [
+        "lib/forge-std/src/console.sol",
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
         "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol",
         "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
         "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
@@ -3002,7 +3252,11 @@
         "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol",
         "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
         "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
         "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
         "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
@@ -3023,19 +3277,24 @@
         "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol",
         "lib/osx/packages/contracts/src/core/utils/auth.sol",
         "lib/osx/packages/contracts/src/token/ERC20/IERC20MintableUpgradeable.sol",
-        "lib/osx/packages/contracts/src/utils/Proxy.sol"
+        "lib/osx/packages/contracts/src/utils/Proxy.sol",
+        "src/bonding_curve/ContinuousToken.sol",
+        "src/bonding_curve/curves/BancorBondingCurve.sol",
+        "src/bonding_curve/interfaces/IBondingCurve.sol",
+        "src/bonding_curve/math/BancorFormula.sol",
+        "src/bonding_curve/math/Power.sol"
       ],
       "versionRequirement": "=0.8.17",
       "artifacts": {
-        "SimpleAdmin": {
-          "0.8.17+commit.8df45f5f.Linux.gcc": "AragonPlugin.sol/SimpleAdmin.json"
+        "SymbioticBondingCurvePlugin": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "SymbioticBondingCurve.sol/SymbioticBondingCurvePlugin.json"
         }
       }
     },
-    "src/AragonPluginSetup.sol": {
-      "lastModificationDate": 1689974776784,
-      "contentHash": "98ce33fd83c3f0d7500787e37050f00b",
-      "sourceName": "src/AragonPluginSetup.sol",
+    "src/SymbioticBondingCurveSetup.sol": {
+      "lastModificationDate": 1689980513519,
+      "contentHash": "e12575d7bf0c309d9fd09c735db772e9",
+      "sourceName": "src/SymbioticBondingCurveSetup.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -3065,6 +3324,8 @@
         }
       },
       "imports": [
+        "lib/forge-std/src/console.sol",
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
         "lib/openzeppelin-contracts/contracts/interfaces/IERC1271.sol",
         "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol",
         "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
@@ -3073,7 +3334,11 @@
         "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol",
         "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
         "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
         "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
         "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
         "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
         "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165Checker.sol",
@@ -3113,19 +3378,120 @@
         "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol",
         "lib/osx/packages/contracts/src/token/ERC20/IERC20MintableUpgradeable.sol",
         "lib/osx/packages/contracts/src/utils/Proxy.sol",
-        "src/AragonPlugin.sol"
+        "src/SymbioticBondingCurve.sol",
+        "src/bonding_curve/ContinuousToken.sol",
+        "src/bonding_curve/curves/BancorBondingCurve.sol",
+        "src/bonding_curve/interfaces/IBondingCurve.sol",
+        "src/bonding_curve/math/BancorFormula.sol",
+        "src/bonding_curve/math/Power.sol"
       ],
       "versionRequirement": "=0.8.17",
       "artifacts": {
-        "SimpleAdminSetup": {
-          "0.8.17+commit.8df45f5f.Linux.gcc": "AragonPluginSetup.sol/SimpleAdminSetup.json"
+        "SymbioticBondingCurvePluginSetup": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "SymbioticBondingCurveSetup.sol/SymbioticBondingCurvePluginSetup.json"
         }
       }
     },
-    "src/Counter.sol": {
-      "lastModificationDate": 1689967346160,
-      "contentHash": "ae6c800a2b4c57768024d6e9423d39e8",
-      "sourceName": "src/Counter.sol",
+    "src/bonding_curve/ContinuousToken.sol": {
+      "lastModificationDate": 1689980242326,
+      "contentHash": "a3e82a1cd0c03be2a151d751fd871d76",
+      "sourceName": "src/bonding_curve/ContinuousToken.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/console.sol",
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "src/bonding_curve/curves/BancorBondingCurve.sol",
+        "src/bonding_curve/interfaces/IBondingCurve.sol",
+        "src/bonding_curve/math/BancorFormula.sol",
+        "src/bonding_curve/math/Power.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "ContinuousToken": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "ContinuousToken.sol/ContinuousToken.json"
+        }
+      }
+    },
+    "src/bonding_curve/curves/BancorBondingCurve.sol": {
+      "lastModificationDate": 1689978562197,
+      "contentHash": "a7483721939de29586fc75410b7d812a",
+      "sourceName": "src/bonding_curve/curves/BancorBondingCurve.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/console.sol",
+        "src/bonding_curve/interfaces/IBondingCurve.sol",
+        "src/bonding_curve/math/BancorFormula.sol",
+        "src/bonding_curve/math/Power.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "BancorBondingCurve": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "BancorBondingCurve.sol/BancorBondingCurve.json"
+        }
+      }
+    },
+    "src/bonding_curve/interfaces/IBondingCurve.sol": {
+      "lastModificationDate": 1689975214820,
+      "contentHash": "2c8ff0c5185491b386a2f23af895dbb5",
+      "sourceName": "src/bonding_curve/interfaces/IBondingCurve.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -3155,10 +3521,138 @@
         }
       },
       "imports": [],
-      "versionRequirement": "^0.8.13",
+      "versionRequirement": "=0.8.17",
       "artifacts": {
-        "Counter": {
-          "0.8.17+commit.8df45f5f.Linux.gcc": "Counter.sol/Counter.json"
+        "IBondingCurve": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "IBondingCurve.sol/IBondingCurve.json"
+        }
+      }
+    },
+    "src/bonding_curve/math/BancorFormula.sol": {
+      "lastModificationDate": 1689982848734,
+      "contentHash": "d920539e7f7a018abcfb53e10e5ca3f4",
+      "sourceName": "src/bonding_curve/math/BancorFormula.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/src/console.sol",
+        "src/bonding_curve/math/Power.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "BancorFormula": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "BancorFormula.sol/BancorFormula.json"
+        }
+      }
+    },
+    "src/bonding_curve/math/Power.sol": {
+      "lastModificationDate": 1689979682234,
+      "contentHash": "151e6ce4894a59c7666823b02639bd0a",
+      "sourceName": "src/bonding_curve/math/Power.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "Power": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "Power.sol/Power.json"
+        }
+      }
+    },
+    "src/mockContracts/MockLSD.sol": {
+      "lastModificationDate": 1689979345322,
+      "contentHash": "3cba46ec9065945b0618f76b75aa62d8",
+      "sourceName": "src/mockContracts/MockLSD.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "MockLSD": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "MockLSD.sol/MockLSD.json"
         }
       }
     },
@@ -3219,6 +3713,106 @@
       "artifacts": {
         "CounterTest": {
           "0.8.17+commit.8df45f5f.Linux.gcc": "Counter.t.sol/CounterTest.json"
+        }
+      }
+    },
+    "test/SymbioticBondingCurve.t.sol": {
+      "lastModificationDate": 1689982579253,
+      "contentHash": "35694ddfac69defc7cc5cdf1f4413720",
+      "sourceName": "test/SymbioticBondingCurve.t.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/safeconsole.sol",
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol",
+        "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "lib/osx/packages/contracts/src/core/plugin/IPlugin.sol",
+        "lib/osx/packages/contracts/src/core/plugin/PluginCloneable.sol",
+        "lib/osx/packages/contracts/src/core/plugin/PluginUUPSUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/utils/auth.sol",
+        "lib/osx/packages/contracts/src/token/ERC20/IERC20MintableUpgradeable.sol",
+        "lib/osx/packages/contracts/src/utils/Proxy.sol",
+        "src/SymbioticBondingCurve.sol",
+        "src/bonding_curve/ContinuousToken.sol",
+        "src/bonding_curve/curves/BancorBondingCurve.sol",
+        "src/bonding_curve/interfaces/IBondingCurve.sol",
+        "src/bonding_curve/math/BancorFormula.sol",
+        "src/bonding_curve/math/Power.sol",
+        "src/mockContracts/MockLSD.sol"
+      ],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "SymbioticBondingCurvePluginTest": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "SymbioticBondingCurve.t.sol/SymbioticBondingCurvePluginTest.json"
         }
       }
     }

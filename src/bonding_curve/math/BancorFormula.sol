@@ -2,6 +2,8 @@ pragma solidity 0.8.17;
 
 import "./Power.sol"; // Efficient power function.
 
+import "forge-std/console.sol";
+
 //Note: Yolo changed solidity vrsn and removed SafeMath. may cause issues
 
 
@@ -35,6 +37,10 @@ contract BancorFormula is Power {
         uint256 _depositAmount) public view returns (uint256)
     {
         // validate input
+        console.logUint(_supply);
+        console.logUint(_reserveBalance);
+        console.logUint(_reserveRatio);
+        console.logUint(_depositAmount);
         require(_supply > 0 && _reserveBalance > 0 && _reserveRatio > 0 && _reserveRatio <= MAX_RESERVE_RATIO, "Invalid inputs.");
         // special case for 0 deposit amount
         if (_depositAmount == 0) {
