@@ -5,7 +5,7 @@ import {Clones} from '@openzeppelin/contracts/proxy/Clones.sol';
 
 import {PermissionLib} from '@aragon/osx/core/permission/PermissionLib.sol';
 import {PluginSetup, IPluginSetup} from '@aragon/osx/framework/plugin/setup/PluginSetup.sol';
-import {SymbioticBondingCurvePlugin} from './SymbioticBondingCurve.sol';
+import {SymbioticBondingCurvePlugin} from './SymbioticBondingCurvePlugin.sol';
 import {DAO, IDAO} from '@aragon/osx/core/dao/DAO.sol';
 
 contract SymbioticBondingCurvePluginSetup is PluginSetup {

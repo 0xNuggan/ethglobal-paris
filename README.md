@@ -10,8 +10,8 @@ done test "rebase"
 done missing yield use functions
 
 **basic functionlity in module ready. to do:**
-Aragon setup script
-Gasless
+done Aragon setup script
+done Gasless transactions enabled
 Deploy on Polygon
 Presentation with focus on convicing people that don't know about bonding curves
 

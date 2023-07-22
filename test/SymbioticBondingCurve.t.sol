@@ -2,7 +2,7 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Test.sol";
-import "../src/SymbioticBondingCurve.sol";
+import "../src/SymbioticBondingCurvePlugin.sol";
 import "../src/mockContracts/MockLSD.sol";
 
 import {Clones} from '@openzeppelin/contracts/proxy/Clones.sol';

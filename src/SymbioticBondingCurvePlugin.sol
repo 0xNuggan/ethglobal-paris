@@ -14,11 +14,13 @@ import {PluginCloneable, IDAO} from '@aragon/osx/core/plugin/PluginCloneable.sol
 import {IERC20MintableUpgradeable} from "@aragon/osx/token/ERC20/IERC20MintableUpgradeable.sol";
 import {createERC1967Proxy} from "@aragon/osx/utils/Proxy.sol";
 
+import {BaseRelayRecipient} from '@opengsn/contracts/src/BaseRelayRecipient.sol';
+
 import {ContextUpgradeable} from '@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol';
 
 import "./bonding_curve/ContinuousToken.sol";
 
-contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken {
+contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRelayRecipient {
   /// @notice The ID of the permission required to call the `execute` function.
   bytes32 public constant ADMIN_EXECUTE_PERMISSION_ID = keccak256('ADMIN_EXECUTE_PERMISSION');
 
@@ -134,13 +136,25 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken {
 
 
 
-// housekeeping 
- function _msgSender() internal view virtual override(Context, ContextUpgradeable) returns (address) {
-        return msg.sender;
-  }
+    // make gasless transaction possible
+    function _msgSender()
+        internal
+        view
+        virtual
+        override(Context, ContextUpgradeable, BaseRelayRecipient)
+        returns (address)
+    {
+        return BaseRelayRecipient._msgSender();
+    }
 
-    function _msgData() internal view virtual  override(Context, ContextUpgradeable)  returns (bytes calldata) {
-        return msg.data;
+    function _msgData()
+        internal
+        view
+        virtual
+        override(Context, ContextUpgradeable, BaseRelayRecipient)
+        returns (bytes calldata)
+    {
+        return BaseRelayRecipient._msgData();
     }
 }
 

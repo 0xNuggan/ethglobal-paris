@@ -1,3 +1,4 @@
 @openzeppelin/contracts-upgradeable/=lib/openzeppelin-contracts-upgradeable/contracts/
 @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
 @aragon/osx/=lib/osx/packages/contracts/src/
+@opengsn/contracts/=lib/gsn/packages/contracts/
