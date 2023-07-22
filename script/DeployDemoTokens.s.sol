@@ -31,7 +31,7 @@ contract TokenDeployerScript is Script {
         underlyingToken.mint(address(deployer), 100000 ether);
         console.log("Deployer Wallet Funded with 100000 Tokens.");
 
-        MockLSD rebasingReserve = new MockLSD("LSD", "LSD", address(underlyingToken));       
+        MockLSD rebasingReserve = new MockLSD("Liquid Stakin Token", "LSD", address(underlyingToken));       
         console.log("MockLSD deployed to: %s", address(rebasingReserve));
 
 
