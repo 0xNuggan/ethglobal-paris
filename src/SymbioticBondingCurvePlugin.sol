@@ -41,12 +41,14 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRe
     /// @notice Initializes the contract.
     /// @param _dao The associated DAO.
     /// @param _admin The address of the admin.
-    function initialize(IDAO _dao, address _admin, address _reserveToken, uint _initialReserve, uint32 _reserveRatio, address _treasuryAddress) external initializer {
+    function initialize(IDAO _dao, address _admin, address relayForwarder, address _reserveToken, uint _initialReserve, uint32 _reserveRatio, address _treasuryAddress) external initializer {
         __PluginCloneable_init(_dao);
+        _setTrustedForwarder(relayForwarder);
         __ContinuousToken__initialize(_initialReserve, _reserveRatio);
 
         admin = _admin;
         treasuryAddress = _treasuryAddress;
+
 
         
 
@@ -126,7 +128,7 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRe
 
     }
 
-    function calculateReserveRatio(uint _supply, uint _reserve) public view returns (uint32) {
+    function calculateReserveRatio(uint _supply, uint _reserve) public pure returns (uint32) {
 
         // TODO: actual math
         uint32 newReserveRatio = uint32((_supply + _reserve) % 1000000);
@@ -136,7 +138,7 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRe
 
 
 
-    // make gasless transaction possible
+    // allow for gasless transactions
     function _msgSender()
         internal
         view

@@ -23,6 +23,7 @@ contract SymbioticBondingCurvePluginTest is Test {
 
         IDAO _dao = IDAO(address(this));
         address _admin = address(this);
+        address _relayForwarder = address(0xf00);
 
         uint initialReserve = 100 ether;
         reserveToken = new MockLSD("LSD", "LSD");
@@ -34,7 +35,7 @@ contract SymbioticBondingCurvePluginTest is Test {
         plugin = SymbioticBondingCurvePlugin(symbioticBondingCurvePluginImplementation.clone());
 
         reserveToken.approve(address(plugin), type(uint).max);
-        plugin.initialize(_dao, _admin, address(reserveToken), initialReserve, 300000, TREASURY);
+        plugin.initialize(_dao, _admin, _relayForwarder, address(reserveToken), initialReserve, 300000, TREASURY);
     }
 
     function testSetup() public {

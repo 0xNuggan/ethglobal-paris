@@ -3253,8 +3253,8 @@
       }
     },
     "script/DeployPlugin.s.sol": {
-      "lastModificationDate": 1690025172175,
-      "contentHash": "1bd6e46fca8fcce46ba57922ac0e3129",
+      "lastModificationDate": 1690038753398,
+      "contentHash": "3095ff9bc0d745a191f8bf1bf4c0cb56",
       "sourceName": "script/DeployPlugin.s.sol",
       "solcConfig": {
         "settings": {
@@ -3360,7 +3360,8 @@
         "src/bonding_curve/curves/BancorBondingCurve.sol",
         "src/bonding_curve/interfaces/IBondingCurve.sol",
         "src/bonding_curve/math/BancorFormula.sol",
-        "src/bonding_curve/math/Power.sol"
+        "src/bonding_curve/math/Power.sol",
+        "src/mockContracts/MockLSD.sol"
       ],
       "versionRequirement": "^0.8.13",
       "artifacts": {
@@ -3410,8 +3411,8 @@
       }
     },
     "src/SymbioticBondingCurvePlugin.sol": {
-      "lastModificationDate": 1690022269840,
-      "contentHash": "9e0f197fe304b0ade64e5d7bdacf2a8e",
+      "lastModificationDate": 1690026061675,
+      "contentHash": "d4c8915615fa406b3ad551450ff541b3",
       "sourceName": "src/SymbioticBondingCurvePlugin.sol",
       "solcConfig": {
         "settings": {
@@ -3493,8 +3494,8 @@
       }
     },
     "src/SymbioticBondingCurvePluginSetup.sol": {
-      "lastModificationDate": 1690025050450,
-      "contentHash": "bce85a4e97a90092be9030930d339c14",
+      "lastModificationDate": 1690030354202,
+      "contentHash": "1f7fcc0c78630388a008ef927b0b3f34",
       "sourceName": "src/SymbioticBondingCurvePluginSetup.sol",
       "solcConfig": {
         "settings": {
@@ -3920,8 +3921,8 @@
       }
     },
     "test/SymbioticBondingCurve.t.sol": {
-      "lastModificationDate": 1690025042222,
-      "contentHash": "92f2ee89b176ed4eef8acb86da2b2e55",
+      "lastModificationDate": 1690026059043,
+      "contentHash": "0a7ae8e7741afa2c5c59d5a7caa973f8",
       "sourceName": "test/SymbioticBondingCurve.t.sol",
       "solcConfig": {
         "settings": {

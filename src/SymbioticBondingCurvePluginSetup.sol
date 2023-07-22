@@ -8,6 +8,8 @@ import {PluginSetup, IPluginSetup} from '@aragon/osx/framework/plugin/setup/Plug
 import {SymbioticBondingCurvePlugin} from './SymbioticBondingCurvePlugin.sol';
 import {DAO, IDAO} from '@aragon/osx/core/dao/DAO.sol';
 
+import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+
 contract SymbioticBondingCurvePluginSetup is PluginSetup {
   using Clones for address;
 
@@ -28,8 +30,8 @@ contract SymbioticBondingCurvePluginSetup is PluginSetup {
     address _dao,
     bytes calldata _data
   ) external returns (address plugin, PreparedSetupData memory preparedSetupData) {
-   // Decode `_data` to extract the params needed for cloning and initializing the `BOnding Curve` plugin.
-    (address admin, address reserveToken, uint initialReserve, uint32 reserveRatio, address treasury) = abi.decode(_data, (address, address, uint, uint32, address));
+   // Decode `_data` to extract the params needed for cloning and initializing the `Bonding Curve` plugin.
+    (address admin, address reserveToken, address relayForwarder, uint initialReserve, uint32 reserveRatio, address treasury) = abi.decode(_data, (address, address, address, uint, uint32, address));
 
 
     if (admin == address(0)) {
@@ -39,8 +41,10 @@ contract SymbioticBondingCurvePluginSetup is PluginSetup {
     // Clone plugin contract.
     plugin = SymbioticBondingCurvePluginImplementation.clone();
 
+    ERC20(reserveToken).approve(address(plugin), type(uint).max);
+
     // Initialize cloned plugin contract.
-    SymbioticBondingCurvePlugin(plugin).initialize(IDAO(_dao), admin, reserveToken, initialReserve, reserveRatio, treasury);
+    SymbioticBondingCurvePlugin(plugin).initialize(IDAO(_dao), admin, relayForwarder, reserveToken, initialReserve, reserveRatio, treasury);
 
 
     // Prepare permissions
@@ -62,7 +66,7 @@ contract SymbioticBondingCurvePluginSetup is PluginSetup {
       where: _dao,
       who: plugin,
       condition: PermissionLib.NO_CONDITION,
-      permissionId: DAO(payable(_dao)).EXECUTE_PERMISSION_ID()
+      permissionId: keccak256("EXECUTE_PERMISSION")
     });
 
     preparedSetupData.permissions = permissions; 
@@ -93,7 +97,7 @@ contract SymbioticBondingCurvePluginSetup is PluginSetup {
       where: _dao,
       who: plugin,
       condition: PermissionLib.NO_CONDITION,
-      permissionId: DAO(payable(_dao)).EXECUTE_PERMISSION_ID()
+      permissionId: keccak256("EXECUTE_PERMISSION")
     }); 
   }
 

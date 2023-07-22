@@ -13,3 +13,5 @@ coverage/
 
 .DS_Store
 test/.DS_Store
+
+cmd1.txt
