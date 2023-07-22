@@ -14,21 +14,27 @@ contract TokenDeployerScript is Script {
 
     function run() public {
 
-
+        // Load deployer info
         uint256 deployerPrivateKey = vm.envUint("WALLET_DEPLOYER_PK");
         address deployer = vm.envAddress("WALLET_DEPLOYER");
 
 
+        // ======================
+        // Deployment
+        // ======================
         vm.startBroadcast(deployerPrivateKey);
 
         MockToken underlyingToken = new MockToken("ProtocolToken", "PTK");       
         console.log("Mock Protocol Token deployed to: %s", address(underlyingToken));
 
+        // For ease of use.
+        underlyingToken.mint(address(deployer), 100000 ether);
+        console.log("Deployer Wallet Funded with 100000 Tokens.");
+
         MockLSD rebasingReserve = new MockLSD("LSD", "LSD", address(underlyingToken));       
         console.log("MockLSD deployed to: %s", address(rebasingReserve));
 
-        underlyingToken.mint(address(deployer), 100000 ether);
-        console.log("Deployer Wallet Funded with 100000 Tokens.");
+
 
         vm.stopBroadcast();
     }
