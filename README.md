@@ -30,10 +30,10 @@ Then copy the deployment addresses into the .env file and run:
 forge script script/DeployPlugin.s.sol:PluginScript --rpc-url https://polygon-mumbai.g.alchemy.com/v2/[MUMBAY_API_KEY] --broadcast --verify --etherscan-api-key [ETHERSCAN_POLYGON_API_KEY] --chain 80001 --legacy -vvvv
 ```
 
+#### Note
+This repo started as a fork of safe-core. The idea to implement changed during the hackathon, but it now looks like it has a long commit list. The first commit for the final project is ee818486e6ab81d524ec2690c0ad2305072f04b2
 
+#### Final Words
 
 Math-head nouns approve of wonky bonding curves.<br>
 ![nounsy](noun-mid.jpg)
-
-#### Note
-This repo started as a fork of safe-core. The idea to implement changed during the hackathon, but it now looks like it has a long commit list. The first commit for the final project is ee818486e6ab81d524ec2690c0ad2305072f04b2
