@@ -151,7 +151,7 @@ contract SymbioticBondingCurvePluginTest is Test {
         // The extra ether is now in the treasury
         assertEq(reserveToken.balanceOf(address(plugin)), plugin.reserveBalance());
         assertEq(plugin.reserveBalance(), (reserveBefore + mintAmount));
-        assertEq(reserveToken.balanceOf(plugin.treasuryAddress()), 1 ether);
+        assertEq(reserveToken.underlyingToken().balanceOf(plugin.treasuryAddress()), 1 ether);
 
 
     }
@@ -162,14 +162,16 @@ contract SymbioticBondingCurvePluginTest is Test {
 
 
         // STEP ONE: mint tokens
-       uint receivedToken =  userDeposit(BOB, mintAmount);
+        userDeposit(BOB, mintAmount);
 
         //state before
         uint supplyBefore = plugin.totalSupply();
-        uint reserveBefore = plugin.reserveBalance();
 
         // STEP TWO: rebase
         reserveToken.simulateRebase(address(plugin), 1 ether);
+
+        // virtual balance and actual balance diverge
+        assertNotEq(reserveToken.balanceOf(address(plugin)), plugin.reserveBalance());
 
         // we check how many tokens the surplus would generate:
         uint burnAmount = plugin.getContinuousMintReward(1 ether);
@@ -193,11 +195,8 @@ contract SymbioticBondingCurvePluginTest is Test {
 
 
         // STEP ONE: mint tokens
-       uint receivedToken =  userDeposit(BOB, mintAmount);
+        userDeposit(BOB, mintAmount);
 
-        //state before
-        uint supplyBefore = plugin.totalSupply();
-        uint reserveBefore = plugin.reserveBalance();
 
         // STEP TWO: rebase
         reserveToken.simulateRebase(address(plugin), 1 ether);

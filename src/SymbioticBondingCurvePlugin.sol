@@ -118,7 +118,12 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRe
         // Send surplus to treasury. Most straightforward option, generates a cash flow for the DAO
         if(mode == 1){
             
-            reserveToken.transfer(treasuryAddress, surplus);
+
+         //we redeem the tokens
+        reserveToken.withdraw(address(this), surplus);
+
+        // we transfer them back to the treasury
+        reserveToken.underlyingToken().transfer(treasuryAddress, surplus); 
         }
 
         // Option 2: 
