@@ -36,4 +36,4 @@ This repo started as a fork of safe-core. The idea to implement changed during t
 #### Final Words
 
 Math-head nouns approve of wonky bonding curves.<br>
-![nounsy](noun-mid.jpg)
+![nounsy](noun_mid.jpg)
