@@ -12,6 +12,9 @@ contract SymbioticBondingCurvePluginTest is Test {
 
     SymbioticBondingCurvePlugin plugin;
     MockLSD reserveToken;
+
+    address constant BOB = address(0xb0b);
+    address constant TREASURY = address(0x123456789);
     
 
     function setUp() public {
@@ -31,33 +34,193 @@ contract SymbioticBondingCurvePluginTest is Test {
         plugin = SymbioticBondingCurvePlugin(symbioticBondingCurvePluginImplementation.clone());
 
         reserveToken.approve(address(plugin), type(uint).max);
-        plugin.initialize(_dao, _admin, address(reserveToken), initialReserve, 300000);
+        plugin.initialize(_dao, _admin, address(reserveToken), initialReserve, 300000, TREASURY);
     }
 
     function testSetup() public {
         assertEq(plugin.reserveBalance(), 100 ether);
         assertEq(address(plugin.reserveToken()), address(reserveToken));
+        assertEq(plugin.reserveRatio(),300000 );
     }
 
     function testMint() public {
-        address bob = address(0x1);
-        uint mintAmount = 1 ether;
-        reserveToken.mint(bob, mintAmount);
+
+      
+        //state before
+        uint supplyBefore = plugin.totalSupply();
+        uint reserveBefore = plugin.reserveBalance();
+
+        uint receivedToken =  userDeposit(BOB, 1 ether);
+
+        assertEq(plugin.totalSupply(), receivedToken+supplyBefore);
+        assertEq(plugin.reserveBalance(), (reserveBefore + 1 ether));
+        assertEq(reserveToken.balanceOf(BOB), 0 ether);
+    }
+
+    function testBurn() public {
+
+
+        //state before
+        uint supplyBefore = plugin.totalSupply();
+        uint reserveBefore = plugin.reserveBalance();
        
+
+        // STEP ONE: mint tokens
+
+        uint receivedToken =  userDeposit(BOB, 1 ether);
+
+
+        // STEP TWO: burn tokens
+        
+        vm.startPrank(BOB);
+        uint receivedBack = plugin.burn(receivedToken);
+        vm.stopPrank();
+
+
+        //STEP THREE: everything stayed the same
+
+        assertApproxEqAbs(plugin.totalSupply(), supplyBefore, 100);
+        assertApproxEqAbs(plugin.reserveBalance(), (reserveBefore), 100);
+        assertApproxEqAbs(receivedBack, 1 ether, 100);
+        assertApproxEqAbs(reserveToken.balanceOf(BOB), 1 ether, 100);
+    }
+
+
+    function testMockRebase() public {
+
 
         //state before
         uint supplyBefore = plugin.totalSupply();
         uint reserveBefore = plugin.reserveBalance();
 
-        vm.startPrank(bob);
-        reserveToken.approve(address(plugin), type(uint).max);
-        plugin.mint(mintAmount);
-        vm.stopPrank();
+        uint mintAmount = 10 ether;
 
-        assertEq(plugin.totalSupply(), mintAmount+supplyBefore);
-        assertEq(plugin.reserveBalance(), (reserveBefore + 1 ether));
-        assertEq(reserveToken.balanceOf(bob), 0 ether);
+       
+
+        // STEP ONE: mint tokens
+       uint receivedToken =  userDeposit(BOB, mintAmount);
+
+        // STEP TWO: rebase
+        reserveToken.simulateRebase(address(plugin), 1 ether);
+
+        // STEP THREE: check state
+
+        assertEq(plugin.totalSupply(), receivedToken+supplyBefore);
+        assertEq(reserveToken.balanceOf(BOB), 0 ether);
+
+        // This is the mismatch we are looking to use
+        assertEq(reserveToken.balanceOf(address(plugin)), (reserveBefore + mintAmount + 1 ether));
+        assertEq(plugin.reserveBalance(), (reserveBefore + mintAmount));
+
+ 
     }
 
+    function testUseSurplusForTreasury() public {
+
+
+        //state before
+        uint supplyBefore = plugin.totalSupply();
+        uint reserveBefore = plugin.reserveBalance();
+
+        uint mintAmount = 10 ether;
+
+       
+
+        // STEP ONE: mint tokens
+       uint receivedToken =  userDeposit(BOB, mintAmount);
+
+        // STEP TWO: rebase
+        reserveToken.simulateRebase(address(plugin), 1 ether);
+
+        // STEP THREE: send rebase surplus to treasury
+        plugin.manageYieldSurplus(1);
+
+        // STEP FOUR: check state
+
+        assertEq(plugin.totalSupply(), receivedToken+supplyBefore);
+        assertEq(reserveToken.balanceOf(BOB), 0 ether);
+
+        // The extra ether is now in the treasury
+        assertEq(reserveToken.balanceOf(address(plugin)), plugin.reserveBalance());
+        assertEq(plugin.reserveBalance(), (reserveBefore + mintAmount));
+        assertEq(reserveToken.balanceOf(plugin.treasuryAddress()), 1 ether);
+
+
+    }
+
+    function testUseSurplusToMintAndBurn() public {
+
+        uint mintAmount = 10 ether;
+
+
+        // STEP ONE: mint tokens
+       uint receivedToken =  userDeposit(BOB, mintAmount);
+
+        //state before
+        uint supplyBefore = plugin.totalSupply();
+        uint reserveBefore = plugin.reserveBalance();
+
+        // STEP TWO: rebase
+        reserveToken.simulateRebase(address(plugin), 1 ether);
+
+        // we check how many tokens the surplus would generate:
+        uint burnAmount = plugin.getContinuousMintReward(1 ether);
+
+        // STEP THREE: use rebaseSurplus to mint Tokens and burn them
+        plugin.manageYieldSurplus(2);
+
+        // STEP FOUR: check state
+
+        assertEq(plugin.totalSupply(), supplyBefore+burnAmount);
+
+        // the reserve is in line again
+        assertEq(reserveToken.balanceOf(address(plugin)), plugin.reserveBalance());
+
+
+    }
+
+    function testUseSurplusToChangeShape() public {
+
+        uint mintAmount = 10 ether;
+
+
+        // STEP ONE: mint tokens
+       uint receivedToken =  userDeposit(BOB, mintAmount);
+
+        //state before
+        uint supplyBefore = plugin.totalSupply();
+        uint reserveBefore = plugin.reserveBalance();
+
+        // STEP TWO: rebase
+        reserveToken.simulateRebase(address(plugin), 1 ether);
+
+        uint reservRatioBefore = plugin.reserveRatio();
+
+        // STEP THREE: use rebaseSurplus to change shape
+        plugin.manageYieldSurplus(3);
+
+        // STEP FOUR: the reserve ratio has been updated:
+         assertNotEq(0, plugin.reserveRatio());
+        assertNotEq(reservRatioBefore, plugin.reserveRatio());
+
+        // it does not break with the new ReserveRatio
+       testBurn();
+
+
+
+    }
+
+
+    // helper functions
+    function userDeposit(address _user, uint _amount) internal returns (uint amountReceived){
+        reserveToken.mint(_user, _amount);
+
+        vm.startPrank(_user);
+        reserveToken.approve(address(plugin), type(uint).max);
+        uint receivedToken = plugin.mint(_amount);
+        vm.stopPrank();
+
+        return receivedToken;
+    }
 
 }

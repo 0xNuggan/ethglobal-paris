@@ -28,8 +28,9 @@ contract SymbioticBondingCurvePluginSetup is PluginSetup {
     address _dao,
     bytes calldata _data
   ) external returns (address plugin, PreparedSetupData memory preparedSetupData) {
-/*     // Decode `_data` to extract the params needed for cloning and initializing the `Admin` plugin.
-    address admin = abi.decode(_data, (address));
+   // Decode `_data` to extract the params needed for cloning and initializing the `BOnding Curve` plugin.
+    (address admin, address reserveToken, uint initialReserve, uint32 reserveRatio, address treasury) = abi.decode(_data, (address, address, uint, uint32, address));
+
 
     if (admin == address(0)) {
       revert AdminAddressInvalid({admin: admin});
@@ -39,7 +40,8 @@ contract SymbioticBondingCurvePluginSetup is PluginSetup {
     plugin = SymbioticBondingCurvePluginImplementation.clone();
 
     // Initialize cloned plugin contract.
-    SymbioticBondingCurvePlugin(plugin).initialize(IDAO(_dao), admin);
+    SymbioticBondingCurvePlugin(plugin).initialize(IDAO(_dao), admin, reserveToken, initialReserve, reserveRatio, treasury);
+
 
     // Prepare permissions
     PermissionLib.MultiTargetPermission[]
@@ -63,7 +65,7 @@ contract SymbioticBondingCurvePluginSetup is PluginSetup {
       permissionId: DAO(payable(_dao)).EXECUTE_PERMISSION_ID()
     });
 
-    preparedSetupData.permissions = permissions; */
+    preparedSetupData.permissions = permissions; 
   }
 
   /// @inheritdoc IPluginSetup
@@ -71,7 +73,7 @@ contract SymbioticBondingCurvePluginSetup is PluginSetup {
     address _dao,
     SetupPayload calldata _payload
   ) external view returns (PermissionLib.MultiTargetPermission[] memory permissions) {
-  /*   // Collect addresses
+    // Collect addresses
     address plugin = _payload.plugin;
     address admin = SymbioticBondingCurvePlugin(plugin).admin();
 
@@ -92,7 +94,7 @@ contract SymbioticBondingCurvePluginSetup is PluginSetup {
       who: plugin,
       condition: PermissionLib.NO_CONDITION,
       permissionId: DAO(payable(_dao)).EXECUTE_PERMISSION_ID()
-    }); */
+    }); 
   }
 
   /// @inheritdoc IPluginSetup

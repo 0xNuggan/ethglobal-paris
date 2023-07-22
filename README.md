@@ -3,9 +3,16 @@
 project for the ethglobal hackathon.
 
 ### Todo:
-error in reserve ratio initialization
 
-Bonding curve reserve ratio update
-test "rebase"
-missing yield use functions
-missing tax on yield use functions
+
+done Bonding curve reserve ratio update
+done test "rebase"
+done missing yield use functions
+
+**basic functionlity in module ready. to do:**
+Aragon setup script
+Gasless
+Deploy on Polygon
+Presentation with focus on convicing people that don't know about bonding curves
+
+optional missing tax on yield use functions

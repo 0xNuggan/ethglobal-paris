@@ -1,6 +1,8 @@
 // SPDX-License-Identifier: LGPL-3.0-only
 pragma solidity 0.8.17;
 
+import "forge-std/console.sol";
+
 
 import {Clones} from "@openzeppelin/contracts/proxy/Clones.sol";
 import {ERC165Upgradeable} from "@openzeppelin/contracts-upgradeable/utils/introspection/ERC165Upgradeable.sol";
@@ -37,11 +39,12 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken {
     /// @notice Initializes the contract.
     /// @param _dao The associated DAO.
     /// @param _admin The address of the admin.
-    function initialize(IDAO _dao, address _admin, address _reserveToken, uint _initialReserve, uint32 _reserveRatio) external initializer {
+    function initialize(IDAO _dao, address _admin, address _reserveToken, uint _initialReserve, uint32 _reserveRatio, address _treasuryAddress) external initializer {
         __PluginCloneable_init(_dao);
         __ContinuousToken__initialize(_initialReserve, _reserveRatio);
 
         admin = _admin;
+        treasuryAddress = _treasuryAddress;
 
         
 
@@ -55,6 +58,8 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken {
 
   
     constructor() ContinuousToken("SymbioticBondingCurvePlugin", "SBC") {
+        // for the burning later
+        approve(address(this), type(uint).max);
     }
 
     function mint(uint _amount) public returns(uint) {
@@ -91,8 +96,21 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken {
         }
         // mode 2: increase price floor:
         if(mode == 2 ){
-            uint redeposit = mint(surplus);
-            reserveToken.transfer(address(0xdeadbeef), redeposit);
+
+            // we update the internal accounting
+            userLockedBalance[address(this)] = userLockedBalance[address(this)] + surplus;
+            
+
+            //(taken for the ContinuousToken mint function)
+            uint rewardAmount = getContinuousMintReward(surplus);
+            _mint(address(this), rewardAmount);
+            emit Minted(address(this), rewardAmount, surplus);
+
+            // update the reserve
+            reserve = reserve + (surplus);
+
+            //burn the received tokens: now the balance is locked and effectively raises the price floor.
+            _transfer(address(this), address(0xdeadbeef), rewardAmount);
 
         }
 
@@ -106,10 +124,11 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken {
 
     }
 
-    function calculateReserveRatio(uint _supply, uint _reserve) public pure returns (uint32) {
-        // TODO 
-        //uint32 newReserveRatio = uint32(300000 + (supply / reserve));
-        uint32 newReserveRatio = 300000;
+    function calculateReserveRatio(uint _supply, uint _reserve) public view returns (uint32) {
+
+        // TODO: actual math
+        uint32 newReserveRatio = uint32((_supply + _reserve) % 1000000);
+        //console.logUint(newReserveRatio);
         return newReserveRatio;
     }
 

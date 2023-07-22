@@ -3211,8 +3211,8 @@
       }
     },
     "src/SymbioticBondingCurve.sol": {
-      "lastModificationDate": 1689981127951,
-      "contentHash": "ad98f6521228b0fa28fd9a6e1516e47a",
+      "lastModificationDate": 1690019787307,
+      "contentHash": "73372d99134f6a62649cd6040297e570",
       "sourceName": "src/SymbioticBondingCurve.sol",
       "solcConfig": {
         "settings": {
@@ -3292,8 +3292,8 @@
       }
     },
     "src/SymbioticBondingCurveSetup.sol": {
-      "lastModificationDate": 1689980513519,
-      "contentHash": "e12575d7bf0c309d9fd09c735db772e9",
+      "lastModificationDate": 1690020354943,
+      "contentHash": "741e16327b9401ed132d34607a4ed92f",
       "sourceName": "src/SymbioticBondingCurveSetup.sol",
       "solcConfig": {
         "settings": {
@@ -3393,8 +3393,8 @@
       }
     },
     "src/bonding_curve/ContinuousToken.sol": {
-      "lastModificationDate": 1689980242326,
-      "contentHash": "a3e82a1cd0c03be2a151d751fd871d76",
+      "lastModificationDate": 1690012851728,
+      "contentHash": "4a75d597005d5a5dcc363bdaca48d03d",
       "sourceName": "src/bonding_curve/ContinuousToken.sol",
       "solcConfig": {
         "settings": {
@@ -3529,8 +3529,8 @@
       }
     },
     "src/bonding_curve/math/BancorFormula.sol": {
-      "lastModificationDate": 1689982848734,
-      "contentHash": "d920539e7f7a018abcfb53e10e5ca3f4",
+      "lastModificationDate": 1690019469281,
+      "contentHash": "a6c1f79d8b7a1915793aa4763f917080",
       "sourceName": "src/bonding_curve/math/BancorFormula.sol",
       "solcConfig": {
         "settings": {
@@ -3717,8 +3717,8 @@
       }
     },
     "test/SymbioticBondingCurve.t.sol": {
-      "lastModificationDate": 1689982579253,
-      "contentHash": "35694ddfac69defc7cc5cdf1f4413720",
+      "lastModificationDate": 1690019915940,
+      "contentHash": "4586477ada280eef76349de144053ea6",
       "sourceName": "test/SymbioticBondingCurve.t.sol",
       "solcConfig": {
         "settings": {
