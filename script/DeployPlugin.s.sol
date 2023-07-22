@@ -43,7 +43,7 @@ contract PluginScript is Script {
         // =====================
         // Deployment Paramaters
         // ======================
-        address _dao = vm.envAddress("TARGET_DAO");; // the DAO we want to install the plugin to
+        address _dao = vm.envAddress("TARGET_DAO"); // the DAO we want to install the plugin to
         address pluginAdmin = address(deployer);
         address reserveToken = vm.envAddress("RESERVE_TOKEN");
         address relayForwarder = address(0xb539068872230f20456CF38EC52EF2f91AF4AE49); //Gelato Relay

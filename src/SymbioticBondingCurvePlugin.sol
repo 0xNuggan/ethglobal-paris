@@ -71,7 +71,7 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRe
   
     constructor() ContinuousToken("SymbioticBondingCurvePlugin", "SBC") {
         // for the burning later
-        approve(address(this), type(uint).max);
+        //(address(this), type(uint).max);
     }
 
     function mint(uint _amount) public returns(uint) {
