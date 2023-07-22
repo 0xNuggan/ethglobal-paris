@@ -32,7 +32,7 @@ forge script script/DeployPlugin.s.sol:PluginScript --rpc-url https://polygon-mu
 
 
 
-Math-head nouns approve of wonky bonding curves.
+Math-head nouns approve of wonky bonding curves.<br>
 ![nounsy](nouns-small.jpg)
 
 #### Note
