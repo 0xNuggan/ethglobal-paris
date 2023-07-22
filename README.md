@@ -15,25 +15,25 @@ You can watch the presentation and slides here:
 ### Commands for deployment
 
 For a local deployment you can uncomment the setup() function in script/DeployPlugin.s.sol and run 
-'''
+```
 forge script script/DeployPlugin.s.sol:PluginScript --broadcast --chain 80001 --legacy -vvvv
-'''
+```
 
 For test on-chain deployments, it's more comfortable to run script/DeployDemoTokens.s.sol first:
-'''
+```
 forge script script/DeployDemoTokens.s.sol:TokenDeployerScript --rpc-url https://polygon-mumbai.g.alchemy.com/v2/[MUMBAY_API_KEY] --broadcast --verify --etherscan-api-key [ETHERSCAN_POLYGON_API_KEY] --chain 80001 --legacy -vvvv
-'''
+```
 
 Then copy the deployment addresses into the .env file and run:
 
-'''
+```
 forge script script/DeployPlugin.s.sol:PluginScript --rpc-url https://polygon-mumbai.g.alchemy.com/v2/[MUMBAY_API_KEY] --broadcast --verify --etherscan-api-key [ETHERSCAN_POLYGON_API_KEY] --chain 80001 --legacy -vvvv
-'''
+```
 
 
 
 Math-head nouns approve of wonky bonding curves.
-![nounsy](mathHeadNoun.jpg)
+![nounsy](mathHeadNoun.jpg=150x150)
 
 #### Note
 This repo started as a fork of safe-core. The idea to implement changed during the hackathon, but it now looks like it has a long commit list. The first commit for the final project is ee818486e6ab81d524ec2690c0ad2305072f04b2
