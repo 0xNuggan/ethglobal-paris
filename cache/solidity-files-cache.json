@@ -3253,8 +3253,8 @@
       }
     },
     "script/DeployDemoTokens.s.sol": {
-      "lastModificationDate": 1690048721436,
-      "contentHash": "6f088b1e55cd1d3400fbc285fb02e2b8",
+      "lastModificationDate": 1690056310904,
+      "contentHash": "d473acaa20fea2812f76a64cc8e344b0",
       "sourceName": "script/DeployDemoTokens.s.sol",
       "solcConfig": {
         "settings": {
@@ -3372,8 +3372,8 @@
       }
     },
     "script/DeployPlugin.s.sol": {
-      "lastModificationDate": 1690053705289,
-      "contentHash": "2100d2faa34427b85775096ca5c68026",
+      "lastModificationDate": 1690064291791,
+      "contentHash": "8b31373d1c204f560203aa5db86657da",
       "sourceName": "script/DeployPlugin.s.sol",
       "solcConfig": {
         "settings": {

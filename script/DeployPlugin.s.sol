@@ -11,6 +11,10 @@ import {MockLSD} from "../src/mockContracts/MockLSD.sol";
 import {MockToken} from "../src/mockContracts/MockToken.sol";
 
 contract PluginScript is Script {
+
+    MockToken underlyingToken = MockToken(vm.envAddress("UNDERLYING_TOKEN")); 
+    MockLSD rebasingReserve = MockLSD(vm.envAddress("RESERVE_TOKEN"));
+
     function setUp() public {
         //Mock Setup step for local runs
 
@@ -21,10 +25,10 @@ contract PluginScript is Script {
 
         vm.startBroadcast(deployerPrivateKey);
 
-        MockToken underlyingToken = new MockToken("ProtocolToken", "PTK");       
+        underlyingToken = new MockToken("ProtocolToken", "PTK");       
         console.log("Mock Protocol Token deployed to: %s", address(underlyingToken));
 
-        MockLSD rebasingReserve = new MockLSD("LSD", "LSD", address(underlyingToken));       
+        rebasingReserve = new MockLSD("LSD", "LSD", address(underlyingToken));       
         console.log("MockLSD deployed to: %s", address(rebasingReserve));
 
         underlyingToken.mint(address(deployer), 100000 ether);
@@ -45,7 +49,7 @@ contract PluginScript is Script {
         // ======================
         address _dao = vm.envAddress("TARGET_DAO"); // the DAO we want to install the plugin to
         address pluginAdmin = address(deployer);
-        address reserveToken = vm.envAddress("RESERVE_TOKEN");
+        address reserveToken = address(rebasingReserve);
         address relayForwarder = address(0xb539068872230f20456CF38EC52EF2f91AF4AE49); //Gelato Relay
         uint initialReserve = 10 ether;  // the amunt we seeded the setup with
         uint32 reserveRatio = 300000; // initial reserve ratio
@@ -53,8 +57,7 @@ contract PluginScript is Script {
 
 
         // Pre-deployment check
-        address underlyingToken = vm.envAddress("UNDERLYING_TOKEN");
-        require((MockToken(underlyingToken).balanceOf(deployer) >= 10 ether), "Deployer does not have enough underlying tokens to seed the setup with 10 tokens");
+        require((underlyingToken.balanceOf(deployer) >= 10 ether), "Deployer does not have enough underlying tokens to seed the setup with 10 tokens");
 
         // ======================
         // Deployment
