@@ -19,6 +19,7 @@ import {BaseRelayRecipient} from '@opengsn/contracts/src/BaseRelayRecipient.sol'
 import {ContextUpgradeable} from '@openzeppelin/contracts-upgradeable/utils/ContextUpgradeable.sol';
 
 import "./bonding_curve/ContinuousToken.sol";
+import {MockLSD} from "./mockContracts/MockLSD.sol";
 
 contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRelayRecipient {
   /// @notice The ID of the permission required to call the `execute` function.
@@ -31,7 +32,7 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRe
     mapping(address => uint) public userLockedBalance;
     uint256 internal reserve;
 
-    ERC20 public reserveToken;
+    MockLSD public reserveToken;
     address public  treasuryAddress;
     
     //percentage for the treasury, as a number between 0 and 10000
@@ -50,12 +51,19 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRe
         treasuryAddress = _treasuryAddress;
 
 
-        
+        //TODO adapt to new token structure
 
         reserve = _initialReserve;
-        reserveToken = ERC20(_reserveToken);
-        reserveToken.transferFrom(_msgSender(), address(this), _initialReserve);
-        userLockedBalance[_msgSender()] = userLockedBalance[_msgSender()] + (_initialReserve);
+        reserveToken = MockLSD(_reserveToken);
+        //we allow the reserveToken to pull the underlying from this contract
+        reserveToken.underlyingToken().approve(address(reserveToken), type(uint).max);
+        
+        //we bring in the initial reserve to start the bonding curve
+        //reserveToken.underlyingToken().transferFrom(_msgSender(), address(this), _initialReserve);
+
+        //we are assuming the underlying token is already in the contract
+        uint _initialDeposit = reserveToken.deposit(address(this), _initialReserve);
+        userLockedBalance[_msgSender()] = userLockedBalance[_msgSender()] + (_initialDeposit);
     }
 
 
@@ -68,17 +76,26 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRe
 
     function mint(uint _amount) public returns(uint) {
         userLockedBalance[_msgSender()] = userLockedBalance[_msgSender()] + _amount;
-        reserveToken.transferFrom(_msgSender(), address(this), _amount);
+
+        //we pull the protocol tokens from the user and deposit them into the staking system
+        reserveToken.underlyingToken().transferFrom(_msgSender(), address(this), _amount);
+        reserveToken.deposit(address(this), _amount);
+
+        //we mint the DAO tokens
         uint amountMinted = _continuousMint(_amount);
         reserve = reserve + (_amount);
         return amountMinted;
     }
 
     function burn(uint _amount) public returns(uint) {
-        uint refundAmount = _continuousBurn(_amount);
+        uint refundAmount = _continuousBurn(_amount); //the amount of staked tokens we get back
         userLockedBalance[_msgSender()] = userLockedBalance[_msgSender()] - (refundAmount);
         reserve = reserve - (refundAmount);
-        reserveToken.transfer(_msgSender(), refundAmount);
+
+        reserveToken.withdraw(address(this), refundAmount); //we withdraw the underlying tokens from the staking system
+
+        reserveToken.underlyingToken().transfer(_msgSender(), refundAmount); // we transfer them back to the user
+
         return refundAmount;
     }
 

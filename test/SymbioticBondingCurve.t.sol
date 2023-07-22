@@ -4,6 +4,7 @@ pragma solidity ^0.8.13;
 import "forge-std/Test.sol";
 import "../src/SymbioticBondingCurvePlugin.sol";
 import "../src/mockContracts/MockLSD.sol";
+import "../src/mockContracts/MockToken.sol";
 
 import {Clones} from '@openzeppelin/contracts/proxy/Clones.sol';
 
@@ -12,6 +13,7 @@ contract SymbioticBondingCurvePluginTest is Test {
 
     SymbioticBondingCurvePlugin plugin;
     MockLSD reserveToken;
+    MockToken underlyingToken;
 
     address constant BOB = address(0xb0b);
     address constant TREASURY = address(0x123456789);
@@ -26,15 +28,20 @@ contract SymbioticBondingCurvePluginTest is Test {
         address _relayForwarder = address(0xf00);
 
         uint initialReserve = 100 ether;
-        reserveToken = new MockLSD("LSD", "LSD");
-        reserveToken.mint(address(this), initialReserve);
+
+        underlyingToken = new MockToken("Protocol Token", "PT");
+        reserveToken = new MockLSD("LSD", "LSD", address(underlyingToken));
+
+     
 
         // create plugin
 
         address symbioticBondingCurvePluginImplementation = address(new SymbioticBondingCurvePlugin());
         plugin = SymbioticBondingCurvePlugin(symbioticBondingCurvePluginImplementation.clone());
 
-        reserveToken.approve(address(plugin), type(uint).max);
+        underlyingToken.mint(address(plugin), initialReserve);
+
+        //reserveToken.approve(address(plugin), type(uint).max);
         plugin.initialize(_dao, _admin, _relayForwarder, address(reserveToken), initialReserve, 300000, TREASURY);
     }
 
@@ -83,7 +90,7 @@ contract SymbioticBondingCurvePluginTest is Test {
         assertApproxEqAbs(plugin.totalSupply(), supplyBefore, 100);
         assertApproxEqAbs(plugin.reserveBalance(), (reserveBefore), 100);
         assertApproxEqAbs(receivedBack, 1 ether, 100);
-        assertApproxEqAbs(reserveToken.balanceOf(BOB), 1 ether, 100);
+        assertApproxEqAbs(underlyingToken.balanceOf(BOB), 1 ether, 100);
     }
 
 
@@ -214,10 +221,10 @@ contract SymbioticBondingCurvePluginTest is Test {
 
     // helper functions
     function userDeposit(address _user, uint _amount) internal returns (uint amountReceived){
-        reserveToken.mint(_user, _amount);
+        underlyingToken.mint(_user, _amount);
 
         vm.startPrank(_user);
-        reserveToken.approve(address(plugin), type(uint).max);
+        underlyingToken.approve(address(plugin), type(uint).max);
         uint receivedToken = plugin.mint(_amount);
         vm.stopPrank();
 

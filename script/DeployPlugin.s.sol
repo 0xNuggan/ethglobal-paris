@@ -2,25 +2,52 @@
 pragma solidity ^0.8.13;
 
 import "forge-std/Script.sol";
+import "forge-std/Test.sol";
 import "forge-std/console.sol";
 
 import {SymbioticBondingCurvePluginSetup} from "../src/SymbioticBondingCurvePluginSetup.sol";
 import {SymbioticBondingCurvePlugin} from "../src/SymbioticBondingCurvePlugin.sol";
 import {MockLSD} from "../src/mockContracts/MockLSD.sol";
+import {MockToken} from "../src/mockContracts/MockToken.sol";
 
 contract PluginScript is Script {
-    function setUp() public {}
+    function setUp() public {
+        //Mock Setup step for local runs
 
-    function run() public {
-        address targetDAO = vm.envAddress("TARGET_DAO");
+        /*
         uint256 deployerPrivateKey = vm.envUint("WALLET_DEPLOYER_PK");
         address deployer = vm.envAddress("WALLET_DEPLOYER");
+
+
         vm.startBroadcast(deployerPrivateKey);
 
+        MockToken underlyingToken = new MockToken("ProtocolToken", "PTK");       
+        console.log("Mock Protocol Token deployed to: %s", address(underlyingToken));
 
-        MockLSD rebasingReserve = new MockLSD("LSD", "LSD");       
+        MockLSD rebasingReserve = new MockLSD("LSD", "LSD", address(underlyingToken));       
         console.log("MockLSD deployed to: %s", address(rebasingReserve));
 
+        underlyingToken.mint(address(deployer), 100000 ether);
+        console.log("Deployer Wallet Funded with 100000 Tokens.");
+
+        vm.stopBroadcast();
+        */
+    }
+
+    function run() public {
+
+        //Load deployed addresses
+        address targetDAO = vm.envAddress("TARGET_DAO");
+        address underlyingToken = vm.envAddress("UNDERLYING_TOKEN");
+        address rebasingReserve = vm.envAddress("RESERVE_TOKEN");
+
+        // Load deployer info
+        uint256 deployerPrivateKey = vm.envUint("WALLET_DEPLOYER_PK");
+        address deployer = vm.envAddress("WALLET_DEPLOYER");
+
+        vm.startBroadcast(deployerPrivateKey);
+
+        require((MockToken(underlyingToken).balanceOf(deployer) >= 10 ether), "Deployer does not have enough underlying tokens to seed the setup with 10 tokens");
 
         
         SymbioticBondingCurvePluginSetup bc_setup = new SymbioticBondingCurvePluginSetup();
@@ -29,7 +56,8 @@ contract PluginScript is Script {
         console.log("Plugin implementation deployed to: %s", address(bc_setup.implementation()));
 
 
-        rebasingReserve.mint(address(bc_setup), 10 ether); //ether used as a shorthand for 1e18
+        //rebasingReserve.mint(address(bc_setup), 10 ether); //ether used as a shorthand for 1e18
+        MockToken(underlyingToken).transfer(address(bc_setup), 10 ether); //ether used as a shorthand for 1e18
         console.log("Seeded Setup with 10 tokens for initialization");
 
         address _dao = targetDAO; // the DAO we want to install the plugin to

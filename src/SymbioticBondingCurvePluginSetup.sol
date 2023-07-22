@@ -9,6 +9,7 @@ import {SymbioticBondingCurvePlugin} from './SymbioticBondingCurvePlugin.sol';
 import {DAO, IDAO} from '@aragon/osx/core/dao/DAO.sol';
 
 import {ERC20} from "@openzeppelin/contracts/token/ERC20/ERC20.sol";
+import {MockLSD} from "../src/mockContracts/MockLSD.sol"; // the staked token contract
 
 contract SymbioticBondingCurvePluginSetup is PluginSetup {
   using Clones for address;
@@ -31,7 +32,7 @@ contract SymbioticBondingCurvePluginSetup is PluginSetup {
     bytes calldata _data
   ) external returns (address plugin, PreparedSetupData memory preparedSetupData) {
    // Decode `_data` to extract the params needed for cloning and initializing the `Bonding Curve` plugin.
-    (address admin, address reserveToken, address relayForwarder, uint initialReserve, uint32 reserveRatio, address treasury) = abi.decode(_data, (address, address, address, uint, uint32, address));
+    (address admin, address reserveToken, address relayForwarder, uint initialUnderlying, uint32 reserveRatio, address treasury) = abi.decode(_data, (address, address, address, uint, uint32, address));
 
 
     if (admin == address(0)) {
@@ -42,9 +43,10 @@ contract SymbioticBondingCurvePluginSetup is PluginSetup {
     plugin = SymbioticBondingCurvePluginImplementation.clone();
 
     ERC20(reserveToken).approve(address(plugin), type(uint).max);
+    MockLSD(reserveToken).underlyingToken().transfer(address(plugin), initialUnderlying);
 
     // Initialize cloned plugin contract.
-    SymbioticBondingCurvePlugin(plugin).initialize(IDAO(_dao), admin, relayForwarder, reserveToken, initialReserve, reserveRatio, treasury);
+    SymbioticBondingCurvePlugin(plugin).initialize(IDAO(_dao), admin, relayForwarder, reserveToken, initialUnderlying, reserveRatio, treasury);
 
 
     // Prepare permissions

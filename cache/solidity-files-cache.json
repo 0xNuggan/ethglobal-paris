@@ -3252,10 +3252,10 @@
         }
       }
     },
-    "script/DeployPlugin.s.sol": {
-      "lastModificationDate": 1690038753398,
-      "contentHash": "3095ff9bc0d745a191f8bf1bf4c0cb56",
-      "sourceName": "script/DeployPlugin.s.sol",
+    "script/DeployDemoTokens.s.sol": {
+      "lastModificationDate": 1690046931376,
+      "contentHash": "f665c6e76290f56f968a1a38f05d8699",
+      "sourceName": "script/DeployDemoTokens.s.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -3361,7 +3361,132 @@
         "src/bonding_curve/interfaces/IBondingCurve.sol",
         "src/bonding_curve/math/BancorFormula.sol",
         "src/bonding_curve/math/Power.sol",
-        "src/mockContracts/MockLSD.sol"
+        "src/mockContracts/MockLSD.sol",
+        "src/mockContracts/MockToken.sol"
+      ],
+      "versionRequirement": "^0.8.13",
+      "artifacts": {
+        "TokenDeployerScript": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "DeployDemoTokens.s.sol/TokenDeployerScript.json"
+        }
+      }
+    },
+    "script/DeployPlugin.s.sol": {
+      "lastModificationDate": 1690047257064,
+      "contentHash": "637eb34e0adbb2d4646b06a49d017b4d",
+      "sourceName": "script/DeployPlugin.s.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/forge-std/lib/ds-test/src/test.sol",
+        "lib/forge-std/src/Base.sol",
+        "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
+        "lib/forge-std/src/StdChains.sol",
+        "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
+        "lib/forge-std/src/StdJson.sol",
+        "lib/forge-std/src/StdMath.sol",
+        "lib/forge-std/src/StdStorage.sol",
+        "lib/forge-std/src/StdStyle.sol",
+        "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
+        "lib/forge-std/src/Vm.sol",
+        "lib/forge-std/src/console.sol",
+        "lib/forge-std/src/console2.sol",
+        "lib/forge-std/src/interfaces/IMulticall3.sol",
+        "lib/forge-std/src/safeconsole.sol",
+        "lib/gsn/packages/contracts/src/BaseRelayRecipient.sol",
+        "lib/gsn/packages/contracts/src/interfaces/IRelayRecipient.sol",
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1271.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165Checker.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155ReceiverUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20PermitUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/utils/SafeERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/IERC721ReceiverUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165StorageUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol",
+        "lib/osx/packages/contracts/src/core/dao/DAO.sol",
+        "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "lib/osx/packages/contracts/src/core/dao/IEIP4824.sol",
+        "lib/osx/packages/contracts/src/core/permission/IPermissionCondition.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionManager.sol",
+        "lib/osx/packages/contracts/src/core/plugin/IPlugin.sol",
+        "lib/osx/packages/contracts/src/core/plugin/PluginCloneable.sol",
+        "lib/osx/packages/contracts/src/core/plugin/PluginUUPSUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/utils/BitMap.sol",
+        "lib/osx/packages/contracts/src/core/utils/CallbackHandler.sol",
+        "lib/osx/packages/contracts/src/core/utils/auth.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol",
+        "lib/osx/packages/contracts/src/token/ERC20/IERC20MintableUpgradeable.sol",
+        "lib/osx/packages/contracts/src/utils/Proxy.sol",
+        "src/SymbioticBondingCurvePlugin.sol",
+        "src/SymbioticBondingCurvePluginSetup.sol",
+        "src/bonding_curve/ContinuousToken.sol",
+        "src/bonding_curve/curves/BancorBondingCurve.sol",
+        "src/bonding_curve/interfaces/IBondingCurve.sol",
+        "src/bonding_curve/math/BancorFormula.sol",
+        "src/bonding_curve/math/Power.sol",
+        "src/mockContracts/MockLSD.sol",
+        "src/mockContracts/MockToken.sol"
       ],
       "versionRequirement": "^0.8.13",
       "artifacts": {
@@ -3411,8 +3536,8 @@
       }
     },
     "src/SymbioticBondingCurvePlugin.sol": {
-      "lastModificationDate": 1690026061675,
-      "contentHash": "d4c8915615fa406b3ad551450ff541b3",
+      "lastModificationDate": 1690047866727,
+      "contentHash": "23185e1efbf3c2afb0d212a1054015d3",
       "sourceName": "src/SymbioticBondingCurvePlugin.sol",
       "solcConfig": {
         "settings": {
@@ -3484,7 +3609,8 @@
         "src/bonding_curve/curves/BancorBondingCurve.sol",
         "src/bonding_curve/interfaces/IBondingCurve.sol",
         "src/bonding_curve/math/BancorFormula.sol",
-        "src/bonding_curve/math/Power.sol"
+        "src/bonding_curve/math/Power.sol",
+        "src/mockContracts/MockLSD.sol"
       ],
       "versionRequirement": "=0.8.17",
       "artifacts": {
@@ -3494,8 +3620,8 @@
       }
     },
     "src/SymbioticBondingCurvePluginSetup.sol": {
-      "lastModificationDate": 1690030354202,
-      "contentHash": "1f7fcc0c78630388a008ef927b0b3f34",
+      "lastModificationDate": 1690047928231,
+      "contentHash": "dc7c8088a1fd1473da4c9350a3062ea1",
       "sourceName": "src/SymbioticBondingCurvePluginSetup.sol",
       "solcConfig": {
         "settings": {
@@ -3587,7 +3713,8 @@
         "src/bonding_curve/curves/BancorBondingCurve.sol",
         "src/bonding_curve/interfaces/IBondingCurve.sol",
         "src/bonding_curve/math/BancorFormula.sol",
-        "src/bonding_curve/math/Power.sol"
+        "src/bonding_curve/math/Power.sol",
+        "src/mockContracts/MockLSD.sol"
       ],
       "versionRequirement": "=0.8.17",
       "artifacts": {
@@ -3816,8 +3943,8 @@
       }
     },
     "src/mockContracts/MockLSD.sol": {
-      "lastModificationDate": 1689979345322,
-      "contentHash": "3cba46ec9065945b0618f76b75aa62d8",
+      "lastModificationDate": 1690047766023,
+      "contentHash": "d59a5b2678fbda6a3067bd9956914544",
       "sourceName": "src/mockContracts/MockLSD.sol",
       "solcConfig": {
         "settings": {
@@ -3857,6 +3984,51 @@
       "artifacts": {
         "MockLSD": {
           "0.8.17+commit.8df45f5f.Linux.gcc": "MockLSD.sol/MockLSD.json"
+        }
+      }
+    },
+    "src/mockContracts/MockToken.sol": {
+      "lastModificationDate": 1690041396012,
+      "contentHash": "0790cef3b7228fab206829d9e2dec88d",
+      "sourceName": "src/mockContracts/MockToken.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "MockToken": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "MockToken.sol/MockToken.json"
         }
       }
     },
@@ -3921,8 +4093,8 @@
       }
     },
     "test/SymbioticBondingCurve.t.sol": {
-      "lastModificationDate": 1690026059043,
-      "contentHash": "0a7ae8e7741afa2c5c59d5a7caa973f8",
+      "lastModificationDate": 1690044508556,
+      "contentHash": "6547f775ff2d34ddfa9359bb0b178982",
       "sourceName": "test/SymbioticBondingCurve.t.sol",
       "solcConfig": {
         "settings": {
@@ -4013,7 +4185,8 @@
         "src/bonding_curve/interfaces/IBondingCurve.sol",
         "src/bonding_curve/math/BancorFormula.sol",
         "src/bonding_curve/math/Power.sol",
-        "src/mockContracts/MockLSD.sol"
+        "src/mockContracts/MockLSD.sol",
+        "src/mockContracts/MockToken.sol"
       ],
       "versionRequirement": "^0.8.13",
       "artifacts": {
