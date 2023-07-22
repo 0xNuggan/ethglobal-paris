@@ -3536,8 +3536,8 @@
       }
     },
     "src/SymbioticBondingCurvePlugin.sol": {
-      "lastModificationDate": 1690048769820,
-      "contentHash": "961e9d96d1e0e349f5e7daedb1655c1d",
+      "lastModificationDate": 1690049474807,
+      "contentHash": "42404474fcd092b84ebe8280b514abeb",
       "sourceName": "src/SymbioticBondingCurvePlugin.sol",
       "solcConfig": {
         "settings": {
@@ -3620,8 +3620,8 @@
       }
     },
     "src/SymbioticBondingCurvePluginSetup.sol": {
-      "lastModificationDate": 1690047928231,
-      "contentHash": "dc7c8088a1fd1473da4c9350a3062ea1",
+      "lastModificationDate": 1690049532179,
+      "contentHash": "6c385e999689911a3caa128f979743c9",
       "sourceName": "src/SymbioticBondingCurvePluginSetup.sol",
       "solcConfig": {
         "settings": {
@@ -3724,8 +3724,8 @@
       }
     },
     "src/bonding_curve/ContinuousToken.sol": {
-      "lastModificationDate": 1690012851728,
-      "contentHash": "4a75d597005d5a5dcc363bdaca48d03d",
+      "lastModificationDate": 1690049654626,
+      "contentHash": "10e0700a57f6ae669ec81045f31fed3a",
       "sourceName": "src/bonding_curve/ContinuousToken.sol",
       "solcConfig": {
         "settings": {

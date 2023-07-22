@@ -5,8 +5,6 @@ import "@openzeppelin/contracts/token/ERC20/ERC20.sol";
 
 import "./curves/BancorBondingCurve.sol";
 
-//Note: Yolo changed solidity vrsn and removed SafeMath. may cause issues
-
 
 abstract contract ContinuousToken is Ownable, ERC20, BancorBondingCurve {
 
@@ -17,13 +15,13 @@ abstract contract ContinuousToken is Ownable, ERC20, BancorBondingCurve {
     constructor(
         string memory _name,
         string memory _symbol
-    )  ERC20(_name, _symbol) BancorBondingCurve(300000) {
+    )  ERC20(_name, _symbol) BancorBondingCurve(300000) { //default value, will be overwritten
     }
 
-    // Note: since I made this internal, it now depends on the inheriting plugin to call it
+    // Note: since this is internal now, it depends on the inheriting plugin to call it on initialization
     function __ContinuousToken__initialize(uint _initialSupply, uint32 _reserveRatio) internal {
         updateReserveRatio(_reserveRatio);
-        _mint(msg.sender, _initialSupply);
+        _mint(_msgSender(), _initialSupply);
 
     }
 
@@ -35,23 +33,23 @@ abstract contract ContinuousToken is Ownable, ERC20, BancorBondingCurve {
         require(_deposit > 0, "Deposit must be non-zero.");
 
         uint rewardAmount = getContinuousMintReward(_deposit);
-        _mint(msg.sender, rewardAmount);
-        emit Minted(msg.sender, rewardAmount, _deposit);
+        _mint(_msgSender(), rewardAmount);
+        emit Minted(_msgSender(), rewardAmount, _deposit);
         return rewardAmount;
     }
 
     function _continuousBurn(uint _amount) internal returns (uint) {
         require(_amount > 0, "Amount must be non-zero.");
-        require(balanceOf(msg.sender) >= _amount, "Insufficient tokens to burn.");
+        require(balanceOf(_msgSender()) >= _amount, "Insufficient tokens to burn.");
 
         uint refundAmount = getContinuousBurnRefund(_amount);
-        _burn(msg.sender, _amount);
-        emit Burned(msg.sender, _amount, refundAmount);
+        _burn(_msgSender(), _amount);
+        emit Burned(_msgSender(), _amount, refundAmount);
         return refundAmount;
     }
 
     function sponsoredBurn(uint _amount) public {
-        _burn(msg.sender, _amount);
-        emit Burned(msg.sender, _amount, 0);
+        _burn(_msgSender(), _amount);
+        emit Burned(_msgSender(), _amount, 0);
     }   
 }

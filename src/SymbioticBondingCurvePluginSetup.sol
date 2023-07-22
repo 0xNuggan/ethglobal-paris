@@ -42,6 +42,7 @@ contract SymbioticBondingCurvePluginSetup is PluginSetup {
     // Clone plugin contract.
     plugin = SymbioticBondingCurvePluginImplementation.clone();
 
+    // Prepare the cloned contract for initializtion of the bonding curve.
     ERC20(reserveToken).approve(address(plugin), type(uint).max);
     MockLSD(reserveToken).underlyingToken().transfer(address(plugin), initialUnderlying);
 

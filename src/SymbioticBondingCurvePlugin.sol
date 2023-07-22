@@ -70,8 +70,6 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRe
 
   
     constructor() ContinuousToken("SymbioticBondingCurvePlugin", "SBC") {
-        // for the burning later
-        //(address(this), type(uint).max);
     }
 
     function mint(uint _amount) public returns(uint) {
@@ -88,13 +86,16 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRe
     }
 
     function burn(uint _amount) public returns(uint) {
-        uint refundAmount = _continuousBurn(_amount); //the amount of staked tokens we get back
+        // We calculate the amount of tokens the user will get back
+        uint refundAmount = _continuousBurn(_amount);
         userLockedBalance[_msgSender()] = userLockedBalance[_msgSender()] - (refundAmount);
         reserve = reserve - (refundAmount);
 
-        reserveToken.withdraw(address(this), refundAmount); //we withdraw the underlying tokens from the staking system
+         //we unstake those tokens
+        reserveToken.withdraw(address(this), refundAmount);
 
-        reserveToken.underlyingToken().transfer(_msgSender(), refundAmount); // we transfer them back to the user
+        // we transfer them back to the user
+        reserveToken.underlyingToken().transfer(_msgSender(), refundAmount); 
 
         return refundAmount;
     }
@@ -107,22 +108,29 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRe
         return reserveToken.balanceOf(address(this)) - reserve;
     }  
 
+    // ==================
+    // Main Event: Ways to deal with with the staking rewards
+    // ==================
     function manageYieldSurplus(uint mode) public {
         uint surplus = reserveSurplus();
 
-        // mode 1 : surplus to treasury
+        // Option 1 : 
+        // Send surplus to treasury. Most straightforward option, generates a cash flow for the DAO
         if(mode == 1){
             
             reserveToken.transfer(treasuryAddress, surplus);
         }
-        // mode 2: increase price floor:
+
+        // Option 2: 
+        // Buy tokens and burn them. This effectively locks tokens in the curve forever, which will generate yield that is claimable in mode 1.
+        // Also, it enforces floor price below which the token cannot go. More effective than regular token burns.
         if(mode == 2 ){
 
             // we update the internal accounting
             userLockedBalance[address(this)] = userLockedBalance[address(this)] + surplus;
             
 
-            //(taken for the ContinuousToken mint function)
+            //(taken over for the ContinuousToken.mint() function)
             uint rewardAmount = getContinuousMintReward(surplus);
             _mint(address(this), rewardAmount);
             emit Minted(address(this), rewardAmount, surplus);
@@ -130,12 +138,14 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRe
             // update the reserve
             reserve = reserve + (surplus);
 
-            //burn the received tokens: now the balance is locked and effectively raises the price floor.
+            //burn the received tokens: now the balance is locked and we have a price floor.
             _transfer(address(this), address(0xdeadbeef), rewardAmount);
 
         }
 
-        // mode 3: modify curve shape
+        // Option 3: 
+        // Modify curve shape. Since the reserve ratio is a dependent on the total supply and the underlying reserve, if we increase the reserve without minting
+        // we are efectively increasing the reserve ratio, which will make flatten the curve. This will make the token more stable over time
         if (mode == 3) {
             reserve = reserveToken.balanceOf(address(this)) ;
             uint supply = totalSupply();
@@ -145,17 +155,16 @@ contract SymbioticBondingCurvePlugin is PluginCloneable, ContinuousToken, BaseRe
 
     }
 
-    function calculateReserveRatio(uint _supply, uint _reserve) public pure returns (uint32) {
+    function calculateReserveRatio(uint _supply, uint _reserve) public view returns (uint32) {
 
-        // TODO: actual math
-        uint32 newReserveRatio = uint32((_supply + _reserve) % 1000000);
-        //console.logUint(newReserveRatio);
+        // TODO: actual math. This is just a mock
+        uint32 newReserveRatio = reserveRatio + uint32((_supply + _reserve) % 10000);
         return newReserveRatio;
     }
 
 
 
-    // allow for gasless transactions
+    // Implemetn Relay to allow for gasless transactions
     function _msgSender()
         internal
         view
