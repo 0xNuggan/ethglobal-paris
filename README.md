@@ -1,15 +1,15 @@
 # Symbiotic Bonding Curves
 
-This project combines Boniding-Curve-based fundraising with Liquid Staking Derivatives into an Aragon Plugin with increasingly wonkier options for managing the yield.
+This project combines Bonding-Curve-based fundraising with Liquid Staking Derivatives into an Aragon Plugin with increasingly wonkier options for managing the yield.
 
 You can watch the presentation and slides here:
 
 ## Characteristics
 - Functional Aragon Dao Plugin, signed up at the registry (link)
 - Foundry Solidity scripting 
-- Deployed on Polygon Mumbai Testnet
+- Deployed on Polygon Mumbai Testnet (links)
 - The SymbioticBondingCurvePlugin contract implements the BaseRelayRecipient contract, and can therefore work with gas-less transactions.
-- Management and testing automated with chainlink automation.
+- Management and testing automated with Chainlink automation. (link)
 
 
 ### Commands for deployment
@@ -28,6 +28,11 @@ Then copy the deployment addresses into the .env file and run:
 
 ```
 forge script script/DeployPlugin.s.sol:PluginScript --rpc-url https://polygon-mumbai.g.alchemy.com/v2/[MUMBAY_API_KEY] --broadcast --verify --etherscan-api-key [ETHERSCAN_POLYGON_API_KEY] --chain 80001 --legacy -vvvv
+```
+
+Afterwards, you can copy the PluginRepo address into the .env and run (as of end of hackathon, this script is not yet functional)
+```
+forge script script/DeployDaoWithPlugin.s.sol:DaoPluginScript --rpc-url https://polygon-mumbai.g.alchemy.com/v2/[MUMBAY_API_KEY] --broadcast --verify --etherscan-api-key [ETHERSCAN_POLYGON_API_KEY] --chain 80001 --legacy -vvvv
 ```
 
 #### Note

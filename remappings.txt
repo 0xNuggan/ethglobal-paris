@@ -2,3 +2,4 @@
 @openzeppelin/contracts/=lib/openzeppelin-contracts/contracts/
 @aragon/osx/=lib/osx/packages/contracts/src/
 @opengsn/contracts/=lib/gsn/packages/contracts/
+@ensdomains/ens-contracts/=lib/ens-contracts/

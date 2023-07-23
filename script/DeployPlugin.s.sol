@@ -10,10 +10,14 @@ import {SymbioticBondingCurvePlugin} from "../src/SymbioticBondingCurvePlugin.so
 import {MockLSD} from "../src/mockContracts/MockLSD.sol";
 import {MockToken} from "../src/mockContracts/MockToken.sol";
 
+import {PluginRepoFactory, PluginRepo} from "@aragon/osx/framework/plugin/repo/PluginRepoFactory.sol";
+
 contract PluginScript is Script {
 
     MockToken underlyingToken = MockToken(vm.envAddress("UNDERLYING_TOKEN")); 
     MockLSD rebasingReserve = MockLSD(vm.envAddress("RESERVE_TOKEN"));
+
+    PluginRepoFactory pluginRepoFactory = PluginRepoFactory(vm.envAddress("PLUGIN_REPO_FACTORY"));
 
     function setUp() public {
         //Mock Setup step for local runs
@@ -43,6 +47,8 @@ contract PluginScript is Script {
         // Load deployer info
         uint256 deployerPrivateKey = vm.envUint("WALLET_DEPLOYER_PK");
         address deployer = vm.envAddress("WALLET_DEPLOYER");
+
+        
 
         // =====================
         // Deployment Paramaters
@@ -88,6 +94,21 @@ contract PluginScript is Script {
 
         bc_setup.prepareInstallation(_dao, initData);
         console.log("Plugin Installation Prepared. Bonding Curve Initialized.");
+
+        // ======================
+        // Register Plugin
+        // ======================
+
+        PluginRepo pluginRepo = pluginRepoFactory.createPluginRepoWithFirstVersion(
+                    "symbiotic-bonding-curve-1",
+                    address(bc_setup),
+                    deployer,
+                    "0x00",
+                    "0x00"
+        );
+
+        console.log("Plugin Repo created at: %s", address(pluginRepo));
+
 
 
         vm.stopBroadcast();

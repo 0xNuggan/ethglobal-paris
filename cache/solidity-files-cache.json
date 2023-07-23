@@ -11,6 +11,539 @@
     ]
   },
   "files": {
+    "lib/ens-contracts/contracts/registry/ENS.sol": {
+      "lastModificationDate": 1690069127860,
+      "contentHash": "d7f00c64cdab1ddb053002d600ee4ae7",
+      "sourceName": "lib/ens-contracts/contracts/registry/ENS.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.4",
+      "artifacts": {
+        "ENS": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "ENS.sol/ENS.json"
+        }
+      }
+    },
+    "lib/ens-contracts/contracts/resolvers/Resolver.sol": {
+      "lastModificationDate": 1690069127976,
+      "contentHash": "2a187b1e3204409f58eedb3c581b2226",
+      "sourceName": "lib/ens-contracts/contracts/resolvers/Resolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/ens-contracts/contracts/resolvers/profiles/IABIResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddrResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddressResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IContentHashResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSRecordResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSZoneResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IExtendedResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IInterfaceResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/INameResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IPubkeyResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/ITextResolver.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol"
+      ],
+      "versionRequirement": ">=0.8.4",
+      "artifacts": {
+        "Resolver": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "Resolver.sol/Resolver.json"
+        }
+      }
+    },
+    "lib/ens-contracts/contracts/resolvers/profiles/IABIResolver.sol": {
+      "lastModificationDate": 1690069127864,
+      "contentHash": "8aafef3ad6058617f5b719861e406a4d",
+      "sourceName": "lib/ens-contracts/contracts/resolvers/profiles/IABIResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.4",
+      "artifacts": {
+        "IABIResolver": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "IABIResolver.sol/IABIResolver.json"
+        }
+      }
+    },
+    "lib/ens-contracts/contracts/resolvers/profiles/IAddrResolver.sol": {
+      "lastModificationDate": 1690069127864,
+      "contentHash": "3f1fad68ada48982f35ef7af2e8a245b",
+      "sourceName": "lib/ens-contracts/contracts/resolvers/profiles/IAddrResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.4",
+      "artifacts": {
+        "IAddrResolver": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "IAddrResolver.sol/IAddrResolver.json"
+        }
+      }
+    },
+    "lib/ens-contracts/contracts/resolvers/profiles/IAddressResolver.sol": {
+      "lastModificationDate": 1690069127864,
+      "contentHash": "6f8242d10df510af914b58122a33d176",
+      "sourceName": "lib/ens-contracts/contracts/resolvers/profiles/IAddressResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.4",
+      "artifacts": {
+        "IAddressResolver": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "IAddressResolver.sol/IAddressResolver.json"
+        }
+      }
+    },
+    "lib/ens-contracts/contracts/resolvers/profiles/IContentHashResolver.sol": {
+      "lastModificationDate": 1690069127864,
+      "contentHash": "f9e7dc8b82306ecd1504ba9b10716631",
+      "sourceName": "lib/ens-contracts/contracts/resolvers/profiles/IContentHashResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.4",
+      "artifacts": {
+        "IContentHashResolver": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "IContentHashResolver.sol/IContentHashResolver.json"
+        }
+      }
+    },
+    "lib/ens-contracts/contracts/resolvers/profiles/IDNSRecordResolver.sol": {
+      "lastModificationDate": 1690069127864,
+      "contentHash": "c61d99362d86e11c143e9035d895a1da",
+      "sourceName": "lib/ens-contracts/contracts/resolvers/profiles/IDNSRecordResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.4",
+      "artifacts": {
+        "IDNSRecordResolver": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "IDNSRecordResolver.sol/IDNSRecordResolver.json"
+        }
+      }
+    },
+    "lib/ens-contracts/contracts/resolvers/profiles/IDNSZoneResolver.sol": {
+      "lastModificationDate": 1690069127864,
+      "contentHash": "4e7595256b231fed30f6c9945f1efa45",
+      "sourceName": "lib/ens-contracts/contracts/resolvers/profiles/IDNSZoneResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.4",
+      "artifacts": {
+        "IDNSZoneResolver": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "IDNSZoneResolver.sol/IDNSZoneResolver.json"
+        }
+      }
+    },
+    "lib/ens-contracts/contracts/resolvers/profiles/IExtendedResolver.sol": {
+      "lastModificationDate": 1690069127864,
+      "contentHash": "5fb946efa195615f0fbe2746a4e76ff6",
+      "sourceName": "lib/ens-contracts/contracts/resolvers/profiles/IExtendedResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "^0.8.4",
+      "artifacts": {
+        "IExtendedResolver": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "IExtendedResolver.sol/IExtendedResolver.json"
+        }
+      }
+    },
+    "lib/ens-contracts/contracts/resolvers/profiles/IInterfaceResolver.sol": {
+      "lastModificationDate": 1690069127864,
+      "contentHash": "a7500941f527de797e9d353be520ef1c",
+      "sourceName": "lib/ens-contracts/contracts/resolvers/profiles/IInterfaceResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.4",
+      "artifacts": {
+        "IInterfaceResolver": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "IInterfaceResolver.sol/IInterfaceResolver.json"
+        }
+      }
+    },
+    "lib/ens-contracts/contracts/resolvers/profiles/INameResolver.sol": {
+      "lastModificationDate": 1690069127864,
+      "contentHash": "3765ef37775da4202d0bc972a5e3a626",
+      "sourceName": "lib/ens-contracts/contracts/resolvers/profiles/INameResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.4",
+      "artifacts": {
+        "INameResolver": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "INameResolver.sol/INameResolver.json"
+        }
+      }
+    },
+    "lib/ens-contracts/contracts/resolvers/profiles/IPubkeyResolver.sol": {
+      "lastModificationDate": 1690069127864,
+      "contentHash": "51e1427b16cc36011b47d224dd7a9292",
+      "sourceName": "lib/ens-contracts/contracts/resolvers/profiles/IPubkeyResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.4",
+      "artifacts": {
+        "IPubkeyResolver": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "IPubkeyResolver.sol/IPubkeyResolver.json"
+        }
+      }
+    },
+    "lib/ens-contracts/contracts/resolvers/profiles/ITextResolver.sol": {
+      "lastModificationDate": 1690069127864,
+      "contentHash": "db2783ebbe0ddc0a8f69fd69795099c3",
+      "sourceName": "lib/ens-contracts/contracts/resolvers/profiles/ITextResolver.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": ">=0.8.4",
+      "artifacts": {
+        "ITextResolver": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "ITextResolver.sol/ITextResolver.json"
+        }
+      }
+    },
     "lib/forge-std/lib/ds-test/src/test.sol": {
       "lastModificationDate": 1689967348264,
       "contentHash": "9febff9d09f18af5306669dc276c4c43",
@@ -2294,6 +2827,48 @@
         }
       }
     },
+    "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165CheckerUpgradeable.sol": {
+      "lastModificationDate": 1689973033558,
+      "contentHash": "5d8440bd0469fc9ffaa755d056808700",
+      "sourceName": "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165CheckerUpgradeable.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol"
+      ],
+      "versionRequirement": "^0.8.0",
+      "artifacts": {
+        "ERC165CheckerUpgradeable": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "ERC165CheckerUpgradeable.sol/ERC165CheckerUpgradeable.json"
+        }
+      }
+    },
     "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165StorageUpgradeable.sol": {
       "lastModificationDate": 1689973033558,
       "contentHash": "c6b6b3bcee67edef2833cdd43cfb82f7",
@@ -3008,6 +3583,466 @@
         }
       }
     },
+    "lib/osx/packages/contracts/src/framework/dao/DAOFactory.sol": {
+      "lastModificationDate": 1689967364132,
+      "contentHash": "525853f8b6446dde40e912a4fb69d40e",
+      "sourceName": "lib/osx/packages/contracts/src/framework/dao/DAOFactory.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/ens-contracts/contracts/registry/ENS.sol",
+        "lib/ens-contracts/contracts/resolvers/Resolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IABIResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddrResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddressResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IContentHashResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSRecordResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSZoneResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IExtendedResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IInterfaceResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/INameResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IPubkeyResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/ITextResolver.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1271.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165Checker.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155ReceiverUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20PermitUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/utils/SafeERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/IERC721ReceiverUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165CheckerUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165StorageUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol",
+        "lib/osx/packages/contracts/src/core/dao/DAO.sol",
+        "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "lib/osx/packages/contracts/src/core/dao/IEIP4824.sol",
+        "lib/osx/packages/contracts/src/core/permission/IPermissionCondition.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionManager.sol",
+        "lib/osx/packages/contracts/src/core/plugin/IPlugin.sol",
+        "lib/osx/packages/contracts/src/core/plugin/PluginUUPSUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/utils/BitMap.sol",
+        "lib/osx/packages/contracts/src/core/utils/CallbackHandler.sol",
+        "lib/osx/packages/contracts/src/core/utils/auth.sol",
+        "lib/osx/packages/contracts/src/framework/dao/DAORegistry.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/IPluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepoRegistry.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetupProcessor.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetupProcessorHelpers.sol",
+        "lib/osx/packages/contracts/src/framework/utils/InterfaceBasedRegistry.sol",
+        "lib/osx/packages/contracts/src/framework/utils/RegistryUtils.sol",
+        "lib/osx/packages/contracts/src/framework/utils/ens/ENSSubdomainRegistrar.sol",
+        "lib/osx/packages/contracts/src/utils/Proxy.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "DAOFactory": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "DAOFactory.sol/DAOFactory.json"
+        }
+      }
+    },
+    "lib/osx/packages/contracts/src/framework/dao/DAORegistry.sol": {
+      "lastModificationDate": 1689967364132,
+      "contentHash": "8f0c1296c1021469d8a0992ea4d37c16",
+      "sourceName": "lib/osx/packages/contracts/src/framework/dao/DAORegistry.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/ens-contracts/contracts/registry/ENS.sol",
+        "lib/ens-contracts/contracts/resolvers/Resolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IABIResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddrResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddressResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IContentHashResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSRecordResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSZoneResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IExtendedResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IInterfaceResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/INameResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IPubkeyResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/ITextResolver.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165CheckerUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol",
+        "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/utils/auth.sol",
+        "lib/osx/packages/contracts/src/framework/utils/InterfaceBasedRegistry.sol",
+        "lib/osx/packages/contracts/src/framework/utils/RegistryUtils.sol",
+        "lib/osx/packages/contracts/src/framework/utils/ens/ENSSubdomainRegistrar.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "DAORegistry": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "DAORegistry.sol/DAORegistry.json"
+        }
+      }
+    },
+    "lib/osx/packages/contracts/src/framework/plugin/repo/IPluginRepo.sol": {
+      "lastModificationDate": 1689967364132,
+      "contentHash": "2e9d01488c6f6ad09a404504fe067a51",
+      "sourceName": "lib/osx/packages/contracts/src/framework/plugin/repo/IPluginRepo.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "IPluginRepo": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "IPluginRepo.sol/IPluginRepo.json"
+        }
+      }
+    },
+    "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepo.sol": {
+      "lastModificationDate": 1689967364132,
+      "contentHash": "8c324cb98ff655b96b8230952811d50d",
+      "sourceName": "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepo.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165Checker.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165CheckerUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol",
+        "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "lib/osx/packages/contracts/src/core/permission/IPermissionCondition.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionManager.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/IPluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol",
+        "lib/osx/packages/contracts/src/utils/Proxy.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "PluginRepo": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "PluginRepo.sol/PluginRepo.json"
+        }
+      }
+    },
+    "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepoFactory.sol": {
+      "lastModificationDate": 1689967364132,
+      "contentHash": "51e5cd60511c3daddebcd1ec1e7a6d02",
+      "sourceName": "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepoFactory.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/ens-contracts/contracts/registry/ENS.sol",
+        "lib/ens-contracts/contracts/resolvers/Resolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IABIResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddrResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddressResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IContentHashResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSRecordResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSZoneResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IExtendedResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IInterfaceResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/INameResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IPubkeyResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/ITextResolver.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165Checker.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165CheckerUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol",
+        "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "lib/osx/packages/contracts/src/core/permission/IPermissionCondition.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionManager.sol",
+        "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/utils/auth.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/IPluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepoRegistry.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol",
+        "lib/osx/packages/contracts/src/framework/utils/InterfaceBasedRegistry.sol",
+        "lib/osx/packages/contracts/src/framework/utils/RegistryUtils.sol",
+        "lib/osx/packages/contracts/src/framework/utils/ens/ENSSubdomainRegistrar.sol",
+        "lib/osx/packages/contracts/src/utils/Proxy.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "PluginRepoFactory": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "PluginRepoFactory.sol/PluginRepoFactory.json"
+        }
+      }
+    },
+    "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepoRegistry.sol": {
+      "lastModificationDate": 1689967364132,
+      "contentHash": "a1d6bb35c5377b59cecaa230526bc492",
+      "sourceName": "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepoRegistry.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/ens-contracts/contracts/registry/ENS.sol",
+        "lib/ens-contracts/contracts/resolvers/Resolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IABIResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddrResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddressResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IContentHashResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSRecordResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSZoneResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IExtendedResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IInterfaceResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/INameResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IPubkeyResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/ITextResolver.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165CheckerUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol",
+        "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/utils/auth.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/IPluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/utils/InterfaceBasedRegistry.sol",
+        "lib/osx/packages/contracts/src/framework/utils/RegistryUtils.sol",
+        "lib/osx/packages/contracts/src/framework/utils/ens/ENSSubdomainRegistrar.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "PluginRepoRegistry": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "PluginRepoRegistry.sol/PluginRepoRegistry.json"
+        }
+      }
+    },
     "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol": {
       "lastModificationDate": 1689967364132,
       "contentHash": "f2322c4caff635e16160e5bc512f6148",
@@ -3108,6 +4143,349 @@
         }
       }
     },
+    "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetupProcessor.sol": {
+      "lastModificationDate": 1689967364132,
+      "contentHash": "5d42d4b217ca2cc0cf41e609b426cbe3",
+      "sourceName": "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetupProcessor.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/ens-contracts/contracts/registry/ENS.sol",
+        "lib/ens-contracts/contracts/resolvers/Resolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IABIResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddrResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddressResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IContentHashResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSRecordResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSZoneResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IExtendedResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IInterfaceResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/INameResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IPubkeyResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/ITextResolver.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1271.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165Checker.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155ReceiverUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20PermitUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/utils/SafeERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/IERC721ReceiverUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165CheckerUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165StorageUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol",
+        "lib/osx/packages/contracts/src/core/dao/DAO.sol",
+        "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "lib/osx/packages/contracts/src/core/dao/IEIP4824.sol",
+        "lib/osx/packages/contracts/src/core/permission/IPermissionCondition.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionManager.sol",
+        "lib/osx/packages/contracts/src/core/plugin/IPlugin.sol",
+        "lib/osx/packages/contracts/src/core/plugin/PluginUUPSUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/utils/BitMap.sol",
+        "lib/osx/packages/contracts/src/core/utils/CallbackHandler.sol",
+        "lib/osx/packages/contracts/src/core/utils/auth.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/IPluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepoRegistry.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetupProcessorHelpers.sol",
+        "lib/osx/packages/contracts/src/framework/utils/InterfaceBasedRegistry.sol",
+        "lib/osx/packages/contracts/src/framework/utils/RegistryUtils.sol",
+        "lib/osx/packages/contracts/src/framework/utils/ens/ENSSubdomainRegistrar.sol",
+        "lib/osx/packages/contracts/src/utils/Proxy.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "PluginSetupProcessor": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "PluginSetupProcessor.sol/PluginSetupProcessor.json"
+        }
+      }
+    },
+    "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetupProcessorHelpers.sol": {
+      "lastModificationDate": 1689967364132,
+      "contentHash": "cdbd84728f095b0af08cbce907ca0e08",
+      "sourceName": "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetupProcessorHelpers.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165Checker.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165CheckerUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol",
+        "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "lib/osx/packages/contracts/src/core/permission/IPermissionCondition.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionManager.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/IPluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol",
+        "lib/osx/packages/contracts/src/utils/Proxy.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "PluginSetupProcessorHelpers": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "PluginSetupProcessorHelpers.sol/PluginSetupProcessorHelpers.json"
+        }
+      }
+    },
+    "lib/osx/packages/contracts/src/framework/utils/InterfaceBasedRegistry.sol": {
+      "lastModificationDate": 1689967364132,
+      "contentHash": "c7f04105bdb4d791fa4743b18ce0dd3a",
+      "sourceName": "lib/osx/packages/contracts/src/framework/utils/InterfaceBasedRegistry.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165CheckerUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol",
+        "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/utils/auth.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "InterfaceBasedRegistry": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "InterfaceBasedRegistry.sol/InterfaceBasedRegistry.json"
+        }
+      }
+    },
+    "lib/osx/packages/contracts/src/framework/utils/RegistryUtils.sol": {
+      "lastModificationDate": 1689967364052,
+      "contentHash": "0cd649423c7cb71084d9af224c24ad75",
+      "sourceName": "lib/osx/packages/contracts/src/framework/utils/RegistryUtils.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "RegistryUtils": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "RegistryUtils.sol/RegistryUtils.json"
+        }
+      }
+    },
+    "lib/osx/packages/contracts/src/framework/utils/ens/ENSSubdomainRegistrar.sol": {
+      "lastModificationDate": 1689967364132,
+      "contentHash": "e4f9a7723a18bfcb1f1970aca3d17b08",
+      "sourceName": "lib/osx/packages/contracts/src/framework/utils/ens/ENSSubdomainRegistrar.sol",
+      "solcConfig": {
+        "settings": {
+          "optimizer": {
+            "enabled": true,
+            "runs": 200
+          },
+          "metadata": {
+            "bytecodeHash": "ipfs",
+            "appendCBOR": true
+          },
+          "outputSelection": {
+            "*": {
+              "": [
+                "ast"
+              ],
+              "*": [
+                "abi",
+                "evm.bytecode",
+                "evm.deployedBytecode",
+                "evm.methodIdentifiers",
+                "metadata"
+              ]
+            }
+          },
+          "evmVersion": "london",
+          "libraries": {}
+        }
+      },
+      "imports": [
+        "lib/ens-contracts/contracts/registry/ENS.sol",
+        "lib/ens-contracts/contracts/resolvers/Resolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IABIResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddrResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddressResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IContentHashResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSRecordResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSZoneResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IExtendedResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IInterfaceResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/INameResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IPubkeyResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/ITextResolver.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/utils/auth.sol"
+      ],
+      "versionRequirement": "=0.8.17",
+      "artifacts": {
+        "ENSSubdomainRegistrar": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "ENSSubdomainRegistrar.sol/ENSSubdomainRegistrar.json"
+        }
+      }
+    },
     "lib/osx/packages/contracts/src/token/ERC20/IERC20MintableUpgradeable.sol": {
       "lastModificationDate": 1689967364056,
       "contentHash": "35644dfe9dcafe07e95997bd5fdab291",
@@ -3197,10 +4575,10 @@
         }
       }
     },
-    "script/Counter.s.sol": {
-      "lastModificationDate": 1689967346160,
-      "contentHash": "0705c52104730a78aef4aa6694175c81",
-      "sourceName": "script/Counter.s.sol",
+    "script/DeployDaoWithPlugin.s.sol": {
+      "lastModificationDate": 1690071407282,
+      "contentHash": "592371c4c70f07bf39a70bcb201eaf8f",
+      "sourceName": "script/DeployDaoWithPlugin.s.sol",
       "solcConfig": {
         "settings": {
           "optimizer": {
@@ -3230,25 +4608,118 @@
         }
       },
       "imports": [
+        "lib/ens-contracts/contracts/registry/ENS.sol",
+        "lib/ens-contracts/contracts/resolvers/Resolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IABIResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddrResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddressResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IContentHashResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSRecordResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSZoneResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IExtendedResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IInterfaceResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/INameResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IPubkeyResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/ITextResolver.sol",
+        "lib/forge-std/lib/ds-test/src/test.sol",
         "lib/forge-std/src/Base.sol",
         "lib/forge-std/src/Script.sol",
+        "lib/forge-std/src/StdAssertions.sol",
         "lib/forge-std/src/StdChains.sol",
         "lib/forge-std/src/StdCheats.sol",
+        "lib/forge-std/src/StdError.sol",
+        "lib/forge-std/src/StdInvariant.sol",
         "lib/forge-std/src/StdJson.sol",
         "lib/forge-std/src/StdMath.sol",
         "lib/forge-std/src/StdStorage.sol",
         "lib/forge-std/src/StdStyle.sol",
         "lib/forge-std/src/StdUtils.sol",
+        "lib/forge-std/src/Test.sol",
         "lib/forge-std/src/Vm.sol",
         "lib/forge-std/src/console.sol",
         "lib/forge-std/src/console2.sol",
         "lib/forge-std/src/interfaces/IMulticall3.sol",
-        "lib/forge-std/src/safeconsole.sol"
+        "lib/forge-std/src/safeconsole.sol",
+        "lib/gsn/packages/contracts/src/BaseRelayRecipient.sol",
+        "lib/gsn/packages/contracts/src/interfaces/IRelayRecipient.sol",
+        "lib/openzeppelin-contracts/contracts/access/Ownable.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1271.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/IERC1967.sol",
+        "lib/openzeppelin-contracts/contracts/interfaces/draft-IERC1822.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Clones.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/ERC1967/ERC1967Upgrade.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/Proxy.sol",
+        "lib/openzeppelin-contracts/contracts/proxy/beacon/IBeacon.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/ERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/IERC20.sol",
+        "lib/openzeppelin-contracts/contracts/token/ERC20/extensions/IERC20Metadata.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Address.sol",
+        "lib/openzeppelin-contracts/contracts/utils/Context.sol",
+        "lib/openzeppelin-contracts/contracts/utils/StorageSlot.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/ERC165Checker.sol",
+        "lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/IERC1967Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/interfaces/draft-IERC1822Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/ERC1967/ERC1967UpgradeUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/beacon/IBeaconUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/Initializable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/proxy/utils/UUPSUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155ReceiverUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC1155/IERC1155Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/IERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/extensions/IERC20PermitUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC20/utils/SafeERC20Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/token/ERC721/IERC721ReceiverUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165CheckerUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165StorageUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol",
+        "lib/osx/packages/contracts/src/core/dao/DAO.sol",
+        "lib/osx/packages/contracts/src/core/dao/IDAO.sol",
+        "lib/osx/packages/contracts/src/core/dao/IEIP4824.sol",
+        "lib/osx/packages/contracts/src/core/permission/IPermissionCondition.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionLib.sol",
+        "lib/osx/packages/contracts/src/core/permission/PermissionManager.sol",
+        "lib/osx/packages/contracts/src/core/plugin/IPlugin.sol",
+        "lib/osx/packages/contracts/src/core/plugin/PluginCloneable.sol",
+        "lib/osx/packages/contracts/src/core/plugin/PluginUUPSUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/plugin/dao-authorizable/DaoAuthorizableUpgradeable.sol",
+        "lib/osx/packages/contracts/src/core/utils/BitMap.sol",
+        "lib/osx/packages/contracts/src/core/utils/CallbackHandler.sol",
+        "lib/osx/packages/contracts/src/core/utils/auth.sol",
+        "lib/osx/packages/contracts/src/framework/dao/DAOFactory.sol",
+        "lib/osx/packages/contracts/src/framework/dao/DAORegistry.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/IPluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepoRegistry.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetupProcessor.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetupProcessorHelpers.sol",
+        "lib/osx/packages/contracts/src/framework/utils/InterfaceBasedRegistry.sol",
+        "lib/osx/packages/contracts/src/framework/utils/RegistryUtils.sol",
+        "lib/osx/packages/contracts/src/framework/utils/ens/ENSSubdomainRegistrar.sol",
+        "lib/osx/packages/contracts/src/token/ERC20/IERC20MintableUpgradeable.sol",
+        "lib/osx/packages/contracts/src/utils/Proxy.sol",
+        "src/SymbioticBondingCurvePlugin.sol",
+        "src/SymbioticBondingCurvePluginSetup.sol",
+        "src/bonding_curve/ContinuousToken.sol",
+        "src/bonding_curve/curves/BancorBondingCurve.sol",
+        "src/bonding_curve/interfaces/IBondingCurve.sol",
+        "src/bonding_curve/math/BancorFormula.sol",
+        "src/bonding_curve/math/Power.sol",
+        "src/mockContracts/MockLSD.sol",
+        "src/mockContracts/MockToken.sol"
       ],
       "versionRequirement": "^0.8.13",
       "artifacts": {
-        "CounterScript": {
-          "0.8.17+commit.8df45f5f.Linux.gcc": "Counter.s.sol/CounterScript.json"
+        "DaoPluginScript": {
+          "0.8.17+commit.8df45f5f.Linux.gcc": "DeployDaoWithPlugin.s.sol/DaoPluginScript.json"
         }
       }
     },
@@ -3372,8 +4843,8 @@
       }
     },
     "script/DeployPlugin.s.sol": {
-      "lastModificationDate": 1690064291791,
-      "contentHash": "8b31373d1c204f560203aa5db86657da",
+      "lastModificationDate": 1690072085529,
+      "contentHash": "c6cf7a0246b504f4f4cd3e07fbb34117",
       "sourceName": "script/DeployPlugin.s.sol",
       "solcConfig": {
         "settings": {
@@ -3404,6 +4875,19 @@
         }
       },
       "imports": [
+        "lib/ens-contracts/contracts/registry/ENS.sol",
+        "lib/ens-contracts/contracts/resolvers/Resolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IABIResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddrResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IAddressResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IContentHashResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSRecordResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IDNSZoneResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IExtendedResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IInterfaceResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/INameResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/IPubkeyResolver.sol",
+        "lib/ens-contracts/contracts/resolvers/profiles/ITextResolver.sol",
         "lib/forge-std/lib/ds-test/src/test.sol",
         "lib/forge-std/src/Base.sol",
         "lib/forge-std/src/Script.sol",
@@ -3458,6 +4942,7 @@
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/AddressUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/ContextUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/StorageSlotUpgradeable.sol",
+        "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165CheckerUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165StorageUpgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/ERC165Upgradeable.sol",
         "lib/openzeppelin-contracts-upgradeable/contracts/utils/introspection/IERC165Upgradeable.sol",
@@ -3474,8 +4959,15 @@
         "lib/osx/packages/contracts/src/core/utils/BitMap.sol",
         "lib/osx/packages/contracts/src/core/utils/CallbackHandler.sol",
         "lib/osx/packages/contracts/src/core/utils/auth.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/IPluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepo.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepoFactory.sol",
+        "lib/osx/packages/contracts/src/framework/plugin/repo/PluginRepoRegistry.sol",
         "lib/osx/packages/contracts/src/framework/plugin/setup/IPluginSetup.sol",
         "lib/osx/packages/contracts/src/framework/plugin/setup/PluginSetup.sol",
+        "lib/osx/packages/contracts/src/framework/utils/InterfaceBasedRegistry.sol",
+        "lib/osx/packages/contracts/src/framework/utils/RegistryUtils.sol",
+        "lib/osx/packages/contracts/src/framework/utils/ens/ENSSubdomainRegistrar.sol",
         "lib/osx/packages/contracts/src/token/ERC20/IERC20MintableUpgradeable.sol",
         "lib/osx/packages/contracts/src/utils/Proxy.sol",
         "src/SymbioticBondingCurvePlugin.sol",
