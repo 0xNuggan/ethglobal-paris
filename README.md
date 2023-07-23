@@ -2,7 +2,9 @@
 
 This project combines Bonding-Curve-based fundraising with Liquid Staking Derivatives into an Aragon Plugin with increasingly wonkier options for managing the yield.
 
-You can watch the presentation and slides here: [LINK]
+Hackathon project page: [LINK]()
+
+You can read the slides here: [LINK](https://docs.google.com/presentation/d/1K1wKiX8oEGINubxe64s2J__osIcG2R68DdSttxkCGDw/edit#slide=id.p)
 
 ## Characteristics
 - Functional Aragon Dao Plugin, signed up at the registry ([link](https://mumbai.polygonscan.com/tx/0x144dab540594e66be2ecde2b5ac701d4ce5c49ca167d3ddc99ec49125df0c856))
