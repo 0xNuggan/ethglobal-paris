@@ -5,7 +5,7 @@ This project combines Bonding-Curve-based fundraising with Liquid Staking Deriva
 You can watch the presentation and slides here:
 
 ## Characteristics
-- Functional Aragon Dao Plugin, signed up at the registry ([link](https://mumbai.polygonscan.com/tx/0x144dab540594e66be2ecde2b5ac701d4ce5c49ca167d3ddc99ec49125df0c856)))
+- Functional Aragon Dao Plugin, signed up at the registry ([link](https://mumbai.polygonscan.com/tx/0x144dab540594e66be2ecde2b5ac701d4ce5c49ca167d3ddc99ec49125df0c856))
 - Foundry Solidity scripts for plugin deployment and registration
 - Deployed Contracts on Polygon Mumbai Testnet (see addresses below)
 - The SymbioticBondingCurvePlugin contract implements the BaseRelayRecipient contract, and is therefore compatible with gas-less transactions.
