@@ -11,8 +11,8 @@ You can read the slides here: [LINK](https://docs.google.com/presentation/d/1K1w
 - Original Foundry scripts in Solidity for plugin deployment and registration
 - Deployed Contracts on Polygon Mumbai Testnet (see addresses below)
 - The SymbioticBondingCurvePlugin contract implements the BaseRelayRecipient contract, and is therefore compatible with gas-less transactions.
-- Management and testing automated with Chainlink automation. ([Rebase](https://automation.chain.link/mumbai/27856060908643686677321196615300647332707232863806945074647748540463835847677), [YieldDistribution](https://automation.chain.link/mumbai/27856060908643686677321196615300647332707232863806945074647748540463835847677))
-
+- Management and testing automated with Chainlink automation. ([Rebase](https://automation.chain.link/mumbai/27856060908643686677321196615300647332707232863806945074647748540463835847677), [YieldDistribution](https://automation.chain.link/mumbai/112530855485555977933439502299040451398443904724924978027178076855937771955502))
+https
 
 ### Commands for deployment
 
