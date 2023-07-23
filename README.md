@@ -2,7 +2,7 @@
 
 This project combines Bonding-Curve-based fundraising with Liquid Staking Derivatives into an Aragon Plugin with increasingly wonkier options for managing the yield.
 
-Hackathon project page: [LINK]()
+Hackathon project page: [LINK](https://ethglobal.com/showcase/undefined-q11gf)
 
 You can read the slides here: [LINK](https://docs.google.com/presentation/d/1K1wKiX8oEGINubxe64s2J__osIcG2R68DdSttxkCGDw/edit#slide=id.p)
 
