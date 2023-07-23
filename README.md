@@ -42,7 +42,7 @@ forge script script/DeployDaoWithPlugin.s.sol:DaoPluginScript --rpc-url https://
 |----------|---------|
 | SymbioticBondingCurvePlugin | [0x6272E0238378796783C4fe1A839E187D3910973c](https://mumbai.polygonscan.com/address/0x6272E0238378796783C4fe1A839E187D3910973c) |
 | SymbioticBondingCurvePluginSetup | [0x11CaBEBDF05AB6817919733e21D126A4920C095b](https://mumbai.polygonscan.com/address/0x11CaBEBDF05AB6817919733e21D126A4920C095b)| 
-| Test DAO | [0x454034f4f8873140dd3e37596a7fa4a221a6964a](https://mumbai.polygonscan.com/address/0x454034f4f8873140dd3e37596a7fa4a221a6964a) |
+| Test DAO | [0x454034f4f8873140dd3e37596a7fa4a221a6964a](https://app.aragon.org/#/daos/mumbai/0x454034f4f8873140dd3e37596a7fa4a221a6964a/finance) |
 | Mock Protocol Token | [0x979D92F7ecb126F520Df61EAd1D48E16f25Be49f](https://mumbai.polygonscan.com/address/0x979D92F7ecb126F520Df61EAd1D48E16f25Be49f) |
 | Mock Liquid Staking Token | [0x6326781165914A33F2034a8E1dC66859dAc6b5dA](https://mumbai.polygonscan.com/address/0x6326781165914A33F2034a8E1dC66859dAc6b5dA) |
 
